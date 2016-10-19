@@ -1,0 +1,36 @@
+\select@language {brazil}
+\contentsline {chapter}{Lista de Figuras}{10}{Doc-Start}
+\contentsline {chapter}{Lista de Tabelas}{11}{Doc-Start}
+\contentsline {chapter}{Lista de Algoritmos}{12}{Doc-Start}
+\contentsline {chapter}{Lista de C\'{o}digos de Programas}{13}{section*.1}
+\contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{14}{chapter.2}
+\contentsline {chapter}{\numberline {2}Introdu\c c\~ao}{15}{chapter.3}
+\contentsline {chapter}{\numberline {3}Descri\c c\~ao da classe \textsf {inf-ufg}}{17}{chapter.4}
+\contentsline {section}{\numberline {3.1}Op\c c\~oes da classe}{17}{section.5}
+\contentsline {section}{\numberline {3.2}Par\^ametros da classe}{17}{section.6}
+\contentsline {section}{\numberline {3.3}Elementos Pr\'e--Textuais}{18}{section.8}
+\contentsline {paragraph}{capa\\}{19}{section*.9}
+\contentsline {paragraph}{publica\c c\~ao\\}{19}{section*.10}
+\contentsline {paragraph}{rosto\\}{19}{section*.11}
+\contentsline {paragraph}{aprova\c c\~ao\\}{19}{section*.12}
+\contentsline {paragraph}{banca\\}{19}{section*.13}
+\contentsline {paragraph}{direitos\\}{19}{section*.14}
+\contentsline {paragraph}{dedicat\'oria\\}{19}{section*.15}
+\contentsline {paragraph}{agradecimentos\\}{19}{section*.16}
+\contentsline {paragraph}{resumo\\}{19}{section*.17}
+\contentsline {paragraph}{abstract\\}{20}{section*.18}
+\contentsline {paragraph}{tabelas\\}{20}{section*.19}
+\contentsline {paragraph}{ep\IeC {\'\i }grafe\\}{20}{section*.20}
+\contentsline {chapter}{\numberline {4}Elementos do texto}{21}{chapter.21}
+\contentsline {section}{\numberline {4.1}Figuras}{21}{section.22}
+\contentsline {subsection}{\numberline {4.1.1}Subfiguras}{22}{subsection.26}
+\contentsline {section}{\numberline {4.2}Tabelas}{24}{section.30}
+\contentsline {section}{\numberline {4.3}Algoritmos}{24}{section.32}
+\contentsline {section}{\numberline {4.4}C\'odigos de Programa}{25}{section.43}
+\contentsline {section}{\numberline {4.5}Teoremas, Corol\'arios e Demonstra\c c\~oes}{26}{section.45}
+\contentsline {section}{\numberline {4.6}Cita\c c\~oes Longas}{27}{section.47}
+\contentsline {section}{\numberline {4.7}Refer\^encias Bibliogr\'aficas}{27}{section.48}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{29}{section.48}
+\contentsline {chapter}{\numberline {A}Exemplo de um Ap\^endice}{34}{appendix.49}
+\contentsline {chapter}{\numberline {B}Exemplo de Outro Ap\^endice}{38}{appendix.50}
+\contentsfinish 

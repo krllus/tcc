@@ -1,0 +1,129 @@
+\chapter{Descrição da classe \textsf{inf-ufg}}
+\label{cap:descr}
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\section{Opções da classe}
+\label{sec:opcoes}
+Para usar esta classe num documento \LaTeXe, coloque os arquivos 
+\verb|inf-ufg.cls|,\ \verb|inf-ufg.bst|,\ \verb|abnt-num.bst|,\ \verb|atbeginend.sty|\ e \verb|tocloft.sty|\ numa pasta onde o compilador \LaTeX\ pode achá--lo (normalmente na mesma pasta que seu arquivo \verb|.tex|), e defina--o como o estilo do seu documento. Por exemplo, uma dissertação de mestrado que usa o modelo abnt de citações bibliográficas:
+\begin{verbatim}
+\documentclass[dissertacao,abnt]{inf-ufg}
+...
+\begin{document}
+\end{verbatim}
+
+As opções da classe são \verb|[tese]| (para tese de doutorado), \verb|[dissertacao]| (para dissertação de mestrado), \verb|[monografia]| (para monografia de curso de especialização e \verb|[relatorio]| (para relatório final de curso de graduação). Se nenhuma opção for declarada, o documento é considerado como uma dissertação de mestrado. Se a opção \verb|[abnt]| for utilizada, as citações bibliográficas serão geradas conforme definido pelo grupo de trabalho \textsf{abnt-tex}. Contudo, o mais recomendável é não utilizar essa opção. Com a opção \verb|[nocolorlinks]| todos os {\em links} de navegação no texto ficam na cor preta. O ideal é usar esta opção para gerar o arquivo para impressão, pois a qualidade da impressão dos {\em links} fica superior.
+
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\section{Parâmetros da classe}
+\label{sec:param}
+Os elementos pré-textuais são definidos página por página e dependem da correta definição dos parâmetros listados a seguir (aqueles que contém um texto/valor padrão não precisam ser definidos, caso atenda a situação do autor do texto que está usando a classe \verb|inf-ufg.cls|):
+
+% \setlength{\topsep}{5.2em}
+ \begin{itemize}%\addtolength{\itemsep}{-0.7em}
+\item \verb|\autor| : Nome completo do autor da tese, começando pelo apelido (ex.: José da Silva);
+\item \verb|\autorR| : Nome completo do autor da tese, começando pelo nome (ex.: da Silva, José);
+\item \verb|\titulo| : Título da tese, dissertação, monografia ou relatório de conclusão de curso;
+\item \verb|\subtitulo| : Se tiver um subtítulo, use este macro para defini--lo;
+
+\item \verb|\cidade| : A cidade de edição. A cidade padrão é \textsf{Goiânia}.
+\item \verb|\dia| : Dia do mês da data de defesa (1--31);
+\item \verb|\mes| : Mês da data de defesa (1--12);
+\item \verb|\ano| : Ano da data de defesa;
+
+\item \verb|\universidade| : Nome completo da universidade. O nome padrão é \textsf{Universidade Federal de Goiás};
+\item \verb|\uni| : Sigla da universidade. A sigla padrão é \textsf{UFG};
+\item \verb|\unidade| : Nome da unidade acadêmica. O padrão é \textsf{Instituto de Informática};
+\item \verb|\departamento| : Nome do departamento, com maiúscula na primeira letra (para o caso de unidades com mais de um departamento);
+
+\item \verb|\programa| : Nome do programa de pós-graduação, com maiúscula na primeira letra. O padrão é \textsf{Computação};
+\item \verb|\concentracao| : Nome da área de concentração;
+
+\item \verb|\orientador| : Nome completo do orientador, começando pelo apelido;
+\item \verb|\orientadorR| : Nome completo do orientador, começando pelo nome;
+
+\item \verb|\orientadora| : Nome completo da orientadora, começando pelo apelido; use este comando e o próximo se for orientadora e nao orientador.
+\item \verb|\orientadoraR| : Nome completo do orientadora, começando pelo nome;
+
+% \item \verb|\CDU| : CDU das publicações do instituto (a perguntar na biblioteca central);
+% \item \verb|\paginaspre| : Número de páginas pré-textuais;
+% \item \verb|\paginastex| : Número de páginas textuais;
+% \item \verb|\altura| : Altura do papel utilizado para a impressão do trabalho. O padrão é o papel A4, de altura 29.7cm;
+
+\item \verb|\coorientador| : Nome completo do co--orientador, começando pelo apelido;
+\item \verb|\coorientadorR| : Nome completo do co--orientador, começando pelo nome;
+
+\item \verb|\coorientadora| : Nome completo da coorientadora, começando pelo apelido; use este comando e o próximo se for coorientadora e nao coorientador.
+\item \verb|\coorientadoraR| : Nome completo do coorientadora, começando pelo nome;
+
+\item \verb|\universidadeco| : Nome da universidade do coorientador;
+\item \verb|\unico| : Sigla da universidade do coorientador;
+\item \verb|\unidadeco| : Nome da unidade acadêmica do coorientador.\footnote{Se não tiver um co--orientador, não defina esses últimos sete parâmetros.}
+\end{itemize}
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\section{Elementos Pré--Textuais}
+\label{sec:pre}
+Os elementos pré--textuais são definidos página por página, conforme descritos a seguir:
+
+\paragraph{capa\\}
+\verb|\capa| : Gera o modelo da capa externa do trabalho. Esta página servirá apenas como modelo para a encadernação da versão final do texto. Nenhum dado é necessário.
+
+\paragraph{publicação\\}
+\verb|\publica| : Gera a autorização para publicação do trabalho em formato eletrônico e disponibilização do mesmo na biblioteca virtual da UFG.
+
+\paragraph{rosto\\}
+\verb|\rosto| : Gera a folha de rosto, a qual é a primeira folha interna do trabalho. Nenhum dado é necessário.
+
+\paragraph{aprovação\\}
+\verb|\aprovacao| : ambiente para a reprodução do termo de aprovação da Banca Examinadora da tese ou dissertação.
+
+\paragraph{banca\\}
+\verb|\banca| : Entrada para o nome dos examinadores, exceto o(s) orientador(es).
+
+\noindent\verb|\profa| : Entrada para o nome das examinadoras, exceto o(s) orientador(es).
+
+\paragraph{direitos\\}
+\verb|\direitos| : Macro com 2 argumentos para gerar os direitos autorais, o perfil do aluno e a ficha catalográfica da Biblioteca Central da UFG.
+\begin{itemize}
+\item O primeiro argumento é o Perfil do aluno; e
+\item O segundo argumento é a lista das palavras--chaves para a Ficha Catalográfica.
+\end{itemize}
+
+\paragraph{dedicatória\\}
+\verb|\dedicatoria| : ambiente para escrever a dedicatória. É possível trocar o espaçamento dentro desse ambiente do mesmo jeito que no \LaTeX\ padrão.
+
+\paragraph{agradecimentos\\}
+\verb|\agradecimentos| : ambiente para escrever os agradecimentos. É possível trocar o espaçamento dentro desse ambiente do mesmo jeito que no \LaTeX\ padrão.
+
+\paragraph{resumo\\}
+\verb|\chaves| : A lista das palavras chaves, separadas por `;'. Deve ser definido antes do ambiente \verb|\resumo|, o qual é usado para escrever o resumo em português.
+
+\paragraph{abstract\\}
+\verb|\keys| : A lista das palavras chaves em inglês, separadas por `;'. Deve ser definido antes do ambiente \verb|\abstract|, o qual contém 1 argumento e é usado escrever o resumo em inglês. O argumento deve ser o título do trabalho em inglês.
+
+\paragraph{tabelas\\}
+\verb|\tabelas| : Macro com 1 argumento opcional para gerar as tabelas. O argumento pode ser:
+\begin{itemize}
+ \item nada [] : gera apenas o sumário;
+ \item \textsf{fig} : gera o sumário e uma lista de figuras;
+ \item \textsf{tab} : gera o sumário e uma lista de tabelas;
+ \item \textsf{alg} : gera o sumário e uma lista de algoritmos;
+ \item \textsf{cod} : gera o sumário e uma lista de programas.
+% \item \textsf{figtab} : gera o sumário, uma lista de tabelas, e uma lista de figuras;
+% \item \textsf{figtabalg} : gera o sumário e listas de tabelas, de figuras e de algoritmos;
+% \item \textsf{figtabalgcod} : gera o sumário e listas de tabelas, de figuras, de algoritmos e de programas;
+% \item (qualquer outra coisa) : gera somente o sumário.
+\end{itemize}
+
+Pode-se usar qualquer combinação dessas opções. Por exemplo:
+\begin{itemize}
+ \item \textsf{figtab} : gera o sumário e listas de figuras e tabelas,
+ \item \textsf{figtabcod} : gera o sumário e listas de figuras, tabelas e códigos de programas;
+ \item \textsf{figtabalg} : gera o sumário e listas de figuras, tabelas e algoritmos;
+ \item \textsf{figtabalgcod} : gera o sumário e listas de figuras, tabelas, algoritmos e códigos de programas
+\end{itemize}
+
+\paragraph{epígrafe\\}
+\verb|\epigrafe| : Macro com 3 argumentos que permite editar um epígrafe. O primeiro argumento é o texto da citação. O segundo argumento é o nome do autor da citação. O terceiro argumento é o título da referência à qual a citação pertence.

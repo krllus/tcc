@@ -1,0 +1,20 @@
+
+\chapter{Introdução}
+\label{cap:intro}
+
+Este documento mostra como usar o \LaTeX\ com a classe \textsf{inf-ufg} para formatar teses, dissertações, monografias e relatórios de conclusão de curso, segundo o padrão adotado pelo Instituto de Informática da UFG. Este documento e a classe \textsf{inf-ufg} foram, em grande parte, copiados e adaptados da classe \textsf{thesisPUC} e do texto de Thomas Lewiner \cite{Lew2002} que descreve a sua utilização.
+
+ \LaTeX\ é um sistema de editoração eletrônica muito usado para produzir documentos científicos de alta qualidade tipográfica. O sistema também é útil para produzir todos os tipos de outros documentos, desde simples cartas até livros completos.
+
+Se você precisar de algum material de apoio referente ao \LaTeX, dê uma olhada em um dos sites do Comprehensive TEX Archive Network (CTAN). O site está em \href{http://www.ctan.org/}{www.ctan.org}. Todos os pacotes podem ser obtidos via \textsf{FTP} \href{ftp://www.ctan.org/}{ftp://www.ctan.org} e existem vários servidores em todo o mundo. Eles podem ser encontrados, por exemplo, em \href{ftp://ctan.tug.org/}{ftp://ctan.tug.org} (EUA), \href{ftp://ftp.dante.de/}{ftp://ftp.dante.de} (Alemanha), \href{ftp://ftp.tex.ac.uk/}{ftp://ftp.tex.ac.uk} (Reino Unido).
+
+Você pode encontrar uma grande quantidade de informações e dicas na página dos usuários brasileiros de \LaTeX\ (\TeX-BR). O endereço é \href{http://biquinho.furg.br/tex-br/}{http://biquinho.furg.br/tex-br/}.
+Tanto no CTAN quanto no \TeX-BR estão disponíveis bons documentos em português sobre o \LaTeX. Em particular no CTAN, está disponível uma introdução bastante completa em português: \href{http://www.ctan.org/tex-archive/info/lshort/portuguese-BR/lshortBR.pdf}{CTAN:/tex-archive/info/lshort/portuguese-BR/}. No \TeX-BR também existe um documento com exemplos de uso de \LaTeX\ e de vários pacotes: \href{http://biquinho.furg.br/tex-br/doc/LaTeX-demo/}{http://biquinho.furg.br/tex-br/doc/LaTeX-demo/} . O objetivo é ser, através de exemplos, um guia para o usuário de \LaTeX\ iniciante e intermediário, podendo, ainda, servir como um guia de referência rápida para usuários avançados.
+
+Se você quer usar o \LaTeX\ em seu computador, verifique em quais sistemas ele está disponível em \href{http://www.ctan.org/tex-archive/systems/}{CTAN:/tex-archive/systems}. Em particular para \textsf{MS Windows}, o sistema gratuito \href{http://www.miktex.org/}{MikTeX}, disponível no CTAN e no site \href{http://www.miktex.org/}{www.miktex.org} é completo e atualizado de todas as opções  que você poderia precisar para editar o seu texto.
+
+O estilo \textsf{inf-ufg} se integra completamente ao \LaTeXe. Uma tese, dissertação ou monografia escrita no estilo padrão do \LaTeX\ para teses (estilo \verb|report|) pode ser formatada em 15 minutos para se adaptar às normas da UFG.
+
+O estilo \textsf{inf-ufg} foi desenhado para minimizar a quantidade de texto e de comandos necessários para escrever a sua dissertação. Só é preciso inserir algumas macros no início do seu arquivo \LaTeX, precisando os dados bibliográficos da sua dissertação (por exemplo o seu nome, o titulo da dissertação\ldots). Em seguida, cada página dos elementos pré-textuais será formatada usando macros ou ambientes específicos. O corpo do texto é editado normalmente. Finalmente, as referências bibliográficas podem ser entradas manualmente (via o comando \verb|\bibitem| do \LaTeX\ padrão) ou usando o sistema BiBTeX (muito mais recomendável). Neste caso, os arquivos \verb|inf-ufg.bst| e \verb|abnt-alf.bst| permitem a formatação das referências bibliográficas segundo as normas da UFG.
+
+

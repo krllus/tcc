@@ -1,0 +1,406 @@
+\begin{thebibliography}{10}
+
+\bibitem{Arm1979}
+{\sffamily\scshape Armstrong, M.~A.}
+\newblock {\bfseries Basic topology}.
+\newblock McGraw-Hill, London, 1979.
+
+\bibitem{NBR10520:2001}
+Associa{\c c}\~ao Brasileira de Normas T\'ecnicas, Rio de Janeiro.
+\newblock {\bfseries {NBR} 10520}, July 2001.
+
+\bibitem{NBR14724:2001}
+Associa{\c c}\~ao Brasileira de Normas T\'ecnicas, Rio de Janeiro.
+\newblock {\bfseries {NBR} 14724}, July 2001.
+
+\bibitem{Ber1970}
+{\sffamily\scshape Berge, C.}
+\newblock {\bfseries Graphes et hypergraphes}.
+\newblock Dunod, Paris, 1970.
+
+\bibitem{LeeSwi2002}
+{\sffamily\scshape Berners-Lee, R.; Swick, T.}
+\newblock {\bfseries {Semantic Web Development}}, 2002.
+
+\bibitem{Bue1990}
+{\sffamily\scshape Buerger, D.~J.}
+\newblock {\bfseries {\LaTeX} for Engineers and Scientists}.
+\newblock Mc{\-}Graw-Hill, New York, NY, USA, 1990.
+
+\bibitem{Coh1973}
+{\sffamily\scshape Cohen, M.~M.}
+\newblock {\bfseries A course in simple homotopy theory}.
+\newblock Springer, New York, 1973.
+
+\bibitem{Cro1978}
+{\sffamily\scshape Croom, F.~H.}
+\newblock {\bfseries Basic concepts of algebraic topology}.
+\newblock Springer, New York, 1978.
+
+\bibitem{DelEde1993}
+{\sffamily\scshape Delfinado, C. J.~A.; {Herbert
+  {\href{http://www.cs.duke.edu/~edels/}{Edelsbrunner}}}.}
+\newblock {\bfseries
+  \href{http://www.cs.uiuc.edu/Dienst/Repository/2.0/Body/ncstrl.uiuc_cs/UIUCDCS-R-93-1787/postscript}{An
+  Incremental Algorithm for Betti Numbers of Simplicial Complexes}}.
+\newblock In: {\itshape Proceedings of 9th Annual Symposium on Computer
+  Geometry}, p. 232--239, 1993.
+
+\bibitem{Dra1994}
+{\sffamily\scshape Drakos, N.}
+\newblock {\bfseries The {\LaTeX} to {HTML} translator}.
+\newblock Internal report, Computer Based Learning Unit, University of Leeds,
+  jan 1994.
+
+\bibitem{GooMitSam1994}
+{\sffamily\scshape Goossens, M.; Mittelbach, F.; Samarin, A.}
+\newblock {\bfseries The {\LaTeX} Companion}.
+\newblock Ad{\-d}i{\-s}on-Wes{\-l}ey, Reading, MA, USA, second edition, 1994.
+
+\bibitem{Hah1991}
+{\sffamily\scshape Hahn, J.}
+\newblock {\bfseries {\LaTeX} for Everyone}.
+\newblock Personal {\TeX} Inc., 12 Madrona Street, Mill Valley, CA 94941, USA,
+  1991.
+
+\bibitem{HopTar1973}
+{\sffamily\scshape Hopcroft, J.; Tarjan, R.~E.}
+\newblock {\bfseries Efficient algorithms for graph manipulation}.
+\newblock {\itshape Communications of the ACM}, 16:372--378, 1973.
+
+\bibitem{Har1998}
+{\sffamily\scshape {\href{http://graphics.cs.uiuc.edu/~jch/}{Hart}}, J.~C.}
+\newblock {\bfseries
+  \href{http://graphics.cs.uiuc.edu/~jch/papers/morseism.pdf}{Morse theory for
+  implicit surface modeling}}.
+\newblock In: Hege, H.-C.; Polthier, K., editors, {\itshape Mathematical
+  Visualization}, p. 257--268. Springer, Berlin, 1998.
+
+\bibitem{Har2000}
+{\sffamily\scshape {\href{http://graphics.cs.uiuc.edu/~jch/}{Hart}}, J.~C.}
+\newblock {\bfseries
+  \href{http://graphics.cs.uiuc.edu/~jch/papers/smi99.pdf}{Computational
+  Topology for Shape Modeling}}.
+\newblock In: {\itshape Proceedings Shape Modeling International '99}, p.
+  36--45, Japan, 1999. University Aizu.
+
+\bibitem{For1995}
+{\sffamily\scshape {\href{http://math.rice.edu/~forman/}{Forman}}, R.}
+\newblock {\bfseries A discrete morse theory for cell complexes}.
+\newblock In: Yau, S.~T., editor, {\itshape Geometry, Topology and Physics for
+  Raoul Bott}. International Press, 1995.
+
+\bibitem{For1998}
+{\sffamily\scshape {\href{http://math.rice.edu/~forman/}{Forman}}, R.}
+\newblock {\bfseries Morse theory for cell complexes}.
+\newblock {\itshape Advances in Mathematics}, 134:90--145, 1998.
+
+\bibitem{For2000}
+{\sffamily\scshape {\href{http://math.rice.edu/~forman/}{Forman}}, R.}
+\newblock {\bfseries \href{http://math.rice.edu/~forman/app.ps} {Some
+  applications of combinatorial differential topology}}.
+\newblock preprint, 2001.
+
+\bibitem{For2001}
+{\sffamily\scshape {\href{http://math.rice.edu/~forman/}{Forman}}, R.}
+\newblock {\bfseries \href{http://math.rice.edu/~forman/user.ps} {A user guide
+  to discrete Morse theory}}.
+\newblock preprint, 2001.
+
+\bibitem{MorTak2000}
+{\sffamily\scshape {\href{http://naomi.is.s.u-tokyo.ac.jp/~moriso}{Moriyama}},
+  S.; {{\href{http://www-imai.is.s.u-tokyo.ac.jp/~fumi/}{Takeuchi}}}, F.}
+\newblock {\bfseries
+  \href{http://www-imai.is.s.u-tokyo.ac.jp/~fumi/PUBLICATIONS/MorTak00.a4.ps}{Incremental
+  construction properties in dimension two---shellability, extendable
+  shellability and vertex decomposability}}.
+\newblock In: {\itshape Proceedings of the 12th Canadian conference on
+  computational geometry}, p. 65--72, Fredericton, 2000.
+
+\bibitem{BerEpp1999}
+{\sffamily\scshape {\href{http://www2.parc.com/csl/members/bern/}{Bern}},
+  M.~W.; {\href{http://www.ics.uci.edu/~eppstein/}{Eppstein}}, D.; others.}
+\newblock {\bfseries \href{http://arxiv.org/pdf/cs/9909001} {Emerging
+  challenges in computational topology}}.
+\newblock ACM Computing Research Repository, 1999.
+
+\bibitem{LewLopTav2002}
+{\sffamily\scshape {\href{http://www.carva.org/thomas.lewiner}{Lewiner}}, T.;
+  {\href{http://www.mat.puc-rio.br/~lopes}{Lopes}}, H.; Tavares, G.}
+\newblock {\bfseries
+  \href{http://www.mat.puc-rio.br/~tomlew/VisMath.pdf}{Visualizing Forman's
+  discrete vector field}}.
+\newblock In: Hege, H.-C.; Polthier, K., editors, {\itshape Mathematical
+  Visualization III}. Springer, Berlin, 2002.
+
+\bibitem{LewTavLop2001}
+{\sffamily\scshape {\href{http://www.carva.org/thomas.lewiner}{Lewiner}}, T.;
+  Tavares, G.; {{\href{http://www.mat.puc-rio.br/~lopes}{Lopes}}}, H.}
+\newblock {\bfseries \href{http://www.mat.puc-rio.br/~tomlew/CGTA.pdf}{Optimal
+  discrete Morse functions for 2-manifolds}}.
+\newblock preprint, 2001.
+
+\bibitem{SzyRos2000}
+{\sffamily\scshape
+  {\href{http://www.cc.gatech.edu/fac/Andrzej.Szymczak/}{Szymczak}}, A.;
+  {\href{http://www.gvu.gatech.edu/people/official/jarek.rossignac/}
+  {Rossignac}}, J.}
+\newblock {\bfseries
+  \href{http://www.cc.gatech.edu/fac/Andrzej.Szymczak/papers/compress.pdf}
+  {Grow \& Fold: Compression of Tetrahedral Meshes}}.
+\newblock In: {\itshape Solid Modelling '99}, 1999.
+\newblock to appear.
+
+\bibitem{DeyEdeGuh1999}
+{\sffamily\scshape {\href{http://www.cis.ohio-state.edu/~tamaldey/}{Dey}},
+  T.~K.; {\href{http://www.cs.duke.edu/~edels/}{Edelsbrunner}}, H.;
+  {\href{http://www.cs.uwm.edu/faculty/guha/}{Guha}}, S.}
+\newblock {\bfseries
+  \href{http://www.ics.uci.edu/~eppstein/gina/DeyEdelsbrunnerGuha.ps.Z}{Computational
+  topology}}.
+\newblock In: Chazelle, B.; Goodman, J.; Pollack, R., editors, {\itshape
+  Advances in Discrete and Computational Geometry}, volume 223 de {\bfseries
+  Contemporary mathematics}, p. 109--143. American Mathematical Society,
+  Providence, 1999.
+
+\bibitem{DeyGuh1996}
+{\sffamily\scshape {\href{http://www.cis.ohio-state.edu/~tamaldey/}{Dey}},
+  T.~K.; {\href{http://www.cs.uwm.edu/faculty/guha/}{Guha}}, S.}
+\newblock {\bfseries
+  \href{http://www.cis.ohio-state.edu/~tamaldey/paper/3dhom/paper.ps.gz}{Computing
+  homology groups of simplicial complexes in $R^3$}}.
+\newblock {\itshape Journal of ACM}, 45(2):266--287, 1998.
+
+\bibitem{DeyGuh2001}
+{\sffamily\scshape {\href{http://www.cis.ohio-state.edu/~tamaldey/}{Dey}},
+  T.~K.; {\href{http://www.cs.uwm.edu/faculty/guha/}{Guha}}, S.}
+\newblock {\bfseries
+  \href{http://www.cis.ohio-state.edu/~tamaldey/paper/3dhom/paper.ps.gz}
+  {Algorithms for manifolds and simplicial complexes in euclidean 3-Space}}.
+\newblock preprint, 2001.
+
+\bibitem{MeyDesSchBar2002}
+{\sffamily\scshape {\href{http://www.cs.caltech.edu/~mmeyer/}{Meyer}}, M.;
+  {\href{http://www.cs.caltech.edu/~mathieu/}{Desbrun}}, M.;
+  {\href{http://www.multires.caltech.edu/~ps/}{Schr\"{o}der}}, P.;
+  {\href{http://www.gg.caltech.edu/~barr/}{Barr}}, A.}
+\newblock {\bfseries \href{http://www.multires.caltech.edu/pubs/diffGeoOps.pdf}
+  {Discrete Differential--Geometry Operators for Triangulated 2--Manifolds}}.
+\newblock In: Hege, H.-C.; Polthier, K., editors, {\itshape Mathematical
+  Visualization III}. Springer, Berlin, 2002.
+
+\bibitem{EdeHarZom2001}
+{\sffamily\scshape {\href{http://www.cs.duke.edu/~edels/}{Edelsbrunner}}, H.;
+  {\href{http://www.math.duke.edu/~harer/}{Harer}}, J.~L.;
+  {\href{http://graphics.stanford.edu/~afra/}{Zomorodian}}, A.}
+\newblock {\bfseries
+  \href{http://graphics.stanford.edu/~afra/papers/socg01/dcg.ps.gz}
+  {Hierarchical Morse Complexes for Piecewise Linear 2-Manifolds}}.
+\newblock In: {\itshape Proceedings of the 17th Symposium of Computational
+  Geometry}, p. 70--79, 2001.
+
+\bibitem{EdeLetZom2000}
+{\sffamily\scshape {\href{http://www.cs.duke.edu/~edels/}{Edelsbrunner}}, H.;
+  {\href{http://www.math.okstate.edu/~letscher/}{Letscher}}, D.;
+  {\href{http://graphics.stanford.edu/~afra/}{Zomorodian}}, A.}
+\newblock {\bfseries \href{http://www.cs.duke.edu/~edels/TriTop/PersTop.ps}
+  {Topological persistence and simplification}}.
+\newblock In: {\itshape Proceedings of the 41st Annual IEEE Symposium on
+  Foundations of Computer Science}, p. 454--463, 2000.
+
+\bibitem{Veg1997}
+{\sffamily\scshape {\href{http://www.cs.rug.nl/~gert/}{Vegter}}, G.}
+\newblock {\bfseries \href{http://cs.smith.edu/~orourke/books/discrete.html}
+  {Computational topology}}.
+\newblock In: Goodman, J.~E.; O'Rourke, J., editors, {\itshape Handlebook of
+  Discrete Computational Geometry}, p. 517--536. CRC Press, 1997.
+
+\bibitem{Scharein}
+{\sffamily\scshape {\href{http://www.cs.ubc.ca/spider/scharein/}{Scharein}},
+  R.}
+\newblock {\bfseries Knot-plot}.
+\newblock \href{http://www.pims.math.ca/knotplot/}{www.pims.math.ca/knotplot/}.
+
+\bibitem{Ege95}
+{\sffamily\scshape {\href{http://www.cs.ucsb.edu/~omer/}{E\u{g}ecio\u{g}lu}},
+  O.; {\href{http://www.cs.ucsb.edu/~teo/}{Gonzalez}}, T.~F.}
+\newblock {\bfseries
+  \href{http://www.cs.ucsb.edu/~omer/DOWNLOADABLE/simplicial96.pdf} {A
+  computationally intractable problem on simplicial complexes}}.
+\newblock {\itshape Computational Geometry: Theory and Applications}, 6:85--98,
+  1996.
+
+\bibitem{AxeEde1998}
+{\sffamily\scshape {\href{http://www.eecs.wsu.edu/~axen/}{Axen}}, U.;
+  {\href{http://www.cs.duke.edu/~edels/}{Edelsbrunner}}, H.}
+\newblock {\bfseries \href{http://www.eecs.wsu.edu/~axen/alpha/vismath.ps}
+  {Auditory Morse analysis of triangulated manifolds}}.
+\newblock In: Hege, H.-C.; Polthier, K., editors, {\itshape Mathematical
+  Visualization II}, p. 223--236. Springer, Heidelberg, 1998.
+
+\bibitem{BoiYvi1998}
+{\sffamily\scshape
+  {\href{http://www.inria.fr/prisme/personnel/boissonnat/boissonnat-eng.html}{Boissonnat}},
+  J.-D.;
+  {\href{http://www.inria.fr/prisme/personnel/yvinec/yvinec-eng.html}{Yvinec}},
+  M.}
+\newblock {\bfseries Algorithmic Geometry}.
+\newblock Cambridge University Press, 1998.
+
+\bibitem{Cha2000}
+{\sffamily\scshape {\href{http://www.math.lsu.edu/~chari/}{Chari}}, M.~K.}
+\newblock {\bfseries
+  \href{http://schutzenberger.liafa.jussieu.fr/FPSAC/FPSAC99/ARTICLES/chari.ps.gz}
+  {On discrete Morse functions and combinatorial decompositions}}.
+\newblock {\itshape Discrete Math}, 217:101--113, 2000.
+
+\bibitem{ChaJos2001}
+{\sffamily\scshape {\href{http://www.math.lsu.edu/~chari/}{Chari}}, M.~K.;
+  {\href{http://www.math.tu-berlin.de/~joswig}{Joswig}}, M.}
+\newblock {\bfseries
+  \href{ftp://ftp.math.tu-berlin.de/pub/combi/joswig/DMC.ps.gz} {Discrete Morse
+  complexes}}.
+\newblock preprint, 2001.
+
+\bibitem{BabHer2000}
+{\sffamily\scshape {\href{http://www.math.washington.edu/~babson/}{Babson}},
+  E.; {\href{http://www.math.lsa.umich.edu/~plhersh/}{Hersh}}, P.}
+\newblock {\bfseries \href{http://www.math.lsa.umich.edu/~plhersh/lexmorse.ps}
+  {Discrete Morse functions from lexicographic orders}}.
+\newblock preprint, 2001.
+
+\bibitem{Lop1996}
+{\sffamily\scshape {\href{http://www.mat.puc-rio.br/~lopes}{Lopes}}, H.}
+\newblock {\bfseries Algorithm to build and unbuild 2 and 3 dimensional
+  manifolds}.
+\newblock PhD thesis, Department of Mathematics, PUC-Rio, 1996.
+
+\bibitem{LopRosSafTav2002}
+{\sffamily\scshape {\href{http://www.mat.puc-rio.br/~lopes}{Lopes}}, H.;
+  {\href{http://www.gvu.gatech.edu/people/official/jarek.rossignac/}{Rossignac}},
+  J.; Safanova, A.;
+  {\href{http://www.cc.gatech.edu/fac/Andrzej.Szymczak/}{Szymczak}}, A.;
+  Tavares, G.}
+\newblock {\bfseries Edgebreaker: a simple compression for surfaces with
+  handles}.
+\newblock In: {\itshape 7th ACM Siggraph Symposium on Solid Modeling and
+  Application}, 2002.
+
+\bibitem{LopTav1997}
+{\sffamily\scshape {\href{http://www.mat.puc-rio.br/~lopes}{Lopes}}, H.;
+  Tavares, G.}
+\newblock {\bfseries Structure operators for modeling 3 dimensional manifolds}.
+\newblock In: Hoffman, C.; Bronsvort, W., editors, {\itshape ACM Siggraph
+  Symposium on Solid Modeling and Applications}, p. 10--18, 1997.
+
+\bibitem{KouNor1993}
+{\sffamily\scshape {\href{http://www.research.att.com/info/ek}{Koutsofios}},
+  E.; {\href{http://www.research.att.com/~north/graphviz/}{North}}, S.~C.}
+\newblock {\bfseries
+  \href{http://www.research.att.com/~north/graphviz/dotguide.pdf} {Drawing
+  graphs with dot}}.
+\newblock Technical report, AT\&T Bell Laboratories, Murray Hill, NJ, 1993.
+
+\bibitem{Nor1992}
+{\sffamily\scshape
+  {\href{http://www.research.att.com/~north/graphviz/}{North}}, S.~C.}
+\newblock {\bfseries
+  \href{http://www.research.att.com/~north/graphviz/neatoguide.pdf} {Neato
+  User's Guide}}.
+\newblock Technical report, AT\&T Bell Laboratories, Murray Hill, NJ, 1992.
+
+\bibitem{TauRos1998}
+{\sffamily\scshape
+  {\href{http://www.research.ibm.com/people/t/taubin/}{Taubin}}, G.;
+  {\href{http://www.gvu.gatech.edu/people/official/jarek.rossignac/}
+  {Rossignac}}, J.}
+\newblock {\bfseries
+  \href{http://www.research.ibm.com/people/t/taubin/publications/taubin-etal-tog-1998-17-2-p84.pdf}
+  {Geometric compression through topological surgery}}.
+\newblock {\itshape ACM Transactions on Graphics}, 17(2):84--115, 1998.
+
+\bibitem{Hachi}
+{\sffamily\scshape {\href{http://www.sk.tsukuba.ac.jp/~hachi/}{Hachimori}}, M.}
+\newblock {\bfseries Simplicial complex library}.
+\newblock \href{http://www.qci.jst.go.jp/~hachi/math/library/index_eng.html}
+  {www.qci.jst.go.jp/\-\~{}hachi}.
+
+\bibitem{Knu1989}
+{\sffamily\scshape Knuth, D.~E.}
+\newblock {\bfseries {The TeX Book}}.
+\newblock Addison-Wesley, 15th edition, 1989.
+
+\bibitem{KopDal1995}
+{\sffamily\scshape Kopka, H.; Daly, P.~W.}
+\newblock {\bfseries A Guide to {\LaTeX}2e: Document Preparation for Beginners
+  and Advanced Users}.
+\newblock Ad{\-d}i{\-s}on-Wes{\-l}ey, Reading, MA, USA, second edition, 1995.
+
+\bibitem{Lam1996}
+{\sffamily\scshape Lamport, L.}
+\newblock {\bfseries {\LaTeX: A Document Preparation System}}.
+\newblock Addison-Wesley, Reading, MA, USA, second edition, 1996.
+
+\bibitem{Lew2002}
+{\sffamily\scshape Lewiner, T.}
+\newblock {\bfseries {Normas para apresenta\c{c}\~{a}o de teses e
+  disserta\c{c}\~{o}es}}.
+\newblock Technical report, Departamento de Matem\'{a}tica - PUC-Rio, 2002.
+
+\bibitem{Lovplu1986}
+{\sffamily\scshape Lov\'{a}sz, L.; Plummer, M.~D.}
+\newblock {\bfseries Matching Theory}.
+\newblock Van Nostrand Reinhold, Amsterdam, 1986.
+
+\bibitem{LunWei1969}
+{\sffamily\scshape Lundell, A.; Weingram, S.}
+\newblock {\bfseries The topology of CW complexes}.
+\newblock Van Nostrand Reinhold, New York, 1969.
+
+\bibitem{Mar1958}
+{\sffamily\scshape Markov, A.}
+\newblock {\bfseries Insolvability of the problem of homeomorphy}.
+\newblock In: {\itshape Proceedings of the International Congress of
+  Mathematics}, p. 300--306, 1958.
+
+\bibitem{Mil1963}
+{\sffamily\scshape Milnor, J.~W.}
+\newblock {\bfseries Morse theory}.
+\newblock Princeton University Press, Princeton, NJ, 1963.
+
+\bibitem{Moi1952}
+{\sffamily\scshape Mo\"{i}se, E.~E.}
+\newblock {\bfseries Affine structures in 3--manifolds}.
+\newblock {\itshape Annals of Math}, 56(2):96--114, 1952.
+
+\bibitem{Mar2004}
+{\sffamily\scshape of~Congress, L.}
+\newblock {\bfseries {MARC 21 Reference Materials}}, 2004.
+
+\bibitem{abnt-classe-doc}
+{\sffamily\scshape Santini~Frasson, M.~V.}
+\newblock {\bfseries Classe {ABNT}}.
+\newblock Grupo abnTeX, 2002.
+
+\bibitem{ShiKer1991}
+{\sffamily\scshape Shinagawa, Y.; Kunii, T.; Kergosien, Y.}
+\newblock {\bfseries Surface coding based on morse theory}.
+\newblock {\itshape IEEE Computer Graphics and Applications}, 11:66--78, 1991.
+
+\bibitem{SmiJon1999}
+{\sffamily\scshape Smith, A.; Jones, B.}
+\newblock {\bfseries {On the Complexity of Computing}}.
+\newblock In: Smith-Jones, A.~B., editor, {\itshape Advances in Computer
+  Science}, p. 555--566. Publishing Press, 1999.
+
+\bibitem{Tar1983}
+{\sffamily\scshape Tarjan, R.~E.}
+\newblock {\bfseries Data Structures and Network Algorithms}.
+\newblock Society for Industrial and Applied Mathematics, Philadelphia, 1983.
+
+\bibitem{Tar1975}
+{\sffamily\scshape Tarjan, R.~E.}
+\newblock {\bfseries Efficiency of a good but not linear set union algorithm}.
+\newblock {\itshape Journal of the ACM}, 22(2):215--225, 1975.
+
+\end{thebibliography}
