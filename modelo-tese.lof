@@ -3,11 +3,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Uma figura t\IeC {\'\i }pica.\relax }}{22}{figure.caption.23}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Esta figura \'e um exemplo de um r\'otulo de figura que ocupa mais de uma linha, devendo ser identado e justificado.\relax }}{22}{figure.caption.24}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Figura inclu\IeC {\'\i }da no texto com a classe graphicx.\relax }}{22}{figure.caption.25}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces {\ref {sub@subfig:ex1}} e {\ref {sub@subfig:ex2}} representam dois exemplos do uso de subfiguras dentro de uma \'unica figura.\relax }}{23}{figure.caption.27}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Segunda subfigura (um peda\c co).}}}{23}{figure.caption.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

@@ -1,0 +1,28 @@
+\chapter{Estudo de caso Implementação de aplicativo com back-end como serviço: Minha UFG}
+
+
+Atualmente na UFG, informações que seriam de interesse não só de alunos e servidores da UFG, são divulgadas em portais das unidades da UFG, cartazes, impressos em geral, e-mail, telefonemas e contatos pessoais, dentre outros. Sendo assim, isso dificulta o trabalho de localizar informações relevantes aos interessados.
+
+\section{Escopo}
+O aplicativo Android Mural UFG, é uma alternativa para os métodos atualmente usados para a divulgação da informação. Essas que seriam agrupadas e divididas em categorias, facilitando a busca das mesmas pelos interessados. Informações de uma categoria não necessariamente seriam relacionadas com informações de outras categorias, o que gera uma certa independência entre as categorias. 
+
+\section{Arquitetura}
+Para a implementação do aplicativo, foi adotado sua divisão em módulos, isso facilita o desenvolvimento e manutenção do código, principalmente no que se refere ao modelo do  banco de dados. Fazendo com que cada módulo fique responsável por gerenciar segmentos de dados específicos.
+
+\section{Implementação}
+Para armazenar os dados de ambos os módulos, estamos usando os serviços de Storage e de Realtime Database providos pelo Firebase, este que além de ser provedor de serviços na nuvem também oferece backend como sendo um serviço. [como explicado na seção tal que trata do que é o firebase].
+
+Para representar um restaurante, foi criada uma estrutura que continha o nome, uma breve descrição, uma url referente a imagem, um campus e uma referência que indica qual seria o local ao qual o restaurante pertence. Essa referência é feita usando o identificador da “tabela” de locais, que contém informações sobre qual prédio, campus, endereço, e coordenadas de latitude e longitude.
+
+\section{Problemas relacionados a back-end como serviço}
+	\subsection{Recuperação de dados}
+	\subsection{Sincronização}
+	\subsection{Firebase Cloud Messaging}
+	\subsection{Armazenamento de arquivos}
+
+\section{Resultados}
+
+No estágio inicial do desenvolvimento, desenvolvemos os módulos “restaurantes” e “locais”. O módulo “restaurantes” tem como objetivo mostrar qual é o cardápio dos restaurantes localizados nas proximidades dos campus da UFG. A princípio, apenas os restaurantes universitários, R.U. Campus Samambaia e R.U. Campus Colemar Natal e Silva, estão inclusos na atual lista de restaurantes.
+
+O módulo “locais”, apresenta uma “lista” que contém lugares, tais como um instituto, um prédio, uma sala. Locais podem existir dentro de outros locais, exemplo, a CAI, Coordenadoria de Assuntos Internacionais, existe dentro do prédio da reitoria. Neste módulo, o interessado pesquisa por um local, e suas informações, tais como, foto, telefone e mapa, serão apresentados ao usuário. 
+

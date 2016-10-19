@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  19 OCT 2016 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  19 OCT 2016 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -669,30 +669,32 @@ Package babel Info: Redefining portuges shorthand "|
 
 ]) (./modelo-tese.toc
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 9.
+(Font)              scaled to size 9.85492pt on input line 8.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 26.
-)
+(Font)              scaled to size 8.99994pt on input line 10.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 35.
+ [9
+
+
+
+])
 \tf@toc=\write5
 \openout5 = `modelo-tese.toc'.
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 67.
- [9
-
-
-
-]
+ [10]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 67.
- (./modelo-tese.lof)
+
+(./modelo-tese.lof)
 \tf@lof=\write6
 \openout6 = `modelo-tese.lof'.
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 67.
-
-[10
+ [11
 
 
 ]
@@ -704,7 +706,7 @@ Package babel Info: Redefining portuges shorthand "|
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 67.
- [11
+ [12
 
 
 ]
@@ -716,10 +718,11 @@ Package babel Info: Redefining portuges shorthand "|
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 67.
- [12
+ [13
 
 
-] (./modelo-tese.loc)
+]
+(./modelo-tese.loc)
 \tf@loc=\write9
 \openout9 = `modelo-tese.loc'.
 
@@ -727,8 +730,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 67.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 67.
-
-[13
+ [14
 
 
 ] (./tex/cap_intro.tex
@@ -743,143 +745,102 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 18.66588pt on input line 2.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
-) (./tex/cap_I.tex
+) (./tex/cap_um.tex
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
- [14
+(babel)             in language  on input line 1.
+ [15
 
 
 ]
 Cap\'{\i }tulo 2.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
+(babel)             in language  on input line 1.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 13.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 19.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 19.
-[15
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 23.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 28.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 29.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 30.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 34.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 36.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 40.
+[16
 
-]) (./tex/cap_II.tex
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 40.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 44.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 47.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 48.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 51.
+) (./tex/cap_dois.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- [16]
+ [17]
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 1.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
+(babel)             in language  on input line 6.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 9.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 12.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 16.
+[18
 
-Underfull \hbox (badness 5189) in paragraph at lines 7--9
-[]\T1/ptm/m/n/12 Para usar esta classe num do-cu-mento [], co-lo-que os ar-qui-
-vos
- []
-
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 18.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 19.
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 25.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 27.
-[17
-
-]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
+(babel)             in language  on input line 20.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 21.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 72.
- [18]
+(babel)             in language  on input line 23.
+) (./tex/cap_con.tex
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 105.
- [19]) (./tex/cap_III.tex
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
- [20]
+(babel)             in language  on input line 2.
+ [19]
 Cap\'{\i }tulo 4.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 1.
+(babel)             in language  on input line 2.
+)
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 25.
-[21
+(babel)             in language  on input line 95.
+ [20
 
-]
-File: ./fig/exemploFig1.eps Graphic file (type eps)
- <./fig/exemploFig1.eps>
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 34.
-File: ./fig/exemploFig2.eps Graphic file (type eps)
- <./fig/exemploFig2.eps>
-File: ./fig/exemploFig3.eps Graphic file (type eps)
- <./fig/exemploFig3.eps>
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 52.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 52.
-File: ./fig/exemploFig1.eps Graphic file (type eps)
-
-<./fig/exemploFig1.eps>
-File: ./fig/exemploFig2.eps Graphic file (type eps)
- <./fig/exemploFig2.eps>
-Underfull \hbox (badness 1838) in paragraph at lines 67--67
-[]\T1/ptm/m/it/10 Segunda sub-fi-gura (um pe-
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 71.
-[22]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 94.
- [23]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 94.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 120.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 135.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 144.
- [24]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 147.
-Package hyperref Info: bookmark level for unknown codigo defaults to 0 on input
- line 155.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 159.
- [25]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 162.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 187.
- [26]
-Underfull \hbox (badness 10000) in paragraph at lines 187--190
-
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 194.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 224.
-
-Underfull \hbox (badness 1383) in paragraph at lines 226--230
-\T1/ptm/m/n/12 e do co-mando []\T1/pcr/m/n/12 \cite\T1/ptm/m/n/12 . Mui-tas das
- en-tra-das lis-ta-das na pá-gina [][][]33[][][][] fo-ram ob-ti-das
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 234.
-[27])
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 91.
- [28] (./modelo-tese.bbl
+] (./modelo-tese.bbl
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
@@ -894,78 +855,78 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 10.79993pt on input line 46.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 92.
- [29
+ [21
 
 
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 192.
- [30]
+ [22]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 296.
- [31]
+ [23]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 396.
- [32])
+ [24])
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 99.
- [33] (./pos/apend_I.tex
+(babel)             in language  on input line 103.
+ [25] (./pos/apend_I.tex
 Ap\^endice A.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 62.
-[34
+[26
 
 
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 107.
- [35]
+ [27]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 167.
- [36]) (./pos/apend_II.tex
+ [28]) (./pos/apend_II.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
- [37]
+ [29]
 Ap\^endice B.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 64.
-[38
+[30
 
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 124.
- [39]
+ [31]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 184.
- [40]) 
+ [32]) 
 AED: lastpage setting LastPage
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 104.
-[41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+(babel)             in language  on input line 108.
+[33]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
  (./modelo-tese.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 108.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
 Package rerunfilecheck Info: File `modelo-tese.out' has not changed.
-(rerunfilecheck)             Checksum: 4498CBE08AE69665C1C40DEDD7642A3F;1444.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 104.
+(rerunfilecheck)             Checksum: A66F3232A5AA2C3EB5BFFD232B84FDDA;2736.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 10215 strings out of 493015
- 153679 string characters out of 6133377
- 287297 words of memory out of 5000000
- 13531 multiletter control sequences out of 15000+600000
- 94290 words of font info for 104 fonts, out of 8000000 for 9000
+ 10140 strings out of 493015
+ 152669 string characters out of 6133377
+ 285626 words of memory out of 5000000
+ 13465 multiletter control sequences out of 15000+600000
+ 72995 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,14n,50p,832b,3376s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,12n,46p,647b,3289s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on modelo-tese.dvi (43 pages, 172276 bytes).
+Output written on modelo-tese.dvi (35 pages, 131404 bytes).
