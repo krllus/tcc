@@ -5,36 +5,35 @@
 \contentsline {chapter}{Lista de C\'{o}digos de Programas}{14}{section*.1}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{15}{chapter.2}
 \contentsline {chapter}{\numberline {2}Back-end como servi\c co}{16}{chapter.3}
-\contentsline {section}{\numberline {2.1}O que \'e}{16}{section.4}
+\contentsline {section}{\numberline {2.1}Defini\c c\~ao}{16}{section.4}
 \contentsline {section}{\numberline {2.2}Funcionalidades}{16}{section.5}
-\contentsline {subsection}{\numberline {2.2.1}Gerenciamento de Usuarios}{16}{subsection.6}
+\contentsline {subsection}{\numberline {2.2.1}Gerenciamento de Usu\'arios}{16}{subsection.6}
 \contentsline {subsection}{\numberline {2.2.2}Gerenciamento de Dados}{16}{subsection.7}
-\contentsline {subsection}{\numberline {2.2.3}Aramazenamento de Imagens}{17}{subsection.8}
-\contentsline {subsection}{\numberline {2.2.4}Objetos Customizaveis}{17}{subsection.9}
-\contentsline {subsection}{\numberline {2.2.5}API}{17}{subsection.10}
-\contentsline {subsection}{\numberline {2.2.6}Disponibilidade e Escalabilidade}{17}{subsection.11}
-\contentsline {subsection}{\numberline {2.2.7}Integra\c c\~ao com redes sociais}{17}{subsection.12}
-\contentsline {section}{\numberline {2.3}Problemas}{17}{section.13}
-\contentsline {subsection}{\numberline {2.3.1}Precifica\c c\~ao}{17}{subsection.14}
-\contentsline {subsection}{\numberline {2.3.2}Escalabilidade}{17}{subsection.15}
-\contentsline {subsection}{\numberline {2.3.3}Mudan\c ca de provedor}{17}{subsection.16}
-\contentsline {subsection}{\numberline {2.3.4}Seguran\c ca}{17}{subsection.17}
-\contentsline {subsection}{\numberline {2.3.5}Sincroniza\c c\~ao de dados}{17}{subsection.18}
-\contentsline {subsection}{\numberline {2.3.6}Garantia da Integridade}{17}{subsection.19}
-\contentsline {subsection}{\numberline {2.3.7}Garantia da Consistencia da Informa\c c\~ao}{17}{subsection.20}
-\contentsline {subsection}{\numberline {2.3.8}Espa\c co utilizado}{17}{subsection.21}
-\contentsline {chapter}{\numberline {3}Estudo de caso Implementa\c c\~ao de aplicativo com back-end como servi\c co: Minha UFG}{18}{chapter.22}
-\contentsline {section}{\numberline {3.1}Escopo}{18}{section.23}
-\contentsline {section}{\numberline {3.2}Arquitetura}{18}{section.24}
-\contentsline {section}{\numberline {3.3}Implementa\c c\~ao}{18}{section.25}
-\contentsline {section}{\numberline {3.4}Problemas relacionados a back-end como servi\c co}{19}{section.26}
-\contentsline {subsection}{\numberline {3.4.1}Recupera\c c\~ao de dados}{19}{subsection.27}
-\contentsline {subsection}{\numberline {3.4.2}Sincroniza\c c\~ao}{19}{subsection.28}
-\contentsline {subsection}{\numberline {3.4.3}Firebase Cloud Messaging}{19}{subsection.29}
-\contentsline {subsection}{\numberline {3.4.4}Armazenamento de arquivos}{19}{subsection.30}
-\contentsline {section}{\numberline {3.5}Resultados}{19}{section.31}
-\contentsline {chapter}{\numberline {4}Conclus\~ao}{20}{chapter.32}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{21}{chapter.32}
-\contentsline {chapter}{\numberline {A}Exemplo de um Ap\^endice}{26}{appendix.33}
-\contentsline {chapter}{\numberline {B}Exemplo de Outro Ap\^endice}{30}{appendix.34}
+\contentsline {subsection}{\numberline {2.2.3}Objetos Customizaveis}{17}{subsection.8}
+\contentsline {subsection}{\numberline {2.2.4}API}{17}{subsection.9}
+\contentsline {subsection}{\numberline {2.2.5}Disponibilidade e Escalabilidade}{17}{subsection.10}
+\contentsline {subsection}{\numberline {2.2.6}Integra\c c\~ao com redes sociais}{17}{subsection.11}
+\contentsline {section}{\numberline {2.3}Problemas}{17}{section.12}
+\contentsline {subsection}{\numberline {2.3.1}Precifica\c c\~ao}{17}{subsection.13}
+\contentsline {subsection}{\numberline {2.3.2}Escalabilidade}{17}{subsection.14}
+\contentsline {subsection}{\numberline {2.3.3}Mudan\c ca de provedor}{17}{subsection.15}
+\contentsline {subsection}{\numberline {2.3.4}Seguran\c ca}{17}{subsection.16}
+\contentsline {subsection}{\numberline {2.3.5}Sincroniza\c c\~ao de dados}{17}{subsection.17}
+\contentsline {subsection}{\numberline {2.3.6}Garantia da Integridade}{17}{subsection.18}
+\contentsline {subsection}{\numberline {2.3.7}Garantia da Consistencia da Informa\c c\~ao}{17}{subsection.19}
+\contentsline {subsection}{\numberline {2.3.8}Espa\c co utilizado}{17}{subsection.20}
+\contentsline {chapter}{\numberline {3}Estudo de caso Implementa\c c\~ao de aplicativo com back-end como servi\c co: Minha UFG}{18}{chapter.21}
+\contentsline {section}{\numberline {3.1}Escopo}{18}{section.22}
+\contentsline {section}{\numberline {3.2}Arquitetura}{18}{section.23}
+\contentsline {section}{\numberline {3.3}Implementa\c c\~ao}{18}{section.24}
+\contentsline {section}{\numberline {3.4}Problemas relacionados a back-end como servi\c co}{19}{section.25}
+\contentsline {subsection}{\numberline {3.4.1}Recupera\c c\~ao de dados}{19}{subsection.26}
+\contentsline {subsection}{\numberline {3.4.2}Sincroniza\c c\~ao}{19}{subsection.27}
+\contentsline {subsection}{\numberline {3.4.3}Firebase Cloud Messaging}{19}{subsection.28}
+\contentsline {subsection}{\numberline {3.4.4}Armazenamento de arquivos}{19}{subsection.29}
+\contentsline {section}{\numberline {3.5}Resultados}{19}{section.30}
+\contentsline {chapter}{\numberline {4}Conclus\~ao}{20}{chapter.31}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{21}{chapter.31}
+\contentsline {chapter}{\numberline {A}Exemplo de um Ap\^endice}{26}{appendix.32}
+\contentsline {chapter}{\numberline {B}Exemplo de Outro Ap\^endice}{30}{appendix.33}
 \contentsfinish 
