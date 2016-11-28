@@ -21,9 +21,9 @@
 \contentsline {subsection}{\numberline {2.4.3}Seguran\c ca}{18}{subsection.17}
 \contentsline {subsection}{\numberline {2.4.4}Sincroniza\c c\~ao de dados}{18}{subsection.18}
 \contentsline {subsection}{\numberline {2.4.5}Garantia da Integridade}{18}{subsection.19}
-\contentsline {subsection}{\numberline {2.4.6}Garantia da Consistencia da Informa\c c\~ao}{18}{subsection.20}
+\contentsline {subsection}{\numberline {2.4.6}Garantia da consistencia da informa\c c\~ao}{18}{subsection.20}
 \contentsline {subsection}{\numberline {2.4.7}Minimizar trafego}{19}{subsection.21}
-\contentsline {subsection}{\numberline {2.4.8}Espa\c co utilizado}{19}{subsection.22}
+\contentsline {subsection}{\numberline {2.4.8}Minimizar espa\c co utilizado}{19}{subsection.22}
 \contentsline {subsection}{\numberline {2.4.9}Recupera\c c\~ao de dados}{19}{subsection.23}
 \contentsline {chapter}{\numberline {3}Estudo de caso Implementa\c c\~ao de aplicativo com back-end como servi\c co: Minha UFG}{20}{chapter.24}
 \contentsline {section}{\numberline {3.1}Escopo}{20}{section.25}
