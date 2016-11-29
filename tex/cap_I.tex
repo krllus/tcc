@@ -1,10 +1,33 @@
-\chapter{Back-end como serviço}
+\chapter{Back-end como serviço (BaaS)}
 
-	explicar o que seriam softwares como servico (SaaS)
+	%contexto explicar o que seriam softwares como servico (SaaS)
+
+	numa era nao muito distante, empresas hospedavam seus proprios servidores de infraestrutura que são responsaveis por todo o back-end, assim ficando responsavel pelos desafios relacionados a gerencia de TI tais como disponibilidade, escalabilidade e manutenção por exemplo. 
+
+	Esse cenario vem se modificando ao longo dos ultimos anos, empresas estão migrando para o modelo de Software as a Service(SaaS), aonde serviços de infraestrutura são fornecidos por outra empresa, passando para o fornecedor a responsabilidade de manutenção do serviço. 
+
+	Agilização no desenvolvimento de novas soluções, menos custo inicial, integridade e consistencia dos dados são as principais vantagens do modelo de SaaS.
+		
+	\noindent Pro:
+	\begin{itemize}		
+		\item servidor já está pronto, somente configurar pequenas coisas e já está funcionando.
+		\item menor custo inicial para criar uma solução.
+		\item segurança, autorização, autenticação, escalabilidade, disponibilidade e manutenção passam a ser terceirizados pela empresa contratada
+	\end{itemize}
+
+	\noindent Con: 
+	\begin{itemize}
+
+		\item tem que pagar para utilizar, tazas variam de acordo com os serviços utilizados
+		\item mudar de uma arquitetura para outra as vezes pode ser trabalhoso.
+	\end{itemize}
 
 \section{Definição}
-	(Copia)
-	Back-end as a service (Back-end como serviço) é um tipo de SaaS que prevê o suporte para que uma ou mais aplicações funcionem sem a necessidade do desenvolvimento back-end. 
+	
+	Back-end as a service (Back-end como serviço) é um tipo de SaaS que prevê o suporte para que uma ou mais aplicações funcionem sem a necessidade do desenvolvimento back-end. Este tipo de serviço, no geral, provê armazenamento 
+
+
+	Este trabalho tem como objetivo a analise e discussão das funcionalidades e desafios referentes ao serviço Firebase. Visto ques este é considerado o mais utilizado da atualidade. \ref{firebase_most_used_service}
 
 \section{Funcionalidades / Oportunidades}
 \label{sec:functionality}
@@ -20,9 +43,6 @@
 
 
 	Um usuario logado no seu app é representado por um objeto do tipo Firebase User. Essa  classe possui um conjunto de propriedades basicas - um ID unico, um email principal, um nome e uma URL de uma foto - que são armazenados no banco de dados da aplicação. Caso seja necessario, informações adicionais podem ser armazenadas dentro do Firebase Realtime Database. Firebase User mantem informações dos diferentes provedores usados para autenticar, permitindo que seja possivel atualizar propriedades que faltavam, usando informações de outros provedores.
-
-	
-	
 
 	\subsection{Gerenciamento de Dados}
 	\label{subsec:data_management}
