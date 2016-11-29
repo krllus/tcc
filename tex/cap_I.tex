@@ -7,30 +7,53 @@
 	Back-end as a service (Back-end como serviço) é um tipo de SaaS que prevê o suporte para que uma ou mais aplicações funcionem sem a necessidade do desenvolvimento back-end. 
 
 \section{Funcionalidades / Oportunidades}
-	
+\label{sec:functionality}
 	As funcionalidades dos Back-ends como serviços variam de acordo com a empresa que está provendo o serviço e com qual finalidade o serviço foi contratado, dentre os serviços mais comuns estão armazenamento de dados, gerenciamento de usuários, notificações assincronas e integração com redes sociais (ref 11 e 12 texto franciely)
 
-	\subsection{Gerenciamento de Usuários}
-	% autenticação
+	\subsection{Gerenciamento de Usuários} % AKA autenticação
+	\label{subsec:user_management}
 	% definição
 	em geral o que é: disponibiliza ao desenvolvedor todos os meios para o controle de acesso de usuários a sua aplicação;
 	
 	% contexto
-	Todo sistema possui usuarios cadastrados e as devidas permissões que cada um deles tem ao sistema. BaaS oferecem serviços diferentes de acordo com as necessidades do cliente. Firebase por exemplo, permite login anonimo ou usando redes sociais ou e-mail, tambem permite gerir quais as permissões que cada usuario tem.
+	Todo sistema possui usuarios cadastrados e as devidas permissões que cada um deles tem ao sistema. BaaS oferecem serviços diferentes de acordo com as necessidades do cliente. Firebase por exemplo, fornece o Firebase Authentication, que permite login anonimo, via email e senha ou usando provedores populares de identidade federada tais como o Google, Facebook, Twitter entre outros. Firebase Authentication utiliza os padrões da industria tais como OAuth 2.0 and OpenID Connect, facilitando a integração com um backend custom caso necessario.
+
+
+	Um usuario logado no seu app é representado por um objeto do tipo Firebase User. Essa  classe possui um conjunto de propriedades basicas - um ID unico, um email principal, um nome e uma URL de uma foto - que são armazenados no banco de dados da aplicação. Caso seja necessario, informações adicionais podem ser armazenadas dentro do Firebase Realtime Database. Firebase User mantem informações dos diferentes provedores usados para autenticar, permitindo que seja possivel atualizar propriedades que faltavam, usando informações de outros provedores.
+
+	
+	
 
 	\subsection{Gerenciamento de Dados}
+	\label{subsec:data_management}
 	% definição
-	o que é: disponibiliza ao desenvolvedor meios para armazenar e acessar os dados gerados por sua aplicação. No geral, a gerencia de dados é feita através de interfaces simples e intuitivas (ref 11);
+	o que é: disponibiliza ao desenvolvedor meios para armazenar e acessar os dados gerados por sua aplicação. No geral, a gerencia de dados é feita através de interfaces simples e intuitivas (ref 11 - francielly);
 	
 	% contexto
 	Storage do firebase, armazenamento de dados criados pelos usuarios do sistema
 
-	\subsection{Gestão de permissão}
-	% autorização
+	\subsection{Gestão de Permissão} % aka autorização
+	\label{subsec:user_authorization}
 	% definição
 
 	% contexto
+	Conteúdos gerados por usarios são em sua maioria privados. Fazendo com que um sistema que controle restrições de acesso dos dados gerados por usuarios seja necessário.
 
+
+	No Firebase, esse controle é implementado usando um conjunto de regras, que são definidas pelo programador, e que são aplicadas a cada operação de leitura ou escrita, fazendo com que uma requisição seja valida somente se essas regras permitirem.
+
+	%exemplo%
+	\begin{center}
+ 		\begin{minipage}{0.7\textwidth}
+  			\begin{codigo}[H]
+   				\small
+   				\VerbatimInput[xleftmargin=10mm,numbers=left,obeytabs=true]{./prog/rules_example.json}
+   				\caption{\texttt{Exmemplo de Regras} }
+   				\label{code:rules_example}
+  			\end{codigo}
+ 		\end{minipage}
+	\end{center}
+	
 	\subsection{Objetos Customizaveis}
 	% definição
 
@@ -52,7 +75,7 @@
 	% contexto
 
 \section{Precificação}%6:30
-\label{sec_pricing}
+\label{sec:pricing}
 	% precificação gera desafios.
 	% definição
 
@@ -131,7 +154,7 @@
 	% definição
 
 	% contexto
-	assim como explicado na seção \ref{sec_pricing}
+	assim como explicado na seção \ref{sec:pricing}
 
 	% soluções utilizadas
 
