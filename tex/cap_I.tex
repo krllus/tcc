@@ -1,67 +1,61 @@
-\chapter{Back-end como serviÁo (BaaS)}
+\chapter{Back-end como servi√ßo (BaaS)}
 
 	%contexto explicar o que seriam softwares como servico (SaaS)
 
-	numa era nao muito distante, empresas hospedavam seus proprios servidores de infraestrutura que s„o responsaveis por todo o back-end, assim ficando responsavel pelos desafios relacionados a gerencia de TI tais como disponibilidade, escalabilidade e manutenÁ„o por exemplo. 
-
-	Esse cenario vem se modificando ao longo dos ultimos anos, empresas est„o migrando para o modelo de Software as a Service(SaaS), aonde serviÁos de infraestrutura s„o fornecidos por outra empresa, passando para o fornecedor a responsabilidade de manutenÁ„o do serviÁo. 
-
-	AgilizaÁ„o no desenvolvimento de novas soluÁıes, menos custo inicial, integridade e consistencia dos dados s„o as principais vantagens do modelo de SaaS.
+	Em tempos n√£o muito distantes ou at√© atuais, empresas hospedavam seus proprios servidores de infraestrutura que s√£o responsaveis por todo o back-end, assim ficando responsavel pelos desafios relacionados a gerencia de TI tais como disponibilidade, escalabilidade e manuten√ß√£o por exemplo. Esse cenario vem se modificando ao longo dos ultimos anos. Empresas est√£o migrando para o modelo de Software as a Service(SaaS), aonde servi√ßos de infraestrutura s√£o fornecidos por outra empresa, passando para o fornecedor a responsabilidade de manuten√ß√£o do servi√ßo. 
+	Agiliza√ß√£o no desenvolvimento de novas solu√ß√µes, menos custo inicial, integridade e consistencia dos dados s√£o as principais vantagens do modelo de SaaS.
 		
 	\noindent Pro:
 	\begin{itemize}		
-		\item servidor j· est· pronto, somente configurar pequenas coisas e j· est· funcionando.
-		\item menor custo inicial para criar uma soluÁ„o.
-		\item seguranÁa, autorizaÁ„o, autenticaÁ„o, escalabilidade, disponibilidade e manutenÁ„o passam a ser terceirizados pela empresa contratada
+		\item servidor j√° est√° pronto, somente configurar pequenas coisas e j√° est√° funcionando.
+		\item menor custo inicial para criar uma solu√ß√£o.
+		\item seguran√ßa, autoriza√ß√£o, autentica√ß√£o, escalabilidade, disponibilidade e manuten√ß√£o passam a ser terceirizados pela empresa contratada
 	\end{itemize}
 
 	\noindent Con: 
 	\begin{itemize}
 
-		\item tem que pagar para utilizar, tazas variam de acordo com os serviÁos utilizados
+		\item tem que pagar para utilizar, tazas variam de acordo com os servi√ßos utilizados
 		\item mudar de uma arquitetura para outra as vezes pode ser trabalhoso.
 	\end{itemize}
 
-\section{DefiniÁ„o}
+\section{Defini√ß√£o}
 	
-	Back-end as a service (Back-end como serviÁo) È um tipo de SaaS que prevÍ o suporte para que uma ou mais aplicaÁıes funcionem sem a necessidade do desenvolvimento back-end. Este tipo de serviÁo, no geral, provÍ armazenamento 
+	Back-end as a service (Back-end como servi√ßo) √© um tipo de SaaS que prev√™ o suporte para que uma ou mais aplica√ß√µes funcionem sem a necessidade do desenvolvimento back-end. Este tipo de servi√ßo, no geral, prov√™ armazenamento 
 
 
-	Este trabalho tem como objetivo a analise e discuss„o das funcionalidades e desafios referentes ao serviÁo Firebase. Visto ques este È considerado o mais utilizado da atualidade. \ref{firebase_most_used_service}
+	Este trabalho tem como objetivo a analise e discuss√£o das funcionalidades e desafios referentes ao servi√ßo Firebase. Visto ques este √© considerado o mais utilizado da atualidade. \ref{firebase_most_used_service}
 
 \section{Funcionalidades / Oportunidades}
 \label{sec:functionality}
-	As funcionalidades dos Back-ends como serviÁos variam de acordo com a empresa que est· provendo o serviÁo e com qual finalidade o serviÁo foi contratado, dentre os serviÁos mais comuns est„o armazenamento de dados, gerenciamento de usu·rios, notificaÁıes assincronas e integraÁ„o com redes sociais (ref 11 e 12 texto franciely)
+	As funcionalidades dos Back-ends como servi√ßos variam de acordo com a empresa que est√° provendo o servi√ßo e com qual finalidade o servi√ßo foi contratado, dentre os servi√ßos mais comuns est√£o armazenamento de dados, gerenciamento de usu√°rios, notifica√ß√µes assincronas e integra√ß√£o com redes sociais (ref 11 e 12 texto franciely)
 
-	\subsection{Gerenciamento de Usu·rios} % AKA autenticaÁ„o
+	\subsection{Gerenciamento de Usu√°rios} % AKA autentica√ß√£o
 	\label{subsec:user_management}
-	% definiÁ„o
-	em geral o que È: disponibiliza ao desenvolvedor todos os meios para o controle de acesso de usu·rios a sua aplicaÁ„o;
+	% defini√ß√£o
+	em geral o que √©: disponibiliza ao desenvolvedor todos os meios para o controle de acesso de usu√°rios a sua aplica√ß√£o;
 	
 	% contexto
-	Todo sistema possui usuarios cadastrados e as devidas permissıes que cada um deles tem ao sistema. BaaS oferecem serviÁos diferentes de acordo com as necessidades do cliente. Firebase por exemplo, fornece o Firebase Authentication, que permite login anonimo, via email e senha ou usando provedores populares de identidade federada tais como o Google, Facebook, Twitter entre outros. Firebase Authentication utiliza os padrıes da industria tais como OAuth 2.0 and OpenID Connect, facilitando a integraÁ„o com um backend custom caso necessario.
+	Todo sistema possui usuarios cadastrados e as devidas permiss√µes que cada um deles tem ao sistema. BaaS oferecem servi√ßos diferentes de acordo com as necessidades do cliente. Firebase por exemplo, fornece o Firebase Authentication, que permite login anonimo, via email e senha ou usando provedores populares de identidade federada tais como o Google, Facebook, Twitter entre outros. Firebase Authentication utiliza os padr√µes da industria tais como OAuth 2.0 and OpenID Connect, facilitando a integra√ß√£o com um backend custom caso necessario.
 
 
-	Um usuario logado no seu app È representado por um objeto do tipo Firebase User. Essa  classe possui um conjunto de propriedades basicas - um ID unico, um email principal, um nome e uma URL de uma foto - que s„o armazenados no banco de dados da aplicaÁ„o. Caso seja necessario, informaÁıes adicionais podem ser armazenadas dentro do Firebase Realtime Database. Firebase User mantem informaÁıes dos diferentes provedores usados para autenticar, permitindo que seja possivel atualizar propriedades que faltavam, usando informaÁıes de outros provedores.
+	Um usuario logado no seu app √© representado por um objeto do tipo Firebase User. Essa  classe possui um conjunto de propriedades basicas - um ID unico, um email principal, um nome e uma URL de uma foto - que s√£o armazenados no banco de dados da aplica√ß√£o. Caso seja necessario, informa√ß√µes adicionais podem ser armazenadas dentro do Firebase Realtime Database. Firebase User mantem informa√ß√µes dos diferentes provedores usados para autenticar, permitindo que seja possivel atualizar propriedades que faltavam, usando informa√ß√µes de outros provedores.
 
 	\subsection{Gerenciamento de Dados}
 	\label{subsec:data_management}
-	% definiÁ„o
-	o que È: disponibiliza ao desenvolvedor meios para armazenar e acessar os dados gerados por sua aplicaÁ„o. No geral, a gerencia de dados È feita atravÈs de interfaces simples e intuitivas (ref 11 - francielly);
+	% defini√ß√£o
+	o que √©: disponibiliza ao desenvolvedor meios para armazenar e acessar os dados gerados por sua aplica√ß√£o. No geral, a gerencia de dados √© feita atrav√©s de interfaces simples e intuitivas (ref 11 - francielly);
 	
 	% contexto
 	Storage do firebase, armazenamento de dados criados pelos usuarios do sistema
 
-	\subsection{Gest„o de Permiss„o} % aka autorizaÁ„o
+	\subsection{Gest√£o de Permiss√£o} % aka autoriza√ß√£o
 	\label{subsec:user_authorization}
-	% definiÁ„o
-
-	% contexto
-	Conte˙dos gerados por usarios s„o em sua maioria privados. Fazendo com que um sistema que controle restriÁıes de acesso dos dados gerados por usuarios seja necess·rio.
-
-
-	No Firebase, esse controle È implementado usando um conjunto de regras, que s„o definidas pelo programador, e que s„o aplicadas a cada operaÁ„o de leitura ou escrita, fazendo com que uma requisiÁ„o seja valida somente se essas regras permitirem.
-
+	
+	A funcionalidade de banco de dados como servi√ßo √© uma das mais utilizadas dentro dos BaaS. Dessa maneira, por quest√µes de manuten√ß√£o de integridade, privacidade e seguran√ßa, os sistemas do mercado oferecem diferentes maneiras para a a defini√ß√£o de regras de acesso e valida√ß√£o. O objetivo √© deixar livre a tentativa de persist√™ncia de informa√ß√£o para todos os usu√°rios e com qualquer tipo de dado. Por√©m, tudo o que for submetido a grava√ß√£o passar√° por um controle restri√ß√µes de acesso e limites internos.
+	
+	No Firebase, esse controle de seguran√ßa e regras √© implementado usando um conjunto de regras definidas pelo programador atrav√©s de descritores JSON. Estas s√£o aplicadas a cada opera√ß√£o de leitura ou escrita, fazendo com que uma requisi√ß√£o seja valida somente se essas regras permitirem. \cite{https://firebase.google.com/docs/database/security/}. Veja um exemplo no trecho de c√≥digo abaixo, onde todos os usu√°rios podem ler o n√≥ foo, mas ningu√©m pode l√™-lo. 
+	
 	%exemplo%
 	\begin{center}
  		\begin{minipage}{0.7\textwidth}
@@ -75,34 +69,34 @@
 	\end{center}
 	
 	\subsection{Objetos Customizaveis}
-	% definiÁ„o
+	% defini√ß√£o
 
 	% contexto
 
 	\subsection{API}
-	% definiÁ„o
+	% defini√ß√£o
 
 	% contexto
 
 	\subsection{Disponibilidade e Escalabilidade}
-	% definiÁ„o
+	% defini√ß√£o
 
 	% contexto
 
-	\subsection{IntegraÁ„o com redes sociais}
-	% definiÁ„o
+	\subsection{Integra√ß√£o com redes sociais}
+	% defini√ß√£o
 
 	% contexto
 
-\section{PrecificaÁ„o}%6:30
+\section{Precifica√ß√£o}%6:30
 \label{sec:pricing}
-	% precificaÁ„o gera desafios.
-	% definiÁ„o
+	% precifica√ß√£o gera desafios.
+	% defini√ß√£o
 
 	% contexto
-	O backend como serviÁo, assim como todo software que roda como serviÁo na nuvem, ele È mantido por uma empresa que obviamente vai cobrar pelo serviÁo, por tanto, deve haver uma preocupaÁ„o com o valor a ser pago para o fornecedor dessa soluÁ„o.
+	O backend como servi√ßo, assim como todo software que roda como servi√ßo na nuvem, ele √© mantido por uma empresa que obviamente vai cobrar pelo servi√ßo, por tanto, deve haver uma preocupa√ß√£o com o valor a ser pago para o fornecedor dessa solu√ß√£o.
 	
-	O preÁo varia muito de acordo com a quantidade do uso do serviÁo, que depende do conjunto de varios fatores, dentre ele podemos citar, por exemplo no firebase estes:
+	O pre√ßo varia muito de acordo com a quantidade do uso do servi√ßo, que depende do conjunto de varios fatores, dentre ele podemos citar, por exemplo no firebase estes:
 		ponto 1 paga por quantidade de dados consumidos
 		ponto 2 paga pela quantidade de usuarios simultaneos
 		...
@@ -110,91 +104,91 @@
 	% falar dos planos
 
 \section{Desafios}
-	% definiÁ„o
-	n„o dar ideia de bug... nao vai gerar problemas, vai gerar desafios.. questoes de projetos que levam aos desafios da escolha
+	% defini√ß√£o
+	n√£o dar ideia de bug... nao vai gerar problemas, vai gerar desafios.. questoes de projetos que levam aos desafios da escolha
 	
 	% contexto
 
 	\subsection{Escalabilidade}%7:30
-	% definiÁ„o
-	o que È escalabilidade
+	% defini√ß√£o
+	o que √© escalabilidade
 
 	% contexto
-	quando estamos tratando de um baas, assim como um backend que È gerido pelo usuario dentro de um servidor local ou servidor de uma maquina virtual contratada, voce tambem deve verificar a capacidade de escalabilidade do mesmo.
+	quando estamos tratando de um baas, assim como um backend que √© gerido pelo usuario dentro de um servidor local ou servidor de uma maquina virtual contratada, voce tambem deve verificar a capacidade de escalabilidade do mesmo.
 
 	Cada fornecedor tem as capacidades minimas e maximas possivel, por exemplo 	
 	servidor um... max min...
 
-	\subsection{Flexibilidade}%8:55 {antigo 'mudanÁa de provedor'}
-	% definiÁ„o
+	\subsection{Flexibilidade}%8:55 {antigo 'mudan√ßa de provedor'}
+	% defini√ß√£o
 
 	% contexto
-	dentro da manutenÁ„o de software uma das aÁıes que podem ser realizada È a troca de fornecedor de algum serviÁo, por exemplo a troca do backend como serviÁo utilizado.
+	dentro da manuten√ß√£o de software uma das a√ß√µes que podem ser realizada √© a troca de fornecedor de algum servi√ßo, por exemplo a troca do backend como servi√ßo utilizado.
 
-	dependendo da estrutura utilizada para armazenar os dados no serviÁo, trocar de provedor pode ser uma tarefa complicada, pois nao necessariamente os dados serao armazenados da mesma forma, algumas APIs disponibilizadas por um podem nao ter a mesma funcionalidades que o do outro... toda a parte que trata da comunicaÁ„o entre o servidor e a criaÁ„o dos objetos tera de ser repensada.
+	dependendo da estrutura utilizada para armazenar os dados no servi√ßo, trocar de provedor pode ser uma tarefa complicada, pois nao necessariamente os dados serao armazenados da mesma forma, algumas APIs disponibilizadas por um podem nao ter a mesma funcionalidades que o do outro... toda a parte que trata da comunica√ß√£o entre o servidor e a cria√ß√£o dos objetos tera de ser repensada.
 
-	% soluÁıes utilizadas
+	% solu√ß√µes utilizadas
 
-	\subsection{SeguranÁa}%9:30
+	\subsection{Seguran√ßa}%9:30
 	% 
-	% definiÁ„o
-	um backend deve oferecer seguranÁa no serviÁo que ele oferece, seja ele um serviÁo ou gerido por um servidor ques esta instalado num predio da organozaÁ„o.
+	% defini√ß√£o
+	um backend deve oferecer seguran√ßa no servi√ßo que ele oferece, seja ele um servi√ßo ou gerido por um servidor ques esta instalado num predio da organoza√ß√£o.
 
 	os baas em geral tratam daquela maneira
-		utilizam um canal seguro via tts para transmissao de informaÁoes
-		e portanto o cliente deve estar praparado para esse tipo de comunicaÁ„o
+		utilizam um canal seguro via tts para transmissao de informa√ßoes
+		e portanto o cliente deve estar praparado para esse tipo de comunica√ß√£o
 
 	ponto importante a destacar
-	em relaÁ„o aos dados em geral n„o temos muita informaÁ„o, isso deve ser implementado pelo desenvolvedor. portanto boa parte da logica de seguranÁa fica implementada na aplicaÁ„o cliente. deve se ter um cuidado de como È feita a implementaÁ„o para n„o expor a todo o sistema pois o codigo est· no cliente.
+	em rela√ß√£o aos dados em geral n√£o temos muita informa√ß√£o, isso deve ser implementado pelo desenvolvedor. portanto boa parte da logica de seguran√ßa fica implementada na aplica√ß√£o cliente. deve se ter um cuidado de como √© feita a implementa√ß√£o para n√£o expor a todo o sistema pois o codigo est√° no cliente.
 
 	% contexto
 
-	% soluÁıes utilizadas
+	% solu√ß√µes utilizadas
 
-	\subsection{SincronizaÁ„o de dados}%14:40
+	\subsection{Sincroniza√ß√£o de dados}%14:40
 	% tratar garantia de integridade junto
-	% definiÁ„o
-	È uma aÁ„o que È muito importe entre o sistema que trata de diferentes versoes da informaÁao em diferentes clientes. esse tipo de atividade geralmente gera um problema arquitetural que envolve tanto o momento que vai ser sincronizado e o que vai ser sincronizado e como vai ser sincronizado.
+	% defini√ß√£o
+	√© uma a√ß√£o que √© muito importe entre o sistema que trata de diferentes versoes da informa√ßao em diferentes clientes. esse tipo de atividade geralmente gera um problema arquitetural que envolve tanto o momento que vai ser sincronizado e o que vai ser sincronizado e como vai ser sincronizado.
 
-	alguns serviÁos fazem uma camada de transparencia...
-	trafegam apenas as mudanÁas.
+	alguns servi√ßos fazem uma camada de transparencia...
+	trafegam apenas as mudan√ßas.
 
 	% contexto
 	
-	% soluÁıes utilizadas
+	% solu√ß√µes utilizadas
 
 	\subsection{Garantia da Integridade}%15:50
-	% definiÁ„o
+	% defini√ß√£o
 
 	% contexto
 
-	% soluÁıes utilizadas
+	% solu√ß√µes utilizadas
 
-	\subsection{Garantia da consistencia da informaÁ„o}%16:30
-	% definiÁ„o
+	\subsection{Garantia da consistencia da informa√ß√£o}%16:30
+	% defini√ß√£o
 
 	% contexto
-	assim como explicado na seÁ„o \ref{sec:pricing}
+	assim como explicado na se√ß√£o \ref{sec:pricing}
 
-	% soluÁıes utilizadas
+	% solu√ß√µes utilizadas
 
 	\subsection{Minimizar trafego}
-	% definiÁ„o
+	% defini√ß√£o
 
 	% contexto
 	
-	% soluÁıes utilizadas
+	% solu√ß√µes utilizadas
 
-	\subsection{Minimizar espaÁo utilizado}
-	% definiÁ„o
-
-	% contexto
-	
-	% soluÁıes utilizadas
-
-	\subsection{RecuperaÁ„o de dados}%19:30
-	% definiÁ„o
+	\subsection{Minimizar espa√ßo utilizado}
+	% defini√ß√£o
 
 	% contexto
 	
-	% soluÁıes utilizadas
+	% solu√ß√µes utilizadas
+
+	\subsection{Recupera√ß√£o de dados}%19:30
+	% defini√ß√£o
+
+	% contexto
+	
+	% solu√ß√µes utilizadas
