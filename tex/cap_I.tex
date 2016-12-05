@@ -55,22 +55,23 @@
 
 	No Firebase existem duas APIs que tratam de armazenamento de dados, Firebase Storage, que trata do armazenamento e arquivos e o Firebase Realtime Database que trata do armazenamento de conjuntos chave-valor.
 	
-	O Firebase Realtime Database, é um banco de dados NoSQL oferecido pela plataforma do Firebase, aonde todos os dados são armazenados no formato JSON e disponibilizados em tempo real para todos os clientes que estão conectados. A API trata de sincronização e armazenamento offline, então se ocorrer uma atulização nos dados e o cliente não estava conectado, ele ainda podera utilizar dos dados que estavam em cache e posteriormente, quando uma conexação for estabelecida, os dados serão sincronizados. \cite{https://firebase.google.com/docs/database/}
+	O Firebase Realtime Database, é um banco de dados NoSQL oferecido pela plataforma do Firebase, aonde todos os dados são armazenados no formato JSON e disponibilizados em tempo real para todos os clientes que estão conectados. A API trata de sincronização e armazenamento offline, então se ocorrer uma atulização nos dados e o cliente não estava conectado, ele ainda podera utilizar dos dados que estavam em cache e posteriormente, quando uma conexação for estabelecida, os dados serão sincronizados.
+	\cite{https://firebase.google.com/docs/database/}.
 
 	O Firebase Storage, é a plataforma utilizada para armazenamento de arquivos. Ela é fortemente integrada com o Goole Cloud Platform, 
+	\cite{https://firebase.google.com/docs/storage/}.
 
-
-	Firebase Storage stores your files in a Google Cloud Storage bucket shared with the default Google App Engine app.
-
-	\cite{https://firebase.google.com/docs/storage/}
+	%Firebase Storage stores your files in a Google Cloud Storage bucket shared with the default Google App Engine app.
 
 	\subsection{Gestão de Permissão} % aka autorização
 	\label{subsec:user_authorization}
 	A funcionalidade de banco de dados como serviço é uma das mais utilizadas dentro dos BaaS. Dessa maneira, por questões de manutenção de integridade, privacidade e segurança, os sistemas do mercado oferecem diferentes maneiras para a a definição de regras de acesso e validação. O objetivo é deixar livre a tentativa de persistência de informação para todos os usuários e com qualquer tipo de dado. Porém, tudo o que for submetido a gravação passará por um controle restrições de acesso e limites internos.
 	
-	No Firebase, esse controle de segurança e regras é implementado usando um conjunto de regras definidas pelo programador através de descritores JSON. Estas são aplicadas a cada operação de leitura ou escrita, fazendo com que uma requisição seja valida somente se essas regras permitirem. \cite{https://firebase.google.com/docs/database/security/}. Veja um exemplo no trecho de código abaixo, onde todos os usuários podem ler o nó foo, mas ninguém pode escrever nele. 
+	No Firebase, esse controle de segurança e regras é implementado usando um conjunto de regras definidas pelo programador através de descritores JSON. Estas são aplicadas a cada operação de leitura ou escrita, fazendo com que uma requisição seja valida somente se essas regras permitirem.
+	\cite{https://firebase.google.com/docs/database/security/}. 
+	Veja um exemplo no trecho de código abaixo, onde todos os usuários podem ler o nó foo, mas ninguém pode escrever nele. 
 	
-	%exemplo%
+	%exemplo
 	\begin{center}
  		\begin{minipage}{0.7\textwidth}
   			\begin{codigo}[H]
@@ -83,24 +84,35 @@
 	\end{center}
 	
 	\subsection{Objetos Customizaveis}
-	% definição
+ 	Objetos do mundo real são complexos, e em muitas das vezes somente os tipos primitivos de dados não são suficientes para representar os atributos desses objetos. Assim necessitando que DAOs (Data access object) sejam criados justamente para converter essa estrutura complexa em uma que o banco de dados consegue entender.
 
-	% contexto
+ 	No Firebase, os dados são armazenados como JSON assim, a lista de tipos primitiva é composta de tipos que podem ser convertidos para JSON diretamente, contendo String, Long, Double, Map<String,Object> e List<Object> isso falando de Java. Para usar objetos personalidados, a classe que o implementa deve de utilizar ter um construtor vazio e metodos publicos de acesso para os atributos dessa classe. \cite{https://firebase.google.com/docs/database/android/read-and-write}
 
 	\subsection{API}
-	% definição
+	\label{sub:api}
+	% Definição
+	possibilidade de o desenvolvedor implementar sua propria api sobre o serviço contratado.
 
 	% contexto
 
-	\subsection{Disponibilidade e Escalabilidade}
-	% definição
-
+	\subsection{Escalabilidade e Disponibilidade}
+	\label{sub:scalability}
 	% contexto
+	Quando se tem um servidor interno, uma das principais preocupações é com a escalabilidade e disponibilidade. Ou seja como que o seu serviço vai funcionar quando esse servidor estiver sobre grande carga, que pode ser gerada por varios usuarios ativos ao mesmo tempo, varias operações de acesso ao banco de dados ocorrendo ao mesmo tempo ou até mesmo falta de recursos. Um sistema é dito escalavel se permanece eficiente quando há um aumento significativo no número de recursos e no numero de usuarios.\cite {colouris: p31 escalabilidade}. A disponibilidade de um sistema é medida da proporção de tempo em que ele está pronto para uso \cite {colouris: p33 tratamento de erro}
 
-	\subsection{Integração com redes sociais}
-	% definição
+	SaaS investem em infraestrutura para mantem o serviço escalavel e disponivel na medida que a demanda dos usuarios vai crescendo, deixando o programador responsavel por estruturar os dados e as consultas de forma a minimizar a quantidade requisições e quantidade de nós a serem acessadas para realizar uma consulta. 
 
-	% contexto
+	%como firebase resolve problemas de escalabilidade 
+	No Firebase, os problemas de usuarios simultaneos e escalabilidade são resolvidos pela plataforma, porem a um custo que deve ser acertado entre as partes contratantes do serviço e o fornecedor. 
+
+	% transcrever ideia do paragrafo abaixo.
+	O problema se que pode ocorrer é caso um dos nós passa a ter mais de 1--10+ milhões de filhos (digamos que você estaja escrevendo um app de mensagens e colocou todas as mensagens de um certo periodo em um mesmo ramo `\textit{/root/messages}') Uma solução para esse problema seria estruturar seus dados de forma que impeça isso de acontecer (por exemplo, arquivando chats que são mais antigos que 1 dia, uma semana, um mes). A razão para essa limitação é que o Firebase é armazenado em memoria ``quente'' então quando se tenta acessar um nó, todos os filhos são baixados e isso acaba lotando a memoria causando uma queda no desempenho. 
+	%\cite{https://groups.google.com/forum/#!topic/firebase-angular/OY7xtpoc9XA}
+
+	% transcrever ideia do paragrafo abaixo.
+	`` Some other things to consider when scaling your Firebase are your typical access patterns. For instance, in order to generate a list of users online are you iterating through all of the children in a users node and checking some field to see if they are online, or have you denormalized your data some and are storing that in a separate users-online node, which reduces the bandwidth used since you're getting exactly the information you want, rather than deriving it from other data. One of our mottos at Firebase is that disk space is cheap, your time is not. Obviously, this denormalization has it's tradeoffs, but we leave these choices up to our developers, rather than corralling them into one option, and we strive to provide adequate documentation on Firebase best practices to hopefully make these well known to our developer community.'' 
+	%\cite{https://groups.google.com/forum/#!topic/firebase-angular/OY7xtpoc9XA}
+
 
 \section{Precificação}%6:30
 \label{sec:pricing}
