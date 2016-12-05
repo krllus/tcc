@@ -50,7 +50,7 @@
 	o que é: disponibiliza ao desenvolvedor meios para armazenar e acessar os dados gerados por sua aplicação. No geral, a gerencia de dados é feita através de interfaces simples e intuitivas (ref 11 - francielly);
 	
 	% contexto
-	Usuarios estão sempre produzindo e consumindo conteudos, que podem ser desde arquivos diversos como fotos, documentos, ou dados que podem ser do tipo chave valor, endereço - rua. Assim SaaS oferecem APIs que facilitam para o desenvlvedor o acesso e armazenamento desses dados. 
+	Usuarios estão sempre produzindo e consumindo conteudos, que podem ser desde arquivos diversos como fotos, documentos, ou dados que podem ser do tipo chave valor, endereço - rua. Assim BaaS oferecem APIs que facilitam para o desenvlvedor o acesso e armazenamento desses dados. 
 
 
 	No Firebase existem duas APIs que tratam de armazenamento de dados, Firebase Storage, que trata do armazenamento e arquivos e o Firebase Realtime Database que trata do armazenamento de conjuntos chave-valor.
@@ -84,6 +84,7 @@
 	\end{center}
 	
 	\subsection{Objetos Customizaveis}
+	\label{subsec:custom_objects}
  	Objetos do mundo real são complexos, e em muitas das vezes somente os tipos primitivos de dados não são suficientes para representar os atributos desses objetos. Assim necessitando que DAOs (Data access object) sejam criados justamente para converter essa estrutura complexa em uma que o banco de dados consegue entender.
 
  	No Firebase, os dados são armazenados como JSON assim, a lista de tipos primitiva é composta de tipos que podem ser convertidos para JSON diretamente, contendo String, Long, Double, Map<String,Object> e List<Object> isso falando de Java. Para usar objetos personalidados, a classe que o implementa deve de utilizar ter um construtor vazio e metodos publicos de acesso para os atributos dessa classe. \cite{https://firebase.google.com/docs/database/android/read-and-write}
@@ -96,23 +97,14 @@
 	% contexto
 
 	\subsection{Escalabilidade e Disponibilidade}
-	\label{sub:scalability}
+	\label{subsec:scalability_and_availability}
 	% contexto
 	Quando se tem um servidor interno, uma das principais preocupações é com a escalabilidade e disponibilidade. Ou seja como que o seu serviço vai funcionar quando esse servidor estiver sobre grande carga, que pode ser gerada por varios usuarios ativos ao mesmo tempo, varias operações de acesso ao banco de dados ocorrendo ao mesmo tempo ou até mesmo falta de recursos. Um sistema é dito escalavel se permanece eficiente quando há um aumento significativo no número de recursos e no numero de usuarios.\cite {colouris: p31 escalabilidade}. A disponibilidade de um sistema é medida da proporção de tempo em que ele está pronto para uso \cite {colouris: p33 tratamento de erro}
 
-	SaaS investem em infraestrutura para mantem o serviço escalavel e disponivel na medida que a demanda dos usuarios vai crescendo, deixando o programador responsavel por estruturar os dados e as consultas de forma a minimizar a quantidade requisições e quantidade de nós a serem acessadas para realizar uma consulta. 
+	BaaS investem em infraestrutura para mantem o serviço escalavel e disponivel na medida que a demanda dos usuarios vai crescendo, deixando o programador responsavel por estruturar os dados e as consultas de forma a minimizar a quantidade requisições e quantidade de nós a serem acessadas para realizar uma consulta. 
 
 	%como firebase resolve problemas de escalabilidade 
-	No Firebase, os problemas de usuarios simultaneos e escalabilidade são resolvidos pela plataforma, porem a um custo que deve ser acertado entre as partes contratantes do serviço e o fornecedor. 
-
-	% transcrever ideia do paragrafo abaixo.
-	O problema se que pode ocorrer é caso um dos nós passa a ter mais de 1--10+ milhões de filhos (digamos que você estaja escrevendo um app de mensagens e colocou todas as mensagens de um certo periodo em um mesmo ramo `\textit{/root/messages}') Uma solução para esse problema seria estruturar seus dados de forma que impeça isso de acontecer (por exemplo, arquivando chats que são mais antigos que 1 dia, uma semana, um mes). A razão para essa limitação é que o Firebase é armazenado em memoria ``quente'' então quando se tenta acessar um nó, todos os filhos são baixados e isso acaba lotando a memoria causando uma queda no desempenho. 
-	%\cite{https://groups.google.com/forum/#!topic/firebase-angular/OY7xtpoc9XA}
-
-	% transcrever ideia do paragrafo abaixo.
-	`` Some other things to consider when scaling your Firebase are your typical access patterns. For instance, in order to generate a list of users online are you iterating through all of the children in a users node and checking some field to see if they are online, or have you denormalized your data some and are storing that in a separate users-online node, which reduces the bandwidth used since you're getting exactly the information you want, rather than deriving it from other data. One of our mottos at Firebase is that disk space is cheap, your time is not. Obviously, this denormalization has it's tradeoffs, but we leave these choices up to our developers, rather than corralling them into one option, and we strive to provide adequate documentation on Firebase best practices to hopefully make these well known to our developer community.'' 
-	%\cite{https://groups.google.com/forum/#!topic/firebase-angular/OY7xtpoc9XA}
-
+	No Firebase, os problemas de usuarios simultaneos e escalabilidade são resolvidos pela plataforma, porem exite um custo de acordo com o que o cliente precisa que deve ser acertado entre as partes contratantes do serviço e o fornecedor. 
 
 \section{Precificação}%6:30
 \label{sec:pricing}
@@ -130,35 +122,43 @@
 	% falar dos planos
 
 \section{Desafios}
-	% definição
+\label{sec:challenges}
 	não dar ideia de bug... nao vai gerar problemas, vai gerar desafios.. questoes de projetos que levam aos desafios da escolha
 	
 	% contexto
 
-	\subsection{Escalabilidade}%7:30
 	% definição
-	o que é escalabilidade
 
+	\subsection{Escalabilidade}%7:30
+	\label{subsec:scalability}
 	% contexto
-	quando estamos tratando de um baas, assim como um backend que é gerido pelo usuario dentro de um servidor local ou servidor de uma maquina virtual contratada, voce tambem deve verificar a capacidade de escalabilidade do mesmo.
+	Para oferecer um serviço que seja escalavel e que estaja disponivel na maior parte do tempo para o cliente, é necessario um grande investimento em infraestrutura por parte dos BaaS e é importante ter em mente que para cada fornecedor existem maximos e minimos com relação a estrutura que eles fornecem. 
 
-	Cada fornecedor tem as capacidades minimas e maximas possivel, por exemplo 	
-	servidor um... max min...
+	O Firebase consegue lidar com centenas de milhares de usuarios conectados ao mesmo tempo tanto para acesso ao banco de dados como para o armazenamento de arquivos, mas caso um dos nós passa a ter mais de 1--10+ milhões de filhos (digamos que você estaja escrevendo um app de mensagens e colocou todas as mensagens de um certo periodo em um mesmo ramo `\textit{/root/messages}') o sistema passa a ter um decaimento da performance. A razão para essa limitação é que o Firebase é armazenado em memoria ``quente'' então quando se tenta acessar um nó, todos os filhos são baixados e isso acaba lotando a memoria causando uma queda no desempenho. Uma solução para esse problema seria estruturar seus dados de forma que impeça isso de acontecer (por exemplo, arquivando chats que são mais antigos que 1 dia, uma semana, um mes). 	
+
+	Outros fatores que devem ser considerados para se ter um sistema escalavel no Firebase são os padrões de acesso. Digamos que para gerar a lista de usuarios online desse app de mensagens, voce pode iterar sobre toda a lista de usuarios verificando se por um atributo para decidir se o usuario está online, ou voce desnormalizar os dados e ter um nó separado `online-users'. Ao utilizar a segunda abordagem, a quantidade de informações trafegada visto que você está pegando exatamente o que voce quer ao invez de derivar ela de outros dados. Um contra dessa abordagem é que ela requer mais espaço no banco. Um dos lemas do Firebase é que espaço é barato, o tempo do usuario não então cabe ao desenvedor decidir qual tipo de abordagem seguir. veja \ref{subsec:min_space}, \ref{subsec:min_trafic}
+	%\cite{https://groups.google.com/forum/#!topic/firebase-angular/OY7xtpoc9XA}
+	
+	Como abordadar precificação?
 
 	\subsection{Flexibilidade}%8:55 {antigo 'mudança de provedor'}
-	% definição
+	\label{subsec:flexibility}
 
 	% contexto
 	dentro da manutenção de software uma das ações que podem ser realizada é a troca de fornecedor de algum serviço, por exemplo a troca do backend como serviço utilizado.
 
 	dependendo da estrutura utilizada para armazenar os dados no serviço, trocar de provedor pode ser uma tarefa complicada, pois nao necessariamente os dados serao armazenados da mesma forma, algumas APIs disponibilizadas por um podem nao ter a mesma funcionalidades que o do outro... toda a parte que trata da comunicação entre o servidor e a criação dos objetos tera de ser repensada.
 
+	% definição
+
 	% soluções utilizadas
 
 	\subsection{Segurança}%9:30
-	% 
+	\label{subsec:security}
+	% contexto
+
 	% definição
-	um backend deve oferecer segurança no serviço que ele oferece, seja ele um serviço ou gerido por um servidor ques esta instalado num predio da organozação.
+	um backend deve oferecer segurança no serviço que ele oferece, seja ele um serviço ou gerido por um servidor ques esta instalado num predio da organização.
 
 	os baas em geral tratam daquela maneira
 		utilizam um canal seguro via tts para transmissao de informaçoes
@@ -167,54 +167,68 @@
 	ponto importante a destacar
 	em relação aos dados em geral não temos muita informação, isso deve ser implementado pelo desenvolvedor. portanto boa parte da logica de segurança fica implementada na aplicação cliente. deve se ter um cuidado de como é feita a implementação para não expor a todo o sistema pois o codigo está no cliente.
 
-	% contexto
-
 	% soluções utilizadas
 
 	\subsection{Sincronização de dados}%14:40
+	\label{subsec:data_sync}
 	% tratar garantia de integridade junto
+	% contexto
+	
 	% definição
 	é uma ação que é muito importe entre o sistema que trata de diferentes versoes da informaçao em diferentes clientes. esse tipo de atividade geralmente gera um problema arquitetural que envolve tanto o momento que vai ser sincronizado e o que vai ser sincronizado e como vai ser sincronizado.
 
 	alguns serviços fazem uma camada de transparencia...
 	trafegam apenas as mudanças.
 
-	% contexto
-	
 	% soluções utilizadas
+	 - Firebase Realtime Database \ref{subsec:data_management}
+
 
 	\subsection{Garantia da Integridade}%15:50
-	% definição
-
 	% contexto
+
+	% definição
 
 	% soluções utilizadas
 
 	\subsection{Garantia da consistencia da informação}%16:30
-	% definição
-
 	% contexto
-	assim como explicado na seção \ref{sec:pricing}
+
+	% definição
 
 	% soluções utilizadas
 
 	\subsection{Minimizar trafego}
-	% definição
-
+	\label{subsec:min_trafic}
 	% contexto
-	
+	Um dos fatores que influencia nas taxas pagas para o fornecedor do BaaS é a quantidade de dados trafegados. Quando mais dados trafegados, maior será a quantia a ser paga no final do mês.
+
+	% definição
+	- quanto mais dados trafegados, maior a quantia paga
+
+	- firebase tem distinção entre storage e database
+
 	% soluções utilizadas
+	- denormalização de dados
+
+	- contratar mais banda a medida que necessario
 
 	\subsection{Minimizar espaço utilizado}
-	% definição
-
+	\label{subsec:min_space}
 	% contexto
+	BaaS em geral oferecem uma cota de espaço em disco limitada pelo serviço contratado, aonde se tem limites de tranferencia alem de limites de armazenamento.
 	
+	% definição
+	armazenamento de arquivos e trafego dos mesmos impacta direto na quantia a ser paga no final do mes. assim o principal desafio é tentar minimizar o tamanho de arquivos trafegados usando soluções como compressão desses mesmos ou até mesmo usar outra solição BaaS para armazenamento de dados.
+
 	% soluções utilizadas
+	- compactação de arquivos antes de enviar nos disposivos clientes.
+
+	- usar outro serviço somente para armazenamento de arquivos.
 
 	\subsection{Recuperação de dados}%19:30
-	% definição
-
 	% contexto
+
+	% definição
 	
 	% soluções utilizadas
