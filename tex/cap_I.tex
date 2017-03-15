@@ -95,6 +95,9 @@
 	possibilidade de o desenvolvedor implementar sua propria api sobre o serviço contratado.
 
 	% contexto
+	em alguns casos, é necessario implementar logicas de negocio mais robustas, que exigem mais processamento do dispositivo do cliente, ou precisam ser ocultadas por questoes de segurança. Exemplo seria a geração da thumbnail de uma imagem ou {arrumar outro exemplo relacionado a segurança}
+
+	Para resolver esse problema, o Firebase desenvolveu o Cloud Functions, que permite a criação de um serviço hospedado por eles onde operações custosas quanto ao processamento ou que não deveriam ser feitas no cliente, são realizadas nos servidores do proprio firebase.
 
 	\subsection{Escalabilidade e Disponibilidade}
 	\label{subsec:scalability_and_availability}
