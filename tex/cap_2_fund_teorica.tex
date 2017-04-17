@@ -1,50 +1,69 @@
 \chapter{Fundamentação Teórica}
 \section{Cloud Computing}
 % definition
-	Cloud Computing ou computação na nuvem, é um termo que pode ser usado para descrever uma plataforma que provê, configura, reconfigura e desprovê servidores a medida do necessario. Servidores esses que podem ser maquinas fisicas ou maquinas virtuais. Tambem pode usado para descrever aplicações que são extendidas para serem acessadas através da internet. Aplicações essas que são providas por Datacenters, ou centro de dados, que hospedam WebServices e WebApplications, tornando possível qualquer um com um navegador web ser capaz de acessar essas aplicações na nuvem.
+	Cloud Computing ou computação na nuvem, é um termo que pode ser usado para descrever uma plataforma que provê, configura, reconfigura e desprovê servidores a medida do necessário. Esses servidores que podem ser maquinas fisicas ou maquinas virtuais. Tambem pode usado para descrever aplicações que são extendidas para serem acessadas através da internet. Aplicações essas que são providas por data centers, ou centro de dados, que hospedam web services e WebApplications, tornando possível qualquer um com um navegador web ser capaz de acessar essas aplicações na nuvem.
+	
+	No mercado, alguns famosos provedores de computação na nuvem são a Amazon EC2 \ref{X} e IBM Bluemix.
+	
+	https://antonioricardo.org/2013/03/28/o-que-e-saas-iaas-e-paas-em-cloud-computing-conceitos-basicos/
 
 \subsection{Os serviços de software na nuvem}
 		
 % providers types
-\subsection{Software as a Service - SaaS}
-	Clientes de software como serviço, alugam o uso de aplicações que rodam dentro da infraestrutura do provedor do serviço de Cloud Computing. Essas aplicações são geralmente ofertadas para os clientes atravez da internet e são gerenciadas totalmente pelo provedor do serviço. O maior beneficio de SaaS é que todos os clientes estão usando a mesma versão do software e novas funcionalidades podem ser facilmente integradas pelo provedor e assim disponiveis para todos os clientes.
+\subsection{Software como serviço - SaaS}
+	Clientes de software como serviço alugam o uso de aplicações que rodam dentro da infraestrutura do provedor do serviço de computaço na nuvem. Essas aplicações são geralmente ofertadas para os clientes atraves da internet e são gerenciadas totalmente pelo provedor do serviço. O maior beneficio de SaaS é a manutenção de uma mesma versão do software para todos os cliente. Novas funcionalidades podem ser integradas pelo provedor através de uma simples atualização centralizada de arquivos e assim disponivel para todos os clientes.
 
+	% tipos de SaaS
 	% example
 
-\subsection{Platform as a Service - PaaS}
+\subsection{Plataforma como serviço - PaaS}
 	% fix english translation, last sentence.
-	Provedores de PaaS oferecem a plataforma de uma aplicação como serviço. Isso permite clientes a disponibilizar softwares usando as ferramentas e linguagens de programação disponibilizadas pelo provedor e a ter controle sobre as aplicações e environment-related settings.
+	Provedores de PaaS oferecem a plataforma de uma aplicação como serviço. Isso permite clientes a disponibilizar software usando as ferramentas e linguagens de programação disponibilizadas pelo provedor e a ter controle sobre as aplicações e environment-related settings.
 
+	% escrever mais sobre este conceito para que tenhamos certeza da diferença dele com o SaaS.
 	% example
 	Google App Engine
+	Amazon EC2
+	IBM Bluemix
+	Heroku
 
-\subsetcion{Infrastructure as a Service - IaaS}
-	Infraestrutura como serviço entrega recursos de hardware tais como CPU, espaço de disco ou componentes de rede como um serviço. Esses recursos sao geralmente entregues como uma plataforma virtual pelo provedor do serviço e pode ser acessada atravez da Web pelo cliente. O cliente tem total controle sobre a maquina virtual e não é responsavel por gerenciar a infraestrutura por que mantem essa maquina.
+\subsection{Infraestrutura como serviço - IaaS}
+	Infraestrutura como serviço entrega recursos de hardware tais como processador, espaço de disco ou componentes de rede como um serviço. Esses recursos são geralmente entregues como uma plataforma virtual pelo provedor do serviço e pode ser acessada atraves da Web pelo cliente. O cliente tem total controle sobre a maquina virtual e não é responsavel por gerenciar a infraestrutura que mantem essa maquina.
+	
+	% Como é feita a cobranca
 	%example	
 
-\subsection{Storage as a Service - STaaS}
-	Storage as a Service é um modelo de negocio onde o fornecedor do serviço aluga parte da sua infraestrutura de armazenamento de dados para o cliente e é mantido com base em uma assinatura. Por o provedor ter uma estrutura escalavel, eles são capazes de ofertar armazenamento muito mais custo-efetivo que a maioria dos individuos ou corporações podem fornecer seu proprio armazenamento, quando custo total de propriedade é considerado. STaaS são geralmente usados quando se quer fazer um backup não local. Um dos pontos fracos desse serviço: é necessario uma grande quantidade de largura de banda para utilizar armazenamento em nuvem.
+\subsection{Armazenamento como serviço - STaaS}
+	Armazenamento como Serviço (Storage as a Service - STaaS) é um modelo de negocio onde o fornecedor do serviço aluga parte da sua infraestrutura de armazenamento de dados para o cliente e é mantido com base em uma assinatura. Pelo provedor ter uma estrutura escalavel, ele é capaz de ofertar armazenamento muito mais compensador que a maioria dos individuos ou corporações podem fornecer com seu proprio armazenamento, principalmente se levarmos em conta os custos de pessoas e manutenção de equipamentos. STaaS são geralmente usados quando se quer fazer um backup não local. Um dos pontos fracos desse serviço: é necessario uma grande quantidade de largura de banda para utilizar armazenamento em nuvem.
 	
 	%example
 	Dropbox
-\subsection{Security as a Service - SECaaS}
+\subsection{Segurança como serviço - SECaaS}
 	% nao entendi muito bem...
-	Segurança como um serviço, é um modelo de negocio onde provedores integram seus serviços a infraestrutura de uma empresa
+	Segurança como um serviço (Security as a Service - SECaaS) é um modelo de negocio onde provedores integram seus serviços a infraestrutura de terceiros, cujo objetivo é adicionar funcionalidades de segurança ao software em si, como firewall, verificação de anti-vírus ou tráfego de informação criptografada.
+	
+	% example - Gmail mcCafee 
 	%example
 
-\subsection{Data as a Service - DaaS}
+\subsection{Dados como serviço - DaaS}
 	% nao entendi o final desse paragrafo.
 	% o que seria UN?
-	Dados como serviço, é baseado no conceito de que o produto, dados nesse caso, pode ser providenciado sob demanda pelo usuario não importando localização geografica ou separação organizacional entre provedor e consumidor. DaaS providos como serviço foi no começo usando somente em web mashups, porem agora esta seu uso esta aumentando, comercialmente e, menos comum, em organizações tais como a UN.
+	Dados como serviço (Data as a Service - DaaS) é baseado no conceito de que o produto (dados) pode ser providenciado sob demanda pelo usuario, não importando localização geografica ou separação organizacional entre provedor e consumidor. DaaS providos como serviço foi no usado no começo somente em ?web mashups?, porem agora esta seu uso esta aumentando, comercialmente e, menos comum, em organizações tais como a UN (.
 	%example
+	
+	%Verificar para talvez refazermos ou até exlcuirmos este tópico.
 
-\subsection{Test Environment as a Service - TEaaS}
-	Ambiente de testes como serviço, geralmente referenciado como "ambienete de teste sob demanda", é um ambiente distribuido de testes em que software e os dados associados sao hospedados, geralmente em nuvem, e são acessados pelos usuarios atraves de navegadores web.
-	%example
+\subsection{Ambiente de testes como serviço - TEaaS}
+	Ambiente de testes como serviço (Test Environment as a services - TEaaS), geralmente referenciado como "ambiente de teste sob demanda", é um ambiente distribuido de testes em que software e os dados associados são hospedados e executados na nuvem afim de realizar verificações, validações ou o teste de software em si. Em geral, este tipo de software é utilizado por equipes que no podem ter acesso a dispositivos ou contextos específicos do usuário final, incluindo testes de escalabilidade.
+	
+	%example - Firebase Test Lab
 
-\subsection{Backend as a Service}
-	Tambem conhecido como Mobile Backend as a Service, Backend Movel como serviço, é um modelo que provê para desenvolvedores web e mobile, uma maneira de ligar/linkar suas aplicações a uma plataforma de backend e storage na nuvem, alem de prover funcionalidades tais como manuzeamento de usuarios, notificações push, e integração com serviços de redes sociais. Esses serviços são providos via o uso de Software Development Kits (SDKs) e Application Programming Interfaces (APIs). BaaS é relativamente recente no mundo de computação em nuvem, a maioria das startups de BaaS são datadas do começo de 2011 ou depois.
-	%example
+\subsection{Backend as a Service - BaaS}
+	Tambem conhecido como Mobile Backend as a Service (mBaaS), é um modelo que provê para desenvolvedores web e móvel, uma maneira de ligar suas aplicações a uma plataforma de backend e armazenamento na nuvem, alem de prover funcionalidades como gestão de usuarios, notificações e integração com serviços de redes sociais. Esses serviços são providos via o uso de Software Development Kits (SDKs) e Application Programming Interfaces (APIs). 
+	
+	O conceito de BaaS é relativamente recente no mundo de computação em nuvem\ref{}, sendo que no mercado, a maioria das startups de BaaS são datadas do começo de 2011 ou depois.
+	
+	%example - lembrar do arquivo que tem as listas e do PFC da Francielly
 	Firebase, Parse, Heroku
 
 	\subsection{quais são os building blocks?}
