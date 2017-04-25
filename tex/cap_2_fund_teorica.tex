@@ -1,24 +1,22 @@
 \chapter{Fundamentação Teórica}
 \section{Cloud Computing}
 	% definition
-	Cloud Computing ou computação na nuvem, é um termo que pode ser usado para descrever uma plataforma que provê, configura, reconfigura e desprovê servidores a medida do necessário. Esses servidores que podem ser maquinas fisicas ou maquinas virtuais. Tambem pode usado para descrever aplicações que são extendidas para serem acessadas através da internet. Aplicações essas que são providas por data centers, ou centro de dados, que hospedam web services e WebApplications, tornando possível qualquer um com um navegador web ser capaz de acessar essas aplicações na nuvem.
+	Cloud Computing ou computação na nuvem, é um termo que pode ser usado para descrever uma plataforma que provê, configura, reconfigura e desprovê servidores a medida do necessário. Esses servidores podem ser maquinas fisicas ou maquinas virtuais e podem  ser utilizados para descrever aplicações que são extendidas para serem acessadas através da internet. Elas são providas por data centers, ou centro de dados, que hospedam web services e WebApplications, tornando possível qualquer um com um navegador web ser capaz de acessar essas aplicações na nuvem.
 	
-	No mercado, alguns famosos provedores de computação na nuvem são a Amazon EC2 \ref{X} e IBM Bluemix.
+	No mercado, alguns famosos provedores de computação na nuvem são a Amazon EC2 \ref{X} e IBM Bluemix \ref{X}.
 	
 	https://antonioricardo.org/2013/03/28/o-que-e-saas-iaas-e-paas-em-cloud-computing-conceitos-basicos/
 
 	\subsection{Os serviços de software na nuvem}
-	
 
 	\subsection{Tipos de Provedores} 
-		Provedores de serviços em nuvem podem ser separados em categerias, todas seguindo um padrão quanto ao modelo de pagamento, porem com suas devidas peculiaridades.
-
+		Provedores de serviços em nuvem podem ser separados em categorias, todas seguindo um padrão quanto ao modelo de pagamento, porem com suas devidas peculiaridades.
 	
 		\begin{description}
 		\item [Software como serviço - SaaS]
 		Clientes de software como serviço alugam o uso de aplicações que rodam dentro da infraestrutura do provedor do serviço de computaço na nuvem. Essas aplicações são geralmente ofertadas para os clientes atraves da internet e são gerenciadas totalmente pelo provedor do serviço. O maior beneficio de SaaS é a manutenção de uma mesma versão do software para todos os cliente. Novas funcionalidades podem ser integradas pelo provedor através de uma simples atualização centralizada de arquivos e assim disponivel para todos os clientes.
 
-		Ao contrario do modelo tradicional de software aonde é comprada a licensa para utilização do produto, em SaaSs, a precificação geralmente é cobrada com base em assinaturas
+		Ao contrario do modelo tradicional de software comprado por licença para utilização do produto, em SaaSs, a precificação geralmente é cobrada com base em assinaturas de conjunto de serviços.
 
 		% tipos de SaaS
 
@@ -29,7 +27,7 @@
 		Infraestrutura como serviço (Infrastructure as a Service - IaaS) entrega recursos de hardware tais como processador, espaço de disco ou componentes de rede como um serviço. Esses recursos são geralmente entregues como uma plataforma virtual pelo provedor do serviço e pode ser acessada atraves da Web pelo cliente. O cliente tem total controle sobre a maquina virtual e não é responsavel por gerenciar a infraestrutura que mantem essa maquina.
 	
 		% Como é feita a cobrança
-		Aqui se é tarifado por alguns fatores como o numero de servidores virtuais, quantidade de dados trafegados, dados armazenados, horas de funcionamento do servico e outros fatores que variam entre provedores.
+		A cobrança nos IaaS é realizada de acordo com fatores como o numero de servidores virtuais, quantidade de dados trafegados, dados armazenados, horas de funcionamento do servico e outros fatores que variam entre provedores.
 
 		%example
 		Amazon EC2
@@ -63,7 +61,7 @@
 		\item[Dados como serviço - DaaS]
 		% nao entendi o final desse paragrafo.
 		% o que seria UN?
-		Dados como serviço (Data as a Service - DaaS) é baseado no conceito de que o produto (dados) pode ser providenciado sob demanda pelo usuario, não importando localização geografica ou separação organizacional entre provedor e consumidor. DaaS providos como serviço foi no usado no começo somente em ?web mashups?, porem agora esta seu uso esta aumentando, comercialmente e, menos comum, em organizações tais como a UN (.
+		Dados como serviço (Data as a Service - DaaS) é baseado no conceito de que o produto (dados) pode ser providenciado sob demanda pelo usuario, não importando localização geografica ou separação organizacional entre provedor e consumidor. DaaS providos como serviço foram usados no começo somente em ?web mashups?, porem agora seu uso esta aumentando comercialmente e, menos comum, em organizações tais como a UN (EVITAR SIGLAS) \ref{X}.
 		%example
 	
 		%Verificar para talvez refazermos ou até exlcuirmos este tópico.
@@ -79,9 +77,9 @@
 	
 		O conceito de BaaS é relativamente recente no mundo de computação em nuvem\ref{API_Evangelist_Overview_of_the_Backend_as_a_Service_Space}, sendo que no mercado, a maioria das startups de BaaS são datadas do começo de 2011 ou depois.
 
-		MBaaS vem da frustração dar deploy(implantação) nas plataformas de IaaS, e de que PaaS não oferecem o que é necessario para plataformas moveis. BaaS é sobre abstrair as complexidades de lançamento e gerenciamento da sua propria infraestrutura e trazer recursos que visão(targeting) exatamente o que desenvovedores precisam para contruir as proximas gerações de aplicativos moveis.\ref{API_Evangelist_Overview_of_the_Backend_as_a_Service_Space}
+		MBaaS vem da frustração em implantar nas plataformas de IaaS, e de que PaaS não oferecem o que é necessario para plataformas moveis. BaaS é sobre abstrair as complexidades de lançamento e gerenciamento da sua propria infraestrutura e trazer recursos que visão(targeting) exatamente o que desenvovedores precisam para contruir as proximas gerações de aplicativos moveis.\ref{API_Evangelist_Overview_of_the_Backend_as_a_Service_Space}
 
-		BaaS tem as mesmas intenções que o PaaS, de acelerar o processo de desenvimento, porem, baas se concentra em trazer um infraestrutura que se escala automaticamente e otimiza uma serie de recursos essenciais que desenvovedores precisam, tais como ferramentas de conteudo, dados, mensagens e APIs de terceiros tais como Facebook, Twitter e Dropbox.
+		BaaS tem a mesma intenções do PaaS: acelerar o processo de desenvimento. Porem, BaaS se concentram em trazer um infraestrutura que escala automaticamente e otimiza uma serie de recursos essenciais que desenvovedores precisam, tais como ferramentas de conteudo, dados, mensagens e APIs de terceiros tais como Facebook, Twitter e Dropbox.
 
 
 		%example - lembrar do arquivo que tem as listas e do PFC da Francielly
@@ -101,16 +99,16 @@
 
 	% deixar \item[] no comeco para pular para proxima linha 
 	\begin{description}
-		\item[Gerenciamento de Usurários]
+		\item[Gerenciamento de Usuários]
 			\begin{description}
             	\item[]
-				\item[Users]{Gerenciamento de usuarios é prover ao  desenvolvedor meios para o qual ele possa permitir que o usuario entre no app e comece a interagir com a aplicação. É uma funcinalidade principal de todos os BaaS.}
+				\item[Users]{Gerenciamento de usuarios é prover ao  desenvolvedor meios para o qual ele possa permitir que o usuario entre no aplicativo e comece a interagir com a aplicação. É uma funcinalidade principal de todos os BaaS.}
 			\end{description}
 		
 		\item[Sistema de Gerenciamento de Conteúdo]
 			\begin{description}
             	\item[]
-				\item[Basic]{Sistema basico de gerenciamento de conteúdo que permite a criação, edição e deleção de paginas de conteudo generico. Em geral essa funcionalidade se asemelha com CMS's da Web, porem aplicados de maneira simples para aplicações mobile.}
+				\item[Basic]{Sistema basico de gerenciamento de conteúdo que permite a criação, edição e deleção de paginas de conteudo generico. Em geral essa funcionalidade se asemelha com gerenciadores de conteúdo (CMS) da Web, porem aplicados de maneira simples para aplicações mobile.}
 			\end{description}
 		
 		\item[Dados]
@@ -120,9 +118,9 @@
 				
 				\item[Key Value] {Armazenamento do tipo chave-valor permite aplicações armazenar dados de forma não relacional, assim podendo ser mantida em objetos ou estruras de dados da linguagem utilizada para programar.}
 				
-				\item[MySQL] {MySQL é um banco de dados popular para construir aplicações web, então BaaS oferecem conectores MySQL para que eles sejam usados como fonte de dados para aplicações mobile.}
+				\item[MySQL] {MySQL é um banco de dados popular para construir aplicações web.  BaaS oferecem conectores MySQL para que eles sejam usados como fonte de dados para aplicações mobile.}
 				
-				\item[Relational] { Tabelas relacionais permitem conectar uma tabela de dados em direferentes tabelas criando um relacionamento entre os campos e valores. Em geral, a abilidade de criar relações entre dados é distribuida junto com conector de MySQL, porem de forma mais simples fornecendo o basico para os desenvolvedores possam desenvolver suas aplicações de maneira mais rapida.}
+				\item[Relational] { Tabelas relacionais permitem conectar uma tabela de dados em diferentes tabelas criando um relacionamento entre os campos e valores. Em geral, a habilidade de criar relações entre dados é distribuida junto com conector de MySQL. Porém, de forma mais simples, fornece-se o basico para que os desenvolvedores possam desenvolver suas aplicações de maneira mais rapida.}
 
 				\item[Table] { Permite que desenvolvedores armazenem seus dados em forma de linhas, colunas e tabelas. Geralmente requisito basico para provedores de BaaS.}
 
@@ -140,24 +138,24 @@
             	\item[]
 				\item[Code] { Alem de permitir desenvolvedores a criar suas aplicações em menos tempo, os frameworks de BaaS, tambem permitem a injeção de codigo em areas controladas da plataforma de maneira a alterar o comportamento base de funcionalidade de forma a melhor atender as necessidades do cliente.}
 
-				\item[Objects] { Permite ao desenvolvedor criar sua propria estrutura de dados, assim sendo possivel armazenar qualquer tipo de dados desejado pelo desenvolvedor. }
+				\item[Objects] { Permite ao desenvolvedor criar sua propria estrutura de dados, sendo possivel armazenar qualquer tipo de dados desejado pelo desenvolvedor. }
 			\end{description}
 	
 
 		\item[API]
 			\begin{description}
             	\item[]
-				\item[Custom] { Varios provedores de BaaS fornecem ferramentas que permitem ao desenvolvedor criar suas proprias API's dentro da plataforma, essa é uma das maneiras mais rapidas de se extender as funcionalidades basicas oferecidas pelo provedor. }
+				\item[Custom] { Varios provedores de BaaS fornecem ferramentas que permitem ao desenvolvedor criar suas proprias integrações com a plataforma. Essa é uma das maneiras mais rapidas de se extender as funcionalidades basicas oferecidas pelo provedor. }
 
 				\item[Query] { Muitos provedores, oferecem interfaces de busca, no qual buscas que seguem o estilo SQL são utilizadas para recuperar dados armazenados. }
 
-				\item[REST API] { Todas as plataformas de BaaS fornecem API's, que abrangem todas as funcionalidades da plataforma, desde gerenciamento de usuarios até o armazenamento de dados. São usadas tanto na construção de aplicações como na integração com outros sistemas de gerenciamento. }
+				\item[REST API] { Todas as plataformas de BaaS fornecem APIs, que abrangem todas as funcionalidades da plataforma, desde gerenciamento de usuarios até o armazenamento de dados. São usadas tanto na construção de aplicações como na integração com outros sistemas de gerenciamento. }
 			\end{description}
 		
 		\item[Comercio Virtual]
 			\begin{description}
             	\item[]
-				\item[In-App Purchases] { No modelo atual, é necessario a existencia de alguma forma de comercio dentro das aplicações, a maneira mais comum de fazer isso é via compras dentro do aplicativo, In App Purchase. Provedores dão a possibilidade de o desenvolvedor implementar compras usando moedas virtual dentro de seus aplicativos. Compras dentro de aplicativos é uma forma de gamificar o app e deixa-lo mais apelativo para o usuario.}
+				\item[In-App Purchases] { No modelo atual, é necessario a existencia de alguma forma de comercio dentro das aplicações. A maneira mais comum de fazer isso é via compras dentro do aplicativo. Provedores dão a possibilidade de o desenvolvedor implementar compras usando moedas virtual dentro de seus aplicativos. Compras dentro de aplicativos é uma forma de gamificar o app e deixa-lo mais apelativo para o usuario.}
 			\end{description}
 		
 		\item[Monetização]
