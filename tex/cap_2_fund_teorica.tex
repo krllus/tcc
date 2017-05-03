@@ -1,3 +1,5 @@
+\usepackage{booktabs}
+
 \chapter{Fundamentação Teórica}
 \section{Cloud Computing}
 	% definition
@@ -250,7 +252,7 @@
 			\end{description}
 	\end{description}
 
-	\subsection{Preficicação}
+	\subsection{Precificação}
 	% abordar precificação do firebase aqui
 	O modelo de precificação para provedores de BaaS ainda esta evoluindo. Muito dos provedores, adotou o custo de armazenamento e chamadas de API como sendo o seu modelo, porem ainda existe muito o que debater sobre o que é modelo mais proveitoso para os desenvolvedores e que gera lucro para o provedor.
 
@@ -307,5 +309,55 @@
 	\end{description}
 
 	%firebase
+	\subsection{Estudo de caso: Precificação do Firebase}
+	O Firebase é o provedor BaaS que escolhemos utilizar para o aplicativo \ref{minha_ufg_app} Minha UFG.
+
+
+	% basico do aplicativo?
+	Aplicativo Minha UFG, é o aplicativo oficial da Universidade Federal de Goias, nele são encontrados informações sobre a universidade para todos os discentes, docentes e comunidade em geral. No momento presente, contamos com 7 funcionalidades principais sendo elas Segurança, Restaurante Universitario, Guia Estudantil, Noticias, Eventos, Radio Universitaria, e Locais.
+
+
+	% basico do firebase?
+	BaaS que foi recentemente adquirida pelo google, principais serviços Realtime database, que consiste em um banco de dados NoSQL em que atualizações são sincronizadas entre os clientes de forma automatica e em tempo real.
+
+
+	% APIs do firebase?
+	Realtime database, Storage, Cloud Functions, Hosting, TestLab, Google Cloud Platform.
+
+
+	% pricing
+	O Firebase divide o pagamento em forma de planos, onde todos possuem acesso as funcionalidades de Analytics, App Indexing, Authentication, Cloud Messaging, Crash Reporting, Dynamic Links, Invites, Notifications \& Remote Config, porem limitados em Realtime Database, Storage, Cloud Functions, Hosting, Test Lab e Google Cloud Platform. 
+
+
+	O plano mais basico é o Spark, ele é gratuito, Flame é o segundo, nele é cobrado uma taxa de 25 dolares mensais. Blaze é o ultimo plano oferecido, ele é um plano oferecido sob demanda, aonde se paga pelo que usou apenas.
+
+
+	Os limites para cada plano são:
+    \begin{table}[h!]
+	\centering
+	\caption{Precificação Firebase}
+	\label{pricing-firebase}
+	\begin{tabular}{|l|llll|}
+    \hline
+						&								& Spark			& Flame 		& Blaze  			\\ \hline
+	Realtime Database 	& Conexões Simultâneas 			& 100  			&  Ilimitado 	& Ilimitado			\\
+						& GB Armazenados    			& 1 GB      	&  2.5GB 		& (\$)5/GB/mês		\\
+	           			& GB Baixados        			& 10GB/mês  	&  20GB/mês		& (\$)1/GB			\\
+						& Backups Automatizados 		& não     		&  não 			& sim				\\ \hline
+	Armazenamento		& GB Armazenados    			& 5 GB      	&  50 GB		& (\$)0.026/GB		\\
+	           			& GB Baixados        			& 1 GB/dia  	&  50 GB/mês	& (\$)0.12/GB		\\
+                        & Operações de Upload  			& 20,000/dia    &  100,000/dia	& (\$)0.10/mil		\\
+	           			& Operações de Download			& 50,000/dia  	&  250,000/dia	& (\$)0.01/mil		\\ \hline
+	Cloud Functions		& Invocações    				& 125,000/mês 	&  2,000,000/mês& (\$)0.40/milhão	\\
+	           			& GB-segundos        			& 40,000/mês  	&  400,000/mês 	& (\$)0.0025/mil	\\
+                        & CPU-segundos		  			& 40,000/mês    &  200,000/mês	& (\$)0.01/mil		\\
+	           			& Outbound Networking			& google-only  	&  5GB/mês		& (\$)0.12/GB		\\ \hline
+    Hosting				& GB Armazenados    			& 1 GB      	&  10 GB		& (\$)0.026/GB		\\
+	           			& GB Transferidos				& 10GB/mês  	&  50 GB/mês 	& (\$)0.15/GB 		\\
+                        & Custom domain hosting \& SSL	& sim	  		&  sim 			& sim				\\  \hline	     
+	Testing				& GB Armazenados    			& 15 testes/dia &  15 testes/dia& horas/dispositivo	\\ \hline	     
+  Google Cloud Platform & Usar BigQuery \& outros IaaS 	& não 			& não 			& sim 				\\ \hline	            
+	\end{tabular}
+	\end{table}
 	
 \section{Banco de dados como Serviço: Questões técnicas e soluções}
