@@ -1,0 +1,108 @@
+\chapter{Desafios técnicos no uso de BaaS e suas soluções }
+\label{cap:challenges}
+
+	Possuir um servidor escalável para receber todos os usuários de forma simultânea é um grande desafio, iniciando pela implantação ou pela do provedor do serviço. Aliado a este problema, existe a necessidade de minimizar o custo monetário do serviço contratado e o tempo de reposta do servidor.
+    
+    Neste capítulo discutiremos alguns problemas e soluções relacionadas a manutenção de serviços que utilizam \textit{backend} como serviço pagando o mínimo possível. Todos eles estão divididos por área.
+    
+    \section{Requisitos não-funcionais}
+    	\subsection{Flexibilidade na troca de provedor}     
+        %contexto
+		Dentro da manutenção de software uma ação que pode ser realizada é a troca de fornecedor de algum serviço, por exemplo a troca do \textit{backend} como serviço utilizado. A troca de provedor pode ser complicada. Os provedores podem utilizar diferentes estruturas de dados ou métodos de interação com as APIs. Caso isso ocorra, é necessário repensar os componentes responsáveis pela comunicação com o servidor e a criação dos objetos.
+        
+        % soluções utilizadas
+		Uma solução para esse problema é utilizar o padrão de projeto \textit{facade}, também conhecido como \textit{façade}. O padrão cria uma interface intermediária, que modela a comunicação entre o servidor e o cliente, de forma que ao alterar o provedor, é necessário apenas reescrever a implementação dessa interface.
+		
+        \subsection{Segurança}     
+		% contexto
+		Usuários estão sempre criando conteúdo, desde conteúdos simples como um uma foto, vídeo ou até mesmo escrevendo um texto de sua dissertação. Visto que o conteúdo desses dados pode ser sensível, deve existir uma preocupação quanto ao armazenamento, o tráfego e o acesso desses dados. A segurança é uma das grandes preocupações que provedores de BaaS devem ter em mente quando projetar seu modelo de negócio.
+        
+		% definição
+        Os BaaS em geral tratam de utilizar um canal seguro via TTS para transmissão de informações e portanto o cliente deve estar preparado para esse tipo de comunicação. Em relação aos dados, de modo geral, a segurança deve ser implementada pelos desenvolvedores, os provedores BaaS não lidam com o aspecto de criptografia. Portanto boa parte da lógica de segurança fica implementada na aplicação cliente. Deve se ter um cuidado de como é feita a implementação para não expor a todo o sistema pois o codigo está no cliente.       	
+        
+		% soluções utilizadas
+        No Firebase a transmissão de dados é realizada utilizando uma conexão segura, todos os dados, antes de serem salvos ou recuperados do banco de dados, passam pelas regras de permissão, tal como exemplificado em \ref{code:rules_example}. Assim previne-se que usuários sem autorização de acesso escrevam ou recuperem dados que eles não tem acesso. Lembrando que a definição  dessas regras fica a cargo do programador.
+
+		\subsection{Garantir sincronização de dados em todos os dispositivos} %14:40     
+		\label{subsec:data_sync}	
+		% contexto definição
+		A garantia de sincronização de dados em todos os dispositivos é muito importante pois trata de diferentes versões da informaçäo  em diferentes clientes.
+        
+        Alguns serviços fazem uma camada de transparência onde os dados são atualizados em \textit{background} sem a necessidade da intervenção do usuário. Uma abordagem comum é manter informações de estado, assim trafegando apenas as mudanças que ocorreram entre estados. 
+        
+        Para garantir a integridade das informações armazenadas ou transferidas, serviços geralmente salvam a informação que possui o \textit{timestamp} mais recente, assim ficando para o desenvolvedor a tarefa de estruturar os dados para evitar a sobreposição desses dados caso esse seja necessário em sua aplicação.
+        
+       	% soluções utilizadas		
+	 	Na API do Firebase Realtime Database \cite{firebase_database}, toda atualização de dados passa pelo servidor do Firebase, permanecendo a última modificação. Assim todos os clientes conectados que estiverem interessados nesses dados, receberão a atualização em questão de milissegundos. Caso o cliente perca a conexão com a internet, a API armazena em cache os dados prévios, e assim que o cliente recuperar a conexão, os novos dados são baixados de forma transparente.
+        
+        \subsection{Escalabilidade}%7:30
+    		\label{subsec:scalability}
+		% contexto
+		Para oferecer um serviço que seja escalável e que esteja disponível na maior parte do tempo para o cliente, é necessário um grande investimento em infraestrutura por parte dos BaaS e é importante ter em mente que para cada fornecedor existem máximos e mínimos com relação a estrutura fornecida. 
+
+		O Firebase, por exemplo, consegue lidar com centenas de milhares de usuários conectados ao mesmo tempo tanto para acesso ao banco de dados quanto para o armazenamento de arquivos, mas caso um dos nós passa a ter mais de 10 milhões ou mais de filhos (digamos que você esteja escrevendo um aplicativo de mensagens e colocou todas as mensagens de um certo período em um mesmo ramo `\textit{/root/messages}') o sistema passa a ter um decaimento da performance. A razão para essa limitação é que o Firebase é armazenado em memória ``quente'' então quando se tenta acessar um nó, todos os filhos são baixados e isso acaba lotando a memória causando uma queda no desempenho. Uma solução para esse problema seria estruturar seus dados de forma que impeça isso de acontecer (por exemplo, arquivando chats que são mais antigos que 1 dia, uma semana ou um mês).
+    
+		% excesso de 'você' e 'usuário' nesse paragrafo
+		Outros fatores que devem ser considerados para se ter um sistema escalável no Firebase são os padrões de acesso. Digamos que para gerar a lista de usuários online desse aplicativo de mensagens, existe a possibilidade de iterar sobre toda a lista de usuários verificando um atributo para decidir se o usuário está online, uma alternativa é denormalizar os dados e ter um nó separado `\textit{online-users}'. Ao utilizar a segunda abordagem, visto que apenas os dados realmente necessários são recuperados, a quantidade de informações trafegada é reduzida. Um contra dessa abordagem é que ela requer mais espaço no banco. Fica para o desenvolvedor decidir qual tipo de abordagem seguir. Veja \ref{subsec:min_space}.
+
+		%Minimizar a quantidade de acessos a API do servidor
+
+		%\cite{https://groups.google.com/forum/#!topic/firebase-angular/OY7xtpoc9XA}
+	
+		%voce deve pagar mais por um servico que seja de certa forma mais escalavel, como abordadar a precificação de um servico "mais" escalavel? 
+
+    
+    \section{Relacionados aos custos}
+    	\subsection{Minimizar tráfego}	
+        \label{subsec:min_trafic}
+		% contexto definição
+        Um dos fatores que impacta diretamente nas taxas pagas para o fornecedor do BaaS é a quantidade de dados trafegados. Quanto mais dados trafegados, maior a quantia a ser paga. Isso vem da limitação que provedores possuem quanto a sua infraestrutura, assim passando parte dos custos operacionais para o desenvolvedor.
+        
+        No Firebase os dados trafegados são separados por duas APIs distintas, o Firebase Realtime Database \cite{firebase_database}, que é utilizada para trafegar objetos da sua a aplicação, e o Firebase Storage \cite{firebase_storage} que é usado para transferir arquivos tal como musicas, fotos, vídeos dentre outros. Ambas APIs possuem seus limites de acordo com o plano escolhido como pode ser observado na Tabela \ref{pricing-firebase}.     
+		
+       	
+		% soluções utilizadas
+        Para amenizar o valor final da conta do mês, pode-se adotar medidas tal como a denormalização de dados, onde a estrutura de dados pode ser reescrita de maneira a criar uma árvore de consulta menos profunda, veja no exemplo \ref{code:denormalization_raw} a estrutura de um chat não normalizado e em \ref{code:denormalization_normal} essa mesma estrutura, porem normalizada. Assim, ao realizar uma consulta, apenas os dados necessários são baixados, minimizando banda transferida entre cliente e servidor, o que também ajudar a preservar dados moveis do cliente.
+		        
+        Outra opção, é contratar mais banda a medida que for necessário, seja mudando o plano ou alterando o contrato diretamente com o provedor.
+		
+
+        \begin{minipage}{0.6\textwidth}
+        	\centering	
+  			\begin{codigo}[H]
+   				\small	
+				\VerbatimInput[xleftmargin=10mm,numbers=left,obeytabs=true]{./prog/denormalization_raw.json}
+		        \caption{\texttt{Exemplo de dados não normalizados.} }
+				\label{code:denormalization_raw}
+           	\end{codigo}          
+ 		\end{minipage}
+		
+                                
+	 		\begin{minipage}{0.45\textwidth}
+	 		\centering
+  				\begin{codigo}[H]  				
+   					\small
+   					\VerbatimInput[xleftmargin=10mm,numbers=left,obeytabs=true]{./prog/denormalization_normal.json}
+			        \caption{\texttt{Exemplo de dados normalizados.} }
+					\label{code:denormalization_normal}
+            	\end{codigo}            
+ 			\end{minipage} 			
+		
+        
+        Vale levar em consideração que espaço de disco é barato nos dias atuais, já o tempo do usuário não. Então para o usuário final, vale a pena pensar em replicar dados com a finalidade de agilizar uma ou mais consultas.
+        
+   	    \subsection{Minimização de armazenamento}%19:30
+    	\label{subsec:min_space}
+		% contexto definição
+        BaaS em geral oferecem uma cota de espaço em disco limitada pelo serviço contratado, existem limites de transferência e limites de armazenamento. O armazenamento de arquivos e o tráfego dos mesmos impacta direto na quantia a ser paga no final do mês. Assim o principal desafio é tentar minimizar o tamanho dos arquivos trafegados. 
+
+		% soluções utilizadas
+        Uma solução que pode ser empregada no armazenamento de arquivos é a compressão dos mesmos. Existem muitos algoritmos de compressão nos quais a perca de qualidade não chega a ser tão impactante para o usuário, assim economizando não apenas a banda usada na transferência dos mesmos, mas também a bateria do dispositivo do cliente. Outra abordagem seria utilizar-se de outro provedor com a única finalidade de armazenamento.
+        
+        \subsection{Minimização de consultas} 
+        \label{subsec:min_queries}               
+      	% contexto definição
+        Outra métrica utilizada por provedores é a quantidade de chamadas de APIs, onde se tem um limite diário ou mensal. Ultrapassar esse limite pode resultar em: indisponibilidade de funcionalidades ou mudança de plano de cobrança.
+		
+        
+        Caso esse limite seja facilmente atingido, pode-se optar por contratar um plano que ofereça um limite maior, ou armazenar consultas prévias em cache. Outro exemplo que causa o aumento de chamadas, é fazer \textit{pooling} no servidor em uma frequência muito alta. Assim pode-se utilizar de notificações \textit{push} caso o provedor forneça esse serviço. Dessa maneira, existe transferência apenas quando novo conteúdo for disponibilizado.

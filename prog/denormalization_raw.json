@@ -1,0 +1,20 @@
+{
+  // Essa é uma arquitetura de dados mal aninhada, 
+  // porque iterando sobre os filhos de "chats"
+  // para obter o titulo das conversas 
+  // requer uma transferência potencial de centenas de 
+  // megabytes de mensagens.
+  "chats": {
+    "one": {
+      "title": "Historical Tech Pioneers",
+      "messages": {
+        "m1": { 
+            "sender": "ghopper",
+            "message": "Relay malfunction found. Cause: moth." },
+        "m2": { ... },
+        // uma lista bem longa de mensagens
+      }
+    },
+    "two": { ... }
+  }
+}

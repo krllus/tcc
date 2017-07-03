@@ -1,0 +1,42 @@
+{ // Conversar contêm apenas meta dados 
+  // sobre cada conversa armazenados 
+  // sobre o ID unido de cada "chat"
+  "chats": {
+    "one": {
+      "title": "Historical Tech Pioneers",
+      "lastMessage": "ghopper: Relay malfunction found. Cause: moth.",
+      "timestamp": 1459361875666
+    },
+    "two": { ... },
+    "three": { ... }
+  },
+  // Os membros da conversa são facilmente acessíveis
+  // e armazenados sobre o ID da conversa.
+  "members": {
+    // mais sobre índices como este abaixo
+    "one": {
+      "ghopper": true,
+      "alovelace": true,
+      "eclarke": true
+    },
+    "two": { ... },
+    "three": { ... }
+  },
+  // Mensagens são separadas de dados que podemos 
+  // querer para iterar rapidamente porem 
+  // ainda facilmente paginada, recuperada e 
+  // organizada pelo ID da conversa
+  "messages": {
+    "one": {
+      "m1": {
+        "name": "eclarke",
+        "message": "The relay seems to be malfunctioning.",
+        "timestamp": 1459361875337
+      },
+      "m2": { ... },
+      "m3": { ... }
+    },
+    "two": { ... },
+    "three": { ... }
+  }
+}
