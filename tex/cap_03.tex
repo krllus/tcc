@@ -20,7 +20,7 @@ Dentro da manutenção de software uma ação que pode ser realizada é a troca de fo
 Uma solução para esse problema é utilizar o padrão de projeto \textit{facade}, também conhecido como \textit{façade}. O padrão cria uma interface intermediária, que modela a comunicação entre o servidor e o cliente, de forma que ao alterar o provedor, é necessário apenas reescrever a implementação dessa interface.
 		
 % solução empregada em Minha UFG
-No Minha UFG, foi adotado o padrão de projeto \textit{façade}, no presente momento, uma parte dos dados vem do Firebase e a outra de servidores internos, toda essa comunicação externos é encapsulada seguindo o padrão \textit{façade}. Em \ref{code:minha_ufg_news_facade} é possivel ver o código da interface provida para a funcionalidade de notícias.
+No Minha UFG, foi adotado o padrão de projeto \textit{façade}, no presente momento, uma parte dos dados vem do Firebase e a outra de servidores internos, toda essa comunicação externos é encapsulada seguindo o padrão \textit{façade}. Em \ref{code:minha_ufg_news_facade} é possível ver o código da interface provida para a funcionalidade de notícias.
 				
 % example code
 
@@ -40,13 +40,16 @@ No Minha UFG, foi adotado o padrão de projeto \textit{façade}, no presente momen
 \subsection{Segurança}     
 \label{subsec_rnf_security}
 % contexto
-Usuários estão sempre criando conteúdo, desde conteúdos simples como um uma foto, vídeo ou até mesmo escrevendo um texto de sua dissertação. Visto que o conteúdo desses dados pode ser sensível, deve existir uma preocupação quanto ao armazenamento, o tráfego e o acesso desses dados. A segurança é uma das grandes preocupações que provedores de BaaS devem ter em mente quando projetar seu modelo de negócio.
+Usuários estão sempre criando conteúdo, desde conteúdos simples como um uma foto, vídeo ou até mesmo escrevendo um texto de sua dissertação. Visto que o conteúdo desses dados pode ser sensível, deve existir uma preocupação quanto ao armazenamento, o tráfego e o acesso desses dados. Assim a segurança é uma das grandes preocupações que provedores de BaaS devem ter em mente quando projetar seu modelo de negócio.
 		        
 % definição
 Os BaaS em geral tratam de utilizar um canal seguro via TTS para transmissão de informações e portanto o cliente deve estar preparado para esse tipo de comunicação. Em relação aos dados, de modo geral, a segurança deve ser implementada pelos desenvolvedores, os provedores BaaS não lidam com o aspecto de criptografia. Portanto boa parte da lógica de segurança fica implementada na aplicação cliente. Deve se ter um cuidado de como é feita a implementação para não expor a todo o sistema pois o código está no cliente.       	
 		        
 % soluções utilizadas
 No Firebase a transmissão de dados é realizada utilizando uma conexão segura, todos os dados, antes de serem salvos ou recuperados do banco de dados, passam pelas regras de permissão, tal como exemplificado em \ref{code:rules_example}. Assim previne-se que usuários sem autorização de acesso escrevam ou recuperem dados que eles não tem acesso. Lembrando que a definição  dessas regras fica a cargo do programador.
+
+%solução usada no Minha UFG
+No Minha UFG, as restrições de acesso foram escritas utilizando as regras do Firebase juntamente com uma estrutura complementar para tipos usuários, onde é definida uma ``hierarquia'' que define quais permissões de escrita e leitura esse usuário possui dentro de um determinado ``ramo''.
 		
 \subsection{Sincronização de Dados}
 \label{subsec:data_sync}	
@@ -57,25 +60,25 @@ Alguns serviços fazem uma camada de transparência onde os dados são atualizados 
 		        
 Para garantir a integridade das informações armazenadas ou transferidas, serviços geralmente salvam a informação que possui o \textit{timestamp} mais recente, assim ficando para o desenvolvedor a tarefa de estruturar os dados para evitar a sobreposição desses dados caso esse seja necessário em sua aplicação.
 		        
-% soluções utilizadas		
-Na API do Firebase Realtime Database \cite{firebase_database}, toda atualização de dados passa pelo servidor do Firebase, permanecendo a última modificação. Assim todos os clientes conectados que estiverem interessados nesses dados, receberão a atualização em questão de milissegundos. Caso o cliente perca a conexão com a internet, a API armazena em cache os dados prévios, e assim que o cliente recuperar a conexão, os novos dados são baixados de forma transparente.
+% soluções utilizadas Minha UFG no final
+Na API do Firebase Realtime Database \cite{firebase_database}, toda atualização de dados passa pelo servidor do Firebase, permanecendo a última modificação. Assim todos os clientes conectados que estiverem interessados nesses dados, receberão a atualização em questão de milissegundos. Caso o cliente perca a conexão com a internet, a API armazena em cache os dados prévios, e assim que o cliente recuperar a conexão, os novos dados são baixados de forma transparente. No Minha UFG, foi utilizado a solução a de sincronização provida pelo Firebase.
 		        
 \subsection{Escalabilidade}
 \label{subsec_rnf_scalability}
 % contexto
 Para oferecer um serviço que seja escalável e que esteja disponível na maior parte do tempo para o cliente, é necessário um grande investimento em infraestrutura por parte dos BaaS e é importante ter em mente que para cada fornecedor existem máximos e mínimos com relação a estrutura fornecida. 
 		
-O Firebase, por exemplo, consegue lidar com centenas de milhares de usuários conectados ao mesmo tempo tanto para acesso ao banco de dados quanto para o armazenamento de arquivos, mas caso um dos nós passa a ter mais de 10 milhões ou mais de filhos (digamos que você esteja escrevendo um aplicativo de mensagens e colocou todas as mensagens de um certo período em um mesmo ramo `\textit{/root/messages}') o sistema passa a ter um decaimento da performance. A razão para essa limitação é que o Firebase é armazenado em memória ``quente'' então quando se tenta acessar um nó, todos os filhos são baixados e isso acaba lotando a memória causando uma queda no desempenho. Uma solução para esse problema seria estruturar seus dados de forma que impeça isso de acontecer (por exemplo, arquivando chats que são mais antigos que 1 dia, uma semana ou um mês).
+O Firebase, por exemplo, consegue lidar com centenas de milhares de usuários conectados ao mesmo tempo tanto para acesso ao banco de dados quanto para o armazenamento de arquivos, mas caso um dos nós passa a ter mais de 10 milhões ou mais de filhos (digamos que você esteja escrevendo um aplicativo de mensagens e colocou todas as mensagens de um certo período em um mesmo ramo ,`\textit{/root/messages}') por exemplo, o sistema passa a ter um decaimento da performance. A razão para essa limitação é que o Firebase é armazenado em memória ``quente'' então quando se tenta acessar um nó, todos os filhos são baixados e isso acaba lotando a memória causando uma queda no desempenho. Uma solução para esse problema seria estruturar seus dados de forma que impeça isso de acontecer (por exemplo, arquivando chats que são mais antigos que 1 dia, uma semana ou um mês).
 		    
 % excesso de 'você' e 'usuário' nesse paragrafo
 Outros fatores que devem ser considerados para se ter um sistema escalável no Firebase são os padrões de acesso. Digamos que para gerar a lista de usuários online desse aplicativo de mensagens, existe a possibilidade de iterar sobre toda a lista de usuários verificando um atributo para decidir se o usuário está online, uma alternativa é denormalizar os dados e ter um nó separado `\textit{online-users}'. Ao utilizar a segunda abordagem, visto que apenas os dados realmente necessários são recuperados, a quantidade de informações trafegada é reduzida. Um contra dessa abordagem é que ela requer mais espaço no banco. Fica para o desenvolvedor decidir qual tipo de abordagem seguir. Veja \ref{subsec:min_space}.
+
+No Minha UFG, a maioria dos dados estão armazenados de forma que é necessário apenas uma consulta no \textit{ branch} para retornar uma lista com resultados. Já em funcionalidades onde os dados são relacionados de forma \textit{many-to-many}, é realizado uma consulta para cada \textit{branch}, utilizando RxJava, e após o fim de todas as consultas, esses objetos são ``montados'' e entregues para a interface. Este é o caso da funcionalidade do cardápio do  restaurante universitário, onde tem o \textit{branch}  de refeições, de comidas e de horários. É necessário obter cada uma desses \textit{branchs} de maneira independente para montar a lista de refeições da semana.
 		
-%Minimizar a quantidade de acessos a API do servidor
-		
-%\cite{https://groups.google.com/forum/#!topic/firebase-angular/OY7xtpoc9XA}
-			
+%Minimizar a quantidade de acessos a API do servidor		
+%\cite{https://groups.google.com/forum/#!topic/firebase-angular/OY7xtpoc9XA}			
 %voce deve pagar mais por um servico que seja de certa forma mais escalavel, como abordadar a precificação de um servico "mais" escalavel? 
-		
+
 		    
 \section{Relacionados aos custos}
 Quando um serviço de BaaS é contratado, existem varios fatores que influenciam diretamente no custo do serviço. Assim o desafio é minimizar o valor a pago.
@@ -90,9 +93,9 @@ No Firebase os dados trafegados são separados por duas APIs distintas, o Firebas
 				
 		       	
 % soluções utilizadas
-Para amenizar o valor final da conta do mês, pode-se adotar medidas tal como a denormalização de dados, onde a estrutura de dados pode ser reescrita de maneira a criar uma árvore de consulta menos profunda, veja no exemplo \ref{code:denormalization_raw} a estrutura de um chat não normalizado e em \ref{code:denormalization_normal} essa mesma estrutura, porem normalizada. Assim, ao realizar uma consulta, apenas os dados necessários são baixados, minimizando banda transferida entre cliente e servidor, o que também ajudar a preservar dados moveis do cliente.
-				        
-Outra opção, é contratar mais banda a medida que for necessário, seja mudando o plano ou alterando o contrato diretamente com o provedor.
+Para amenizar o valor final da conta do mês, pode-se adotar medidas tal como a denormalização de dados, onde a estrutura de dados pode ser reescrita de maneira a criar uma árvore de consulta menos profunda, veja no exemplo \ref{code:denormalization_raw} a estrutura de um chat não normalizado e em \ref{code:denormalization_normal} essa mesma estrutura, porem normalizada. Assim, ao realizar uma consulta, apenas os dados necessários são baixados, minimizando banda transferida entre cliente e servidor, o que também ajudar a preservar dados moveis do cliente. Outra opção, é contratar mais banda a medida que for necessário, seja mudando o plano ou alterando o contrato diretamente com o provedor.
+
+No Minha UFG, a maioria dos dados vem do Firebase, e ele fornece um recurso de cache offline, que possui um limite de 10 MB, o que é suficiente para armazenar aproximadamente 5242880 palavras em texto plano. Imagens não são armazenadas offline no dispositivo cliente, assim nas funcionalidades que usam imagens, notícias por exemplo, a versão reduzida delas é baixada.
 				
 		
 \begin{minipage}{0.6\textwidth}
@@ -126,6 +129,8 @@ BaaS em geral oferecem uma cota de espaço em disco limitada pelo serviço contrat
 		
 % soluções utilizadas
 Uma solução que pode ser empregada no armazenamento de arquivos é a compressão dos mesmos. Existem muitos algoritmos de compressão nos quais a perca de qualidade não chega a ser tão impactante para o usuário, assim economizando não apenas a banda usada na transferência dos mesmos, mas também a bateria do dispositivo do cliente. Outra abordagem seria utilizar-se de outro provedor com a única finalidade de armazenamento.
+
+No Minha UFG, as imagens são submetidas a um processo de compressão antes de serem enviadas para o servidor, os demais dados são em forma de texto plano.
 		        
 \subsection{Minimizar Consultas} 
 \label{subsec:min_queries}               
@@ -134,3 +139,5 @@ Outra métrica utilizada por provedores é a quantidade de chamadas de APIs, onde 
 				
 		        
 Caso esse limite seja facilmente atingido, pode-se optar por contratar um plano que ofereça um limite maior, ou armazenar consultas prévias em cache. Outro exemplo que causa o aumento de chamadas, é fazer \textit{pooling} no servidor em uma frequência muito alta. Assim pode-se utilizar de notificações \textit{push} caso o provedor forneça esse serviço. Dessa maneira, existe transferência apenas quando novo conteúdo for disponibilizado.
+
+No Minha UFG, na maioria das funcionalidades, os dados são recuperados com uma consulta,.  A exceção é o recurso de busca em ``Lugares'', que realiza várias consultas para obter o resultado. Para minimizar os efeitos de múltiplas consultas à API, foi utilizado um recurso de espera que determina que uma nova consulta só pode ser disparada após 300 ms.
