@@ -1,0 +1,36 @@
+\BOOKMARK [0][-]{Doc-Start}{Lista de Figuras}{}% 1
+\BOOKMARK [0][-]{Doc-Start}{Lista de Tabelas}{}% 2
+\BOOKMARK [0][-]{Doc-Start}{Lista de Algoritmos}{}% 3
+\BOOKMARK [0][-]{section*.1}{Lista de C\363digos de Programas}{}% 4
+\BOOKMARK [0][-]{chapter.2}{1 Introdu\347\343o}{}% 5
+\BOOKMARK [0][-]{chapter.3}{2 Fundamenta\347\343o Te\363rica}{}% 6
+\BOOKMARK [1][-]{section.4}{2.1 Cloud Computing}{chapter.3}% 7
+\BOOKMARK [2][-]{subsection.5}{2.1.1 Taxonomia}{section.4}% 8
+\BOOKMARK [1][-]{section.6}{2.2 Aprofundando em BaaS}{chapter.3}% 9
+\BOOKMARK [2][-]{subsection.7}{2.2.1 Defini\347\343o}{section.6}% 10
+\BOOKMARK [2][-]{subsection.8}{2.2.2 Funcionalidades / Oportunidades}{section.6}% 11
+\BOOKMARK [3][-]{section*.9}{Gerenciamento de Usu\341rios}{subsection.8}% 12
+\BOOKMARK [3][-]{section*.10}{Gerenciamento de Dados}{subsection.8}% 13
+\BOOKMARK [3][-]{section*.11}{Gest\343o de Permiss\343o}{subsection.8}% 14
+\BOOKMARK [3][-]{section*.13}{Objetos Customiz\341veis}{subsection.8}% 15
+\BOOKMARK [3][-]{section*.14}{API}{subsection.8}% 16
+\BOOKMARK [3][-]{section*.15}{Escalabilidade e Disponibilidade}{subsection.8}% 17
+\BOOKMARK [2][-]{subsection.16}{2.2.3 Precifica\347\343o}{section.6}% 18
+\BOOKMARK [3][-]{section*.17}{Estudo de caso: Precifica\347\343o do Firebase}{subsection.16}% 19
+\BOOKMARK [0][-]{chapter.19}{3 Utiliza\347\343o de t\351cnicas em caso real: MinhaUFG}{}% 20
+\BOOKMARK [1][-]{section.20}{3.1 Justificativa e escopo}{chapter.19}% 21
+\BOOKMARK [1][-]{section.22}{3.2 Arquitetura}{chapter.19}% 22
+\BOOKMARK [1][-]{section.25}{3.3 Implementa\347\343o}{chapter.19}% 23
+\BOOKMARK [1][-]{section.26}{3.4 Resultados}{chapter.19}% 24
+\BOOKMARK [0][-]{chapter.27}{4 Desafios t\351cnicos no uso de BaaS e suas solu\347\365es }{}% 25
+\BOOKMARK [1][-]{section.28}{4.1 Requisitos N\343o-Funcionais}{chapter.27}% 26
+\BOOKMARK [2][-]{subsection.29}{4.1.1 Flexibilidade na troca de provedor}{section.28}% 27
+\BOOKMARK [2][-]{subsection.31}{4.1.2 Seguran\347a}{section.28}% 28
+\BOOKMARK [2][-]{subsection.32}{4.1.3 Sincroniza\347\343o de Dados}{section.28}% 29
+\BOOKMARK [2][-]{subsection.33}{4.1.4 Escalabilidade}{section.28}% 30
+\BOOKMARK [1][-]{section.34}{4.2 Relacionados aos custos}{chapter.27}% 31
+\BOOKMARK [2][-]{subsection.35}{4.2.1 Minimizar Tr\341fego}{section.34}% 32
+\BOOKMARK [2][-]{subsection.38}{4.2.2 Minimizar Armazenamento}{section.34}% 33
+\BOOKMARK [2][-]{subsection.39}{4.2.3 Minimizar Consultas}{section.34}% 34
+\BOOKMARK [0][-]{chapter.40}{5 Conclus\343o}{}% 35
+\BOOKMARK [0][-]{chapter.40}{Refer\352ncias Bibliogr\341ficas}{}% 36

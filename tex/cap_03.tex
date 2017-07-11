@@ -8,7 +8,7 @@ Neste capítulo discutiremos alguns problemas e soluções relacionadas a manutençã
 \section{Requisitos Não-Funcionais}
 Um requisito não-funcional, tem como objetivo atender a requisitos do sistema que não se referem a funcionalidades do negócio, mas que fazem parte do escopo do sistema.
 		
-Nessa seção será apresentado quatro requisitos não funcioanais sobre BaaS: flexibilidade na troca de provedor, segurança, sincronização de dados e escalabilidade.
+Nessa seção será apresentado quatro requisitos não funcionais sobre BaaS: flexibilidade na troca de provedor, segurança, sincronização de dados e escalabilidade.
 				
 \subsection{Flexibilidade na troca de provedor}
 \label{subsec_rnf_flex_prov}
@@ -20,20 +20,20 @@ Dentro da manutenção de software uma ação que pode ser realizada é a troca de fo
 Uma solução para esse problema é utilizar o padrão de projeto \textit{facade}, também conhecido como \textit{façade}. O padrão cria uma interface intermediária, que modela a comunicação entre o servidor e o cliente, de forma que ao alterar o provedor, é necessário apenas reescrever a implementação dessa interface.
 		
 % solução empregada em Minha UFG
-No Minha UFG, foi adotado o padrão de projeto \textit{façade}, no presente momento, uma parte dos dados vem do Firebase e a outra de servidores internos, toda essa comunicação externos é encapsulada seguindo o padrão \textit{façade}. Em \ref{code:minha_ufg_news_facade} é possivel ver o codigo da interface provida para a funcionalidade de noticias.
+No Minha UFG, foi adotado o padrão de projeto \textit{façade}, no presente momento, uma parte dos dados vem do Firebase e a outra de servidores internos, toda essa comunicação externos é encapsulada seguindo o padrão \textit{façade}. Em \ref{code:minha_ufg_news_facade} é possivel ver o código da interface provida para a funcionalidade de notícias.
 				
 % example code
-		
-\begin{center}
+
 	\begin{minipage}{0.7\textwidth}
+	\centering
 		\begin{codigo}[H]
 			\small
-			\VerbatimInput[xleftmargin=10mm,numbers=left,obeytabs=true]{./prog/minha_ufg_facade_news.java}
+			\VerbatimInput[xleftmargin=10mm,numbers=left,obeytabs=true]{./prog/facade_news.java}
 			\caption{\texttt{Interface \textit{facade} para Notícias} }
 			\label{code:minha_ufg_news_facade}
 		\end{codigo}
 	\end{minipage}
-\end{center}		
+
 				
 				
 								 
@@ -43,7 +43,7 @@ No Minha UFG, foi adotado o padrão de projeto \textit{façade}, no presente momen
 Usuários estão sempre criando conteúdo, desde conteúdos simples como um uma foto, vídeo ou até mesmo escrevendo um texto de sua dissertação. Visto que o conteúdo desses dados pode ser sensível, deve existir uma preocupação quanto ao armazenamento, o tráfego e o acesso desses dados. A segurança é uma das grandes preocupações que provedores de BaaS devem ter em mente quando projetar seu modelo de negócio.
 		        
 % definição
-Os BaaS em geral tratam de utilizar um canal seguro via TTS para transmissão de informações e portanto o cliente deve estar preparado para esse tipo de comunicação. Em relação aos dados, de modo geral, a segurança deve ser implementada pelos desenvolvedores, os provedores BaaS não lidam com o aspecto de criptografia. Portanto boa parte da lógica de segurança fica implementada na aplicação cliente. Deve se ter um cuidado de como é feita a implementação para não expor a todo o sistema pois o codigo está no cliente.       	
+Os BaaS em geral tratam de utilizar um canal seguro via TTS para transmissão de informações e portanto o cliente deve estar preparado para esse tipo de comunicação. Em relação aos dados, de modo geral, a segurança deve ser implementada pelos desenvolvedores, os provedores BaaS não lidam com o aspecto de criptografia. Portanto boa parte da lógica de segurança fica implementada na aplicação cliente. Deve se ter um cuidado de como é feita a implementação para não expor a todo o sistema pois o código está no cliente.       	
 		        
 % soluções utilizadas
 No Firebase a transmissão de dados é realizada utilizando uma conexão segura, todos os dados, antes de serem salvos ou recuperados do banco de dados, passam pelas regras de permissão, tal como exemplificado em \ref{code:rules_example}. Assim previne-se que usuários sem autorização de acesso escrevam ou recuperem dados que eles não tem acesso. Lembrando que a definição  dessas regras fica a cargo do programador.
@@ -51,7 +51,7 @@ No Firebase a transmissão de dados é realizada utilizando uma conexão segura, to
 \subsection{Sincronização de Dados}
 \label{subsec:data_sync}	
 % contexto definição
-A garantia de sincronização de dados em todos os dispositivos é muito importante pois trata de diferentes versões da informaçäo  em diferentes clientes.
+A garantia de sincronização de dados em todos os dispositivos é muito importante pois trata de diferentes versões da informação  em diferentes clientes.
 		        
 Alguns serviços fazem uma camada de transparência onde os dados são atualizados em \textit{background} sem a necessidade da intervenção do usuário. Uma abordagem comum é manter informações de estado, assim trafegando apenas as mudanças que ocorreram entre estados. 
 		        

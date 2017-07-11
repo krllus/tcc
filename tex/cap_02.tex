@@ -14,12 +14,12 @@ Segundo \cite{antonio_ricardo_saas_iaas_paas_cloud_computing}, os provedores de 
 	
 \begin{description}
 	\item [Software como serviço - SaaS]
-	Do inglês \textit{Software as a Service},Clientes de software como serviço alugam o uso de aplicações que rodam dentro da infraestrutura do provedor do serviço de computação na nuvem. Essas aplicações são geralmente ofertadas para os clientes atraves da internet e são gerenciadas totalmente pelo provedor do serviço. O maior benefício de SaaS é a manutenção de uma mesma versão do software para todos os cliente. Adicionalmente, novas funcionalidades podem ser integradas pelo provedor através de uma simples atualização centralizada de arquivos e assim disponível para todos os clientes.
+	Do inglês \textit{Software as a Service},Clientes de software como serviço alugam o uso de aplicações que rodam dentro da infraestrutura do provedor do serviço de computação na nuvem. Essas aplicações são geralmente ofertadas para os clientes através da internet e são gerenciadas totalmente pelo provedor do serviço. O maior benefício de SaaS é a manutenção de uma mesma versão do software para todos os cliente. Adicionalmente, novas funcionalidades podem ser integradas pelo provedor através de uma simples atualização centralizada de arquivos e assim disponível para todos os clientes.
 	
 	Ao contrario do modelo tradicional de software comprado por licença para utilização do produto, em SaaSs, a precificação geralmente é realizada com base em assinaturas de conjunto de serviços.
 	
 	\item [Infraestrutura como serviço - IaaS]
-	Do inglês \textit{Infrastructure as a Service}, entrega recursos de hardware tais como processador, espaço de disco ou componentes de rede como um serviço. Esses recursos são geralmente entregues como uma plataforma virtual pelo provedor do serviço e pode ser acessada atraves da Web pelo cliente. O cliente tem total controle sobre a maquina virtual e não é responsável por gerenciar a infraestrutura que mantem essa maquina.
+	Do inglês \textit{Infrastructure as a Service}, entrega recursos de hardware tais como processador, espaço de disco ou componentes de rede como um serviço. Esses recursos são geralmente entregues como uma plataforma virtual pelo provedor do serviço e pode ser acessada através da Web pelo cliente. O cliente tem total controle sobre a maquina virtual e não é responsável por gerenciar a infraestrutura que mantêm essa maquina.
 		
 	% Como é feita a cobrança
 	A cobrança nos IaaS é realizada de acordo com fatores como o numero de servidores virtuais, quantidade de dados trafegados, dados armazenados, horas de funcionamento do serviço e outros fatores que variam entre provedores.
@@ -132,7 +132,7 @@ No exemplo \ref{code:rules_example} de código, todos os usuários podem ler o nó 
 		\begin{codigo}[H]
 			\small
 			\VerbatimInput[xleftmargin=10mm,numbers=left,obeytabs=true]{./prog/rules_example.json}
-			\caption{\texttt{Exmemplo de Regras} }
+			\caption{\texttt{Exemplo de Regras} }
 			\label{code:rules_example}
 		\end{codigo}
 	\end{minipage}
@@ -163,7 +163,7 @@ Para resolver esse problema, o Firebase desenvolveu o Cloud Functions, que permi
 % contexto
 Quando se tem um servidor interno, uma das principais preocupações é com a escalabilidade e a disponibilidade. Ou seja, como que o seu serviço vai funcionar quando esse servidor estiver sobre grande carga, que pode ser gerada por vários usuários ativos ao mesmo tempo, várias operações de acesso ao banco de dados ocorrendo ao mesmo tempo ou até mesmo falta de recursos. Um sistema é dito escalável se permanece eficiente quando há um aumento significativo no número de recursos e no numero de usuários \cite{Coulouris2005}. A disponibilidade de um sistema é a medida da proporção de tempo em que ele está pronto para uso \cite{Coulouris2005}.
 
-BaaS investem em infraestrutura para mantem o serviço escalável e disponível na medida que a demanda dos usuários vai crescendo, deixando o programador responsável por estruturar os dados e as consultas, de forma a minimizar a quantidade de requisições e a  quantidade de nós a serem acessados para realizar uma consulta. 
+BaaS investem em infraestrutura para mantêm o serviço escalável e disponível na medida que a demanda dos usuários vai crescendo, deixando o programador responsável por estruturar os dados e as consultas, de forma a minimizar a quantidade de requisições e a  quantidade de nós a serem acessados para realizar uma consulta. 
 
 % como firebase resolve problemas de escalabilidade 
 No Firebase, os problemas de usuários simultâneos e escalabilidade são resolvidos pela plataforma, porém existe um custo de acordo com o que o cliente precisa. Esse custo deve ser acertado entre as partes contratantes. 
