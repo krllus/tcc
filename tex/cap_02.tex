@@ -1,269 +1,269 @@
 \chapter{Fundamentação Teórica}
 \label{cap:fund_teorica}
 \section{Cloud Computing}
-	% definition
-	\textit{Cloud Computing} ou computação na nuvem, é um termo que pode ser usado para descrever uma plataforma que provê, configura, reconfigura e desprovê servidores a medida do necessário. Esses servidores podem ser máquinas físicas ou máquinas virtuais e podem ser utilizados para hospedar aplicações que são estendidas para serem acessadas através da internet. Essas máquinas são providas por data centers (centro de dados) que hospedam \textit{web services} e \textit{web applications}, tornando possível o acesso por meio de qualquer navegador web.
+% definition
+\textit{Cloud Computing} ou computação na nuvem, é um termo que pode ser usado para descrever uma plataforma que provê, configura, reconfigura e desprovê servidores a medida do necessário. Esses servidores podem ser máquinas físicas ou máquinas virtuais e podem ser utilizados para hospedar aplicações que são estendidas para serem acessadas através da internet. Essas máquinas são providas por data centers (centro de dados) que hospedam \textit{web services} e \textit{web applications}, tornando possível o acesso por meio de qualquer navegador web.
 	
-	No mercado, alguns famosos provedores de computação na nuvem são a Amazon EC2 \cite{amazon_web_services} e IBM Bluemix \cite{ibm_blue_mix}.
+No mercado, alguns famosos provedores de computação na nuvem são a Amazon EC2 \cite{amazon_web_services} e IBM Bluemix \cite{ibm_blue_mix}.
 	
- Neste capítulo destrincharemos o conceito, taxonomia e exemplos de computação na nuvem, o que servirá de base para o entendimento e discussão deste trabalho.
+Neste capítulo destrincharemos o conceito, taxonomia e exemplos de computação na nuvem, o que servirá de base para o entendimento e discussão deste trabalho.
 
-	%\subsection{Os serviços de software na nuvem}
-	\subsection{Taxonomia} 
-    	Segundo \cite{antonio_ricardo_saas_iaas_paas_cloud_computing}, os provedores de serviços em nuvem podem ser separados em categorias, todas seguindo um padrão quanto ao modelo de pagamento, porem com suas devidas peculiaridades:
+%\subsection{Os serviços de software na nuvem}
+\subsection{Taxonomia} 
+Segundo \cite{antonio_ricardo_saas_iaas_paas_cloud_computing}, os provedores de serviços em nuvem podem ser separados em categorias, todas seguindo um padrão quanto ao modelo de pagamento, porem com suas devidas peculiaridades:
 	
-		\begin{description}
-		\item [Software como serviço - SaaS]
-		Do inglês \textit{Software as a Service},Clientes de software como serviço alugam o uso de aplicações que rodam dentro da infraestrutura do provedor do serviço de computação na nuvem. Essas aplicações são geralmente ofertadas para os clientes atraves da internet e são gerenciadas totalmente pelo provedor do serviço. O maior benefício de SaaS é a manutenção de uma mesma versão do software para todos os cliente. Adicionalmente, novas funcionalidades podem ser integradas pelo provedor através de uma simples atualização centralizada de arquivos e assim disponível para todos os clientes.
-
-		Ao contrario do modelo tradicional de software comprado por licença para utilização do produto, em SaaSs, a precificação geralmente é realizada com base em assinaturas de conjunto de serviços.
-
-		\item [Infraestrutura como serviço - IaaS]
-		Do inglês \textit{Infrastructure as a Service}, entrega recursos de hardware tais como processador, espaço de disco ou componentes de rede como um serviço. Esses recursos são geralmente entregues como uma plataforma virtual pelo provedor do serviço e pode ser acessada atraves da Web pelo cliente. O cliente tem total controle sobre a maquina virtual e não é responsável por gerenciar a infraestrutura que mantem essa maquina.
+\begin{description}
+	\item [Software como serviço - SaaS]
+	Do inglês \textit{Software as a Service},Clientes de software como serviço alugam o uso de aplicações que rodam dentro da infraestrutura do provedor do serviço de computação na nuvem. Essas aplicações são geralmente ofertadas para os clientes atraves da internet e são gerenciadas totalmente pelo provedor do serviço. O maior benefício de SaaS é a manutenção de uma mesma versão do software para todos os cliente. Adicionalmente, novas funcionalidades podem ser integradas pelo provedor através de uma simples atualização centralizada de arquivos e assim disponível para todos os clientes.
 	
-		% Como é feita a cobrança
-		A cobrança nos IaaS é realizada de acordo com fatores como o numero de servidores virtuais, quantidade de dados trafegados, dados armazenados, horas de funcionamento do serviço e outros fatores que variam entre provedores.
-
-		\item[Plataforma como serviço - PaaS]
-		Do inglês \textit{Plataform as a Service}, é um modelo intermediário entre IaaS e SaaS, onde o desenvolvedor tem toda as vantagens de ter seu software em nuvem e de não precisar de uma infraestrutura local. Os provedores de PaaS oferecem a plataforma de uma aplicação como serviço. Assim os clientes podem disponibilizar software usando as ferramentas e linguagens de programação disponibilizadas pelo provedor e ter controle sobre suas aplicações via um painel de controle.
-        
-		\item[Armazenamento como serviço - STaaS]
-		Do inglês \textit{Storage as a Service - STaaS}, é um modelo de negócio em que o fornecedor do serviço aluga parte da sua infraestrutura de armazenamento de dados para o cliente e é mantido com base em uma assinatura. Como o provedor possui uma estrutura escalável, ele é capaz de ofertar armazenamento a um preço mais compensador. Sem levar em conta o custo de pessoas e manutenção necessário para manter um servidor de armazenamento próprio. STaaS são geralmente usados quando se quer fazer um backup remoto. Um dos pontos fracos desse serviço é a necessidade de uma grande largura de banda para utilizar o armazenamento em nuvem.
-	 	
-		\item[Segurança como serviço - SECaaS]
-		Do inglês \textit{Security as a Service}, é um modelo de negócio em que provedores integram seus serviços a infraestrutura de terceiros cujo objetivo é adicionar funcionalidades de segurança ao software em si, como \textit{firewall}, verificação de anti-vírus ou tráfego de informação criptografada.
+	Ao contrario do modelo tradicional de software comprado por licença para utilização do produto, em SaaSs, a precificação geralmente é realizada com base em assinaturas de conjunto de serviços.
 	
-		% example - Gmail mcCafee 
-		% Aion Cloud, Cloudbric, 
-
-		\item[Dados como serviço - DaaS]
-		Do inglês \textit{Data as a Service} é baseado no conceito de que o produto (dados) pode ser providenciado sob demanda pelo usuário, não importando localização geográfica ou separação organizacional entre provedor e consumidor. 
-		% exemplo
-
-		% Verificar para talvez refazermos ou até excluirmos este tópico.
-
-		\item[Ambiente de testes como serviço - TEaaS]
-		Do inglês \textit{Test Environment as a Service} e geralmente referenciado como ``ambiente de teste sob demanda'', é um ambiente distribuído de testes em que software e os dados associados são hospedados e executados na nuvem afim de realizar verificações, validações ou o teste de software em si. Em geral, este tipo de software é utilizado por equipes que no podem ter acesso a dispositivos ou contextos específicos do usuário final, incluindo testes de escalabilidade. Um exemplo de TEaaS é o Firebase Test Lab \cite{firebase_test_lab}.
-	
-		%example
-
-		\item[\textit{Backend} como serviço - BaaS]
-        Do inglês \textit{Back-end as a Service} e também conhecido como \textit{Mobile Back-end as a Service} (MBaaS), é um modelo que provê para desenvolvedores de plataformas web e móvel, uma maneira de ligar suas aplicações a uma plataforma de \textit{backend} e armazenamento na nuvem, além de prover funcionalidades como gestão de usuários, notificações e integração com serviços de redes sociais. Esses serviços são providos via o uso de Software Development Kits (SDKs) e Application Programming Interfaces (APIs). 
-		\end{description}
-
-	\section{Aprofundando em BaaS}
-    
-    O conceito de BaaS é relativamente recente no mundo de computação em nuvem \cite{Lane2013}, sendo que no mercado a maioria das \textit{startups} de BaaS são datadas do começo de 2011 ou depois. É um conceito que surgiu da frustração em implantar nas plataformas de IaaS e de PaaS  que não oferecem o que é necessário para plataformas móveis. BaaS é sobre abstrair as complexidades de lançamento e gerenciamento da sua própria infraestrutura e trazer recursos que almejam exatamente o que desenvolvedores precisam para construir as próximas gerações de aplicativos moveis \cite{Lane2013}.
-
-	BaaS tem a mesma intenções do PaaS: acelerar o processo de desenvolvimento. Porem, BaaS se concentram em trazer um infraestrutura que escala automaticamente e otimiza uma série de recursos essenciais que desenvolvedores precisam, tais como ferramentas de conteúdo, dados, mensagens e APIs de terceiros tais como Facebook\cite{facebook_developers}, Twitter\cite{twitter_developers} e Dropbox\cite{dropbox_developers}.
-
-	% aqui começava o paragrafo sobre aprofundaento em baas
-
-	Em tempos não muito distantes ou até atuais, empresas hospedavam seus próprios servidores de infraestrutura que são responsáveis por todo o \textit{backend}, assim ficando responsável pelos desafios relacionados a gerencia de TI tais como disponibilidade, escalabilidade e manutenção por exemplo. Esse cenário vem se modificando ao longo dos últimos anos. Empresas estão migrando para o modelo de Software as a Service(SaaS), onde serviços de infraestrutura são fornecidos por outra empresa, passando para o fornecedor a responsabilidade de manutenção do serviço. 
-
-	Agilização no desenvolvimento de novas soluções, menor custo inicial, integridade e consistência dos dados são as principais vantagens do modelo de SaaS.
+	\item [Infraestrutura como serviço - IaaS]
+	Do inglês \textit{Infrastructure as a Service}, entrega recursos de hardware tais como processador, espaço de disco ou componentes de rede como um serviço. Esses recursos são geralmente entregues como uma plataforma virtual pelo provedor do serviço e pode ser acessada atraves da Web pelo cliente. O cliente tem total controle sobre a maquina virtual e não é responsável por gerenciar a infraestrutura que mantem essa maquina.
 		
-	% definir principais vantagens
-	% referencia?
+	% Como é feita a cobrança
+	A cobrança nos IaaS é realizada de acordo com fatores como o numero de servidores virtuais, quantidade de dados trafegados, dados armazenados, horas de funcionamento do serviço e outros fatores que variam entre provedores.
+	
+	\item[Plataforma como serviço - PaaS]
+	Do inglês \textit{Plataform as a Service}, é um modelo intermediário entre IaaS e SaaS, onde o desenvolvedor tem toda as vantagens de ter seu software em nuvem e de não precisar de uma infraestrutura local. Os provedores de PaaS oferecem a plataforma de uma aplicação como serviço. Assim os clientes podem disponibilizar software usando as ferramentas e linguagens de programação disponibilizadas pelo provedor e ter controle sobre suas aplicações via um painel de controle.
+	        
+	\item[Armazenamento como serviço - STaaS]
+	Do inglês \textit{Storage as a Service - STaaS}, é um modelo de negócio em que o fornecedor do serviço aluga parte da sua infraestrutura de armazenamento de dados para o cliente e é mantido com base em uma assinatura. Como o provedor possui uma estrutura escalável, ele é capaz de ofertar armazenamento a um preço mais compensador. Sem levar em conta o custo de pessoas e manutenção necessário para manter um servidor de armazenamento próprio. STaaS são geralmente usados quando se quer fazer um backup remoto. Um dos pontos fracos desse serviço é a necessidade de uma grande largura de banda para utilizar o armazenamento em nuvem.
+		 	
+	\item[Segurança como serviço - SECaaS]
+	Do inglês \textit{Security as a Service}, é um modelo de negócio em que provedores integram seus serviços a infraestrutura de terceiros cujo objetivo é adicionar funcionalidades de segurança ao software em si, como \textit{firewall}, verificação de anti-vírus ou tráfego de informação criptografada.
+		
+	% example - Gmail mcCafee 
+	% Aion Cloud, Cloudbric, 
+	
+	\item[Dados como serviço - DaaS]
+	Do inglês \textit{Data as a Service} é baseado no conceito de que o produto (dados) pode ser providenciado sob demanda pelo usuário, não importando localização geográfica ou separação organizacional entre provedor e consumidor. 
+	% exemplo
+	
+	% Verificar para talvez refazermos ou até excluirmos este tópico.
+	
+	\item[Ambiente de testes como serviço - TEaaS]
+	Do inglês \textit{Test Environment as a Service} e geralmente referenciado como ``ambiente de teste sob demanda'', é um ambiente distribuído de testes em que software e os dados associados são hospedados e executados na nuvem afim de realizar verificações, validações ou o teste de software em si. Em geral, este tipo de software é utilizado por equipes que no podem ter acesso a dispositivos ou contextos específicos do usuário final, incluindo testes de escalabilidade. Um exemplo de TEaaS é o Firebase Test Lab \cite{firebase_test_lab}.
+		
+	%example
+	
+	\item[\textit{Backend} como serviço - BaaS]
+	Do inglês \textit{Back-end as a Service} e também conhecido como \textit{Mobile Back-end as a Service} (MBaaS), é um modelo que provê para desenvolvedores de plataformas web e móvel, uma maneira de ligar suas aplicações a uma plataforma de \textit{backend} e armazenamento na nuvem, além de prover funcionalidades como gestão de usuários, notificações e integração com serviços de redes sociais. Esses serviços são providos via o uso de Software Development Kits (SDKs) e Application Programming Interfaces (APIs). 
+\end{description}
+
+\section{Aprofundando em BaaS}
     
-    A maioria dos provedores de BaaS, fornece segurança, autorização, autenticação, escalabilidade, disponibilidade e manutenção a um custo inicial baixo, bastando apenas a configuração de pequenos arquivos para se ter \textit{backend} funcionando. Porém, este não é um serviço gratuito, o custo varia de acordo com a utilização e a mudança de um provedor para outro nem sempre é realizada de maneira fácil, devido a possíveis diferenças arquiteturais.   
+O conceito de BaaS é relativamente recente no mundo de computação em nuvem \cite{Lane2013}, sendo que no mercado a maioria das \textit{startups} de BaaS são datadas do começo de 2011 ou depois. É um conceito que surgiu da frustração em implantar nas plataformas de IaaS e de PaaS  que não oferecem o que é necessário para plataformas móveis. BaaS é sobre abstrair as complexidades de lançamento e gerenciamento da sua própria infraestrutura e trazer recursos que almejam exatamente o que desenvolvedores precisam para construir as próximas gerações de aplicativos moveis \cite{Lane2013}.
+
+BaaS tem a mesma intenções do PaaS: acelerar o processo de desenvolvimento. Porem, BaaS se concentram em trazer um infraestrutura que escala automaticamente e otimiza uma série de recursos essenciais que desenvolvedores precisam, tais como ferramentas de conteúdo, dados, mensagens e APIs de terceiros tais como Facebook\cite{facebook_developers}, Twitter\cite{twitter_developers} e Dropbox\cite{dropbox_developers}.
+
+% aqui começava o paragrafo sobre aprofundaento em baas
+
+Em tempos não muito distantes ou até atuais, empresas hospedavam seus próprios servidores de infraestrutura que são responsáveis por todo o \textit{backend}, assim ficando responsável pelos desafios relacionados a gerencia de TI tais como disponibilidade, escalabilidade e manutenção por exemplo. Esse cenário vem se modificando ao longo dos últimos anos. Empresas estão migrando para o modelo de Software as a Service(SaaS), onde serviços de infraestrutura são fornecidos por outra empresa, passando para o fornecedor a responsabilidade de manutenção do serviço. 
+
+Agilização no desenvolvimento de novas soluções, menor custo inicial, integridade e consistência dos dados são as principais vantagens do modelo de SaaS.
+		
+% definir principais vantagens
+% referencia?
+    
+A maioria dos provedores de BaaS, fornece segurança, autorização, autenticação, escalabilidade, disponibilidade e manutenção a um custo inicial baixo, bastando apenas a configuração de pequenos arquivos para se ter \textit{backend} funcionando. Porém, este não é um serviço gratuito, o custo varia de acordo com a utilização e a mudança de um provedor para outro nem sempre é realizada de maneira fácil, devido a possíveis diferenças arquiteturais.   
 
 \subsection{Definição}
-	BaaS é um tipo de SaaS que prevê o suporte para que uma ou mais aplicações funcionem sem a necessidade do desenvolvimento \textit{backend}. Este tipo de serviço, no geral, provê armazenamento 
+BaaS é um tipo de SaaS que prevê o suporte para que uma ou mais aplicações funcionem sem a necessidade do desenvolvimento \textit{backend}. Este tipo de serviço, no geral, provê armazenamento 
 
-	% acho que preciso definir SaaS, em lugar algum do texto eu cito o que são SaaS. talvez na introdução mas não tenho certeza se é aceitavel
-	% quais os tipos basicos de serviços mais disponibilizados por BaaS?
-	% referencia para tal informação é necessaria
+% acho que preciso definir SaaS, em lugar algum do texto eu cito o que são SaaS. talvez na introdução mas não tenho certeza se é aceitavel
+% quais os tipos basicos de serviços mais disponibilizados por BaaS?
+% referencia para tal informação é necessaria
 
-	Este trabalho tem como objetivo a análise e discussão das funcionalidades e desafios referentes ao serviço Firebase. Visto que este é considerado o mais utilizado da atualidade. \ref{firebase_most_used_service}
+Este trabalho tem como objetivo a análise e discussão das funcionalidades e desafios referentes ao serviço Firebase. Visto que este é considerado o mais utilizado da atualidade. \ref{firebase_most_used_service}
 
-	% é necessário a referencia pra afirmar isso =/
+% é necessário a referencia pra afirmar isso =/
 
 \subsection{Funcionalidades / Oportunidades}
 \label{sec:functionality}
-	As funcionalidades dos \textit{back-ends} como serviços variam de acordo com a empresa que está provendo o serviço e com qual finalidade o serviço foi contratado, dentre os serviços mais comuns estão armazenamento de dados, gerenciamento de usuários, notificações assíncronas e integração com redes sociais \cite{Lane2013}, \cite{jonas_tomaz_baas}.
+As funcionalidades dos \textit{back-ends} como serviços variam de acordo com a empresa que está provendo o serviço e com qual finalidade o serviço foi contratado, dentre os serviços mais comuns estão armazenamento de dados, gerenciamento de usuários, notificações assíncronas e integração com redes sociais \cite{Lane2013}, \cite{jonas_tomaz_baas}.
 
-	% paragrafo que explica o porque de começar a falar de novas 'features'?
+% paragrafo que explica o porque de começar a falar de novas 'features'?
 
-	\subsubsection{Gerenciamento de Usuários} % AKA autenticação
-	\label{subsec:user_management}
-	% definição
-	%em geral o que é: disponibiliza ao desenvolvedor todos os meios para a autenticação do de usuários a sua aplicação;
+\subsubsection{Gerenciamento de Usuários} % AKA autenticação
+\label{subsec:user_management}
+% definição
+%em geral o que é: disponibiliza ao desenvolvedor todos os meios para a autenticação do de usuários a sua aplicação;
 	
-	% contexto
-	Sistemas podem possuir usuários cadastrados, e atribuir permissões aos mesmos. Isso pode ser realizado por meio de Gerenciamento de Usuários. BaaS oferecem serviços diferentes de acordo com as necessidades do cliente. Firebase por exemplo, fornece o Firebase Authentication \cite{firebase_authentication}, que permite login anônimo, via e-mail e senha ou usando provedores populares de identidade federada tais como o Google, Facebook, Twitter entre outros. Firebase Authentication utiliza os padrões da industria tais como OAuth 2.0 e OpenID Connect, facilitando a integração com um \textit{backend} personalizado caso necessário.
+% contexto
+Sistemas podem possuir usuários cadastrados, e atribuir permissões aos mesmos. Isso pode ser realizado por meio de Gerenciamento de Usuários. BaaS oferecem serviços diferentes de acordo com as necessidades do cliente. Firebase por exemplo, fornece o Firebase Authentication \cite{firebase_authentication}, que permite login anônimo, via e-mail e senha ou usando provedores populares de identidade federada tais como o Google, Facebook, Twitter entre outros. Firebase Authentication utiliza os padrões da industria tais como OAuth 2.0 e OpenID Connect, facilitando a integração com um \textit{backend} personalizado caso necessário.
 
 
-	Um usuário logado no seu aplicativo é representado por um objeto do tipo Firebase User. Essa classe possui um conjunto de propriedades básicas - ID único, e-mail principal, nome e a URL de uma foto - que são armazenados no banco de dados da aplicação. Caso seja necessário, informações adicionais podem ser armazenadas dentro do Firebase Realtime Database \cite{firebase_database}. Firebase User mantém informações dos diferentes provedores usados para autenticar, permitindo que seja possível atualizar propriedades que faltavam, usando informações de outros provedores.
+Um usuário logado no seu aplicativo é representado por um objeto do tipo Firebase User. Essa classe possui um conjunto de propriedades básicas - ID único, e-mail principal, nome e a URL de uma foto - que são armazenados no banco de dados da aplicação. Caso seja necessário, informações adicionais podem ser armazenadas dentro do Firebase Realtime Database \cite{firebase_database}. Firebase User mantém informações dos diferentes provedores usados para autenticar, permitindo que seja possível atualizar propriedades que faltavam, usando informações de outros provedores.
 
-	% referencia do site deles
-	% falta escrever sobre algo aqui?
+% referencia do site deles
+% falta escrever sobre algo aqui?
 
-	\subsubsection{Gerenciamento de Dados}
-	\label{subsec:data_management}
-	% definição
-	%o que é: disponibiliza ao desenvolvedor meios para armazenar e acessar os dados gerados por sua aplicação. No geral, a gerencia de dados é feita através de interfaces simples e intuitivas \cite{Lane2013} %(ref 11 - francielly);
+\subsubsection{Gerenciamento de Dados}
+\label{subsec:data_management}
+% definição
+%o que é: disponibiliza ao desenvolvedor meios para armazenar e acessar os dados gerados por sua aplicação. No geral, a gerencia de dados é feita através de interfaces simples e intuitivas \cite{Lane2013} %(ref 11 - francielly);
 	
-	% contexto
-	Usuários estão sempre produzindo e consumindo conteúdos, que podem ser desde arquivos diversos como fotos, documentos, ou dados que podem ser do tipo chave valor, endereço - rua. Assim BaaS oferecem APIs que facilitam para o desenvolvedor o acesso e armazenamento desses dados \cite{Lane2013}.
+% contexto
+Usuários estão sempre produzindo e consumindo conteúdos, que podem ser desde arquivos diversos como fotos, documentos, ou dados que podem ser do tipo chave valor, endereço - rua. Assim BaaS oferecem APIs que facilitam para o desenvolvedor o acesso e armazenamento desses dados \cite{Lane2013}.
 
-	No Firebase existem duas APIs que tratam de armazenamento de dados, Firebase Storage \cite{firebase_storage}, que trata do armazenamento e arquivos e o Firebase Realtime Database que trata do armazenamento de conjuntos chave-valor.
+No Firebase existem duas APIs que tratam de armazenamento de dados, Firebase Storage \cite{firebase_storage}, que trata do armazenamento e arquivos e o Firebase Realtime Database que trata do armazenamento de conjuntos chave-valor.
 	
-	O Firebase Realtime Database, é um banco de dados NoSQL oferecido pela plataforma do Firebase, onde todos os dados são armazenados no formato JSON e disponibilizados em tempo real para todos os clientes que estão conectados. A API trata de sincronização e armazenamento off-line, então se ocorrer uma atualização nos dados e o cliente não estava conectado, ele ainda poderá utilizar dos dados que estavam em cache e posteriormente, quando uma conexão for estabelecida, os dados serão sincronizados \cite{firebase_database}.
+O Firebase Realtime Database, é um banco de dados NoSQL oferecido pela plataforma do Firebase, onde todos os dados são armazenados no formato JSON e disponibilizados em tempo real para todos os clientes que estão conectados. A API trata de sincronização e armazenamento off-line, então se ocorrer uma atualização nos dados e o cliente não estava conectado, ele ainda poderá utilizar dos dados que estavam em cache e posteriormente, quando uma conexão for estabelecida, os dados serão sincronizados \cite{firebase_database}.
 
-	% resalva da limitação de 10 mb?
+% resalva da limitação de 10 mb?
 
-	O Firebase Storage, é a plataforma utilizada para armazenamento de arquivos. Ela é fortemente integrada ao Google Cloud Platform, 
-	\cite{firebase_storage}.
+O Firebase Storage, é a plataforma utilizada para armazenamento de arquivos. Ela é fortemente integrada ao Google Cloud Platform, 
+\cite{firebase_storage}.
 
-	% finalizar esse paragrafo acima.
+% finalizar esse paragrafo acima.
 
-	\subsubsection{Gestão de Permissão} % aka autorização
-	\label{subsec:user_authorization}
-	A funcionalidade de banco de dados como serviço é uma das mais utilizadas dentro dos BaaS [referencia para essa afirmação]. Dessa maneira, por questões de manutenção de integridade, privacidade e segurança, os sistemas do mercado oferecem diferentes maneiras para a a definição de regras de acesso e validação. O objetivo é deixar livre a tentativa de persistência de informação para todos os usuários e com qualquer tipo de dado. Porém, tudo o que for submetido a gravação passará por um controle restrições de acesso e limites internos.
+\subsubsection{Gestão de Permissão} % aka autorização
+\label{subsec:user_authorization}
+A funcionalidade de banco de dados como serviço é uma das mais utilizadas dentro dos BaaS [referencia para essa afirmação]. Dessa maneira, por questões de manutenção de integridade, privacidade e segurança, os sistemas do mercado oferecem diferentes maneiras para a a definição de regras de acesso e validação. O objetivo é deixar livre a tentativa de persistência de informação para todos os usuários e com qualquer tipo de dado. Porém, tudo o que for submetido a gravação passará por um controle restrições de acesso e limites internos.
 	
-	No Firebase, esse controle de segurança e regras é implementado usando um conjunto de regras definidas pelo programador através de descritores JSON. Estas são aplicadas a cada operação de leitura ou escrita, fazendo com que uma requisição seja valida somente se essas regras permitirem. \cite{firebase_security}. 
+No Firebase, esse controle de segurança e regras é implementado usando um conjunto de regras definidas pelo programador através de descritores JSON. Estas são aplicadas a cada operação de leitura ou escrita, fazendo com que uma requisição seja valida somente se essas regras permitirem. \cite{firebase_security}. 
 	
-	No exemplo \ref{code:rules_example} de código, todos os usuários podem ler o nó \textit{foo}, mas ninguém pode escrever nele. 
+No exemplo \ref{code:rules_example} de código, todos os usuários podem ler o nó \textit{foo}, mas ninguém pode escrever nele. 
     
-	%exemplo
-	\begin{center}
- 		\begin{minipage}{0.7\textwidth}
-  			\begin{codigo}[H]
-   				\small
-   				\VerbatimInput[xleftmargin=10mm,numbers=left,obeytabs=true]{./prog/rules_example.json}
-   				\caption{\texttt{Exmemplo de Regras} }
-   				\label{code:rules_example}
-  			\end{codigo}
- 		\end{minipage}
-	\end{center}
+%exemplo
+\begin{center}
+	\begin{minipage}{0.7\textwidth}
+		\begin{codigo}[H]
+			\small
+			\VerbatimInput[xleftmargin=10mm,numbers=left,obeytabs=true]{./prog/rules_example.json}
+			\caption{\texttt{Exmemplo de Regras} }
+			\label{code:rules_example}
+		\end{codigo}
+	\end{minipage}
+\end{center}
 	
-	\subsubsection{Objetos Customizáveis}
-	\label{subsec:custom_objects}
- 	Objetos do mundo real são complexos, e em muitas das vezes somente os tipos primitivos de dados não são suficientes para representar os atributos desses objetos. Assim necessitando de objetos que permitam acessar dados (DAO, do inglês Data Access Object) sejam criados justamente para converter essa estrutura complexa em uma que o banco de dados consegue entender.
+\subsubsection{Objetos Customizáveis}
+\label{subsec:custom_objects}
+Objetos do mundo real são complexos, e em muitas das vezes somente os tipos primitivos de dados não são suficientes para representar os atributos desses objetos. Assim necessitando de objetos que permitam acessar dados (DAO, do inglês Data Access Object) sejam criados justamente para converter essa estrutura complexa em uma que o banco de dados consegue entender.
 
- 	No Firebase, os dados são armazenados como JSON assim, a lista de tipos primitivos é composta de tipos que podem ser convertidos para JSON diretamente, contendo String, Long, Double, Map$<$String,Object$>$ e List$<$Object$>$ isso falando de Java. Para usar objetos personalizados, a classe que o implementa deve de utilizar ter um construtor vazio e métodos públicos de acesso para os atributos dessa classe. \cite{firebase_database_read-write}
+No Firebase, os dados são armazenados como JSON assim, a lista de tipos primitivos é composta de tipos que podem ser convertidos para JSON diretamente, contendo String, Long, Double, Map$<$String,Object$>$ e List$<$Object$>$ isso falando de Java. Para usar objetos personalizados, a classe que o implementa deve de utilizar ter um construtor vazio e métodos públicos de acesso para os atributos dessa classe. \cite{firebase_database_read-write}
 
-	\subsubsection{API}
-	\label{sub:api}
-	% Definição
+\subsubsection{API}
+\label{sub:api}
+% Definição
 
-	% contexto
-	Em alguns casos, é necessário implementar lógicas de negócio mais robustas e que exigem mais processamento do dispositivo do cliente, ou precisam ser ocultadas por questões de segurança. Assim, alguns provedores possibilitam que o desenvolvedor implemente sua própria API sobre o serviço contratado, estendendo ou personalizando o comportamento de uma funcionalidade já existente. A geração de \textit{thumbnail} de imagens é um exemplo de operação que pode ser realizada no servidor para economizar processamento dos clientes.
+% contexto
+Em alguns casos, é necessário implementar lógicas de negócio mais robustas e que exigem mais processamento do dispositivo do cliente, ou precisam ser ocultadas por questões de segurança. Assim, alguns provedores possibilitam que o desenvolvedor implemente sua própria API sobre o serviço contratado, estendendo ou personalizando o comportamento de uma funcionalidade já existente. A geração de \textit{thumbnail} de imagens é um exemplo de operação que pode ser realizada no servidor para economizar processamento dos clientes.
 
-	% arrumar um exemplo que trate da seguranca da informacao que deve ser realizada somente server-side
+% arrumar um exemplo que trate da seguranca da informacao que deve ser realizada somente server-side
 
-	Para resolver esse problema, o Firebase desenvolveu o Cloud Functions, que permite a criação de um serviço hospedado por eles onde operações custosas quanto ao processamento ou que não deveriam ser feitas no cliente, são realizadas nos servidores do próprio Firebase.
+Para resolver esse problema, o Firebase desenvolveu o Cloud Functions, que permite a criação de um serviço hospedado por eles onde operações custosas quanto ao processamento ou que não deveriam ser feitas no cliente, são realizadas nos servidores do próprio Firebase.
 
-	% melhor explicar o que seria o firebase cloud functions
-	% exemplo pratico com codigo de thumbnail
+% melhor explicar o que seria o firebase cloud functions
+% exemplo pratico com codigo de thumbnail
 
-	\subsubsection{Escalabilidade e Disponibilidade}
-	\label{subsec:scalability_and_availability}
-	% contexto
-	Quando se tem um servidor interno, uma das principais preocupações é com a escalabilidade e a disponibilidade. Ou seja, como que o seu serviço vai funcionar quando esse servidor estiver sobre grande carga, que pode ser gerada por vários usuários ativos ao mesmo tempo, várias operações de acesso ao banco de dados ocorrendo ao mesmo tempo ou até mesmo falta de recursos. Um sistema é dito escalável se permanece eficiente quando há um aumento significativo no número de recursos e no numero de usuários \cite{Coulouris2005}. A disponibilidade de um sistema é a medida da proporção de tempo em que ele está pronto para uso \cite{Coulouris2005}.
+\subsubsection{Escalabilidade e Disponibilidade}
+\label{subsec:scalability_and_availability}
+% contexto
+Quando se tem um servidor interno, uma das principais preocupações é com a escalabilidade e a disponibilidade. Ou seja, como que o seu serviço vai funcionar quando esse servidor estiver sobre grande carga, que pode ser gerada por vários usuários ativos ao mesmo tempo, várias operações de acesso ao banco de dados ocorrendo ao mesmo tempo ou até mesmo falta de recursos. Um sistema é dito escalável se permanece eficiente quando há um aumento significativo no número de recursos e no numero de usuários \cite{Coulouris2005}. A disponibilidade de um sistema é a medida da proporção de tempo em que ele está pronto para uso \cite{Coulouris2005}.
 
-	BaaS investem em infraestrutura para mantem o serviço escalável e disponível na medida que a demanda dos usuários vai crescendo, deixando o programador responsável por estruturar os dados e as consultas, de forma a minimizar a quantidade de requisições e a  quantidade de nós a serem acessados para realizar uma consulta. 
+BaaS investem em infraestrutura para mantem o serviço escalável e disponível na medida que a demanda dos usuários vai crescendo, deixando o programador responsável por estruturar os dados e as consultas, de forma a minimizar a quantidade de requisições e a  quantidade de nós a serem acessados para realizar uma consulta. 
 
-	% como firebase resolve problemas de escalabilidade 
-	No Firebase, os problemas de usuários simultâneos e escalabilidade são resolvidos pela plataforma, porém existe um custo de acordo com o que o cliente precisa. Esse custo deve ser acertado entre as partes contratantes. 
+% como firebase resolve problemas de escalabilidade 
+No Firebase, os problemas de usuários simultâneos e escalabilidade são resolvidos pela plataforma, porém existe um custo de acordo com o que o cliente precisa. Esse custo deve ser acertado entre as partes contratantes. 
 
-	% sao resolvidos pela plataforma, nao sei explicar como... devo entrar com os numeros dos servidores?
-	% devo abordar o problema do custo do servico?
+% sao resolvidos pela plataforma, nao sei explicar como... devo entrar com os numeros dos servidores?
+% devo abordar o problema do custo do servico?
 
 \subsection{Precificação}%6:30
-	% o que nos leva a precifica;ao, um das principais vantagens e tambem desvantagens
+% o que nos leva a precifica;ao, um das principais vantagens e tambem desvantagens
 \label{sec:pricing}
-	% precificação gera desafios.
-	% definição
-	Os serviços ofertados pela empresa também possuem um custo de manutenção, em geral, quantidade de dados transferidos e armazenados, e quantidade de requisições a API. Custo esse que é repassado para os contratantes do serviço.
+% precificação gera desafios.
+% definição
+Os serviços ofertados pela empresa também possuem um custo de manutenção, em geral, quantidade de dados transferidos e armazenados, e quantidade de requisições a API. Custo esse que é repassado para os contratantes do serviço.
 
-	% contexto
-	O \textit{backend} como serviço, assim como todo software que roda como serviço na nuvem, é mantido por uma empresa que obviamente vai cobrar pelo serviço, por tanto, deve haver uma preocupação com o valor a ser pago para o fornecedor dessa solução.
+% contexto
+O \textit{backend} como serviço, assim como todo software que roda como serviço na nuvem, é mantido por uma empresa que obviamente vai cobrar pelo serviço, por tanto, deve haver uma preocupação com o valor a ser pago para o fornecedor dessa solução.
 	
-	O modelo de precificação para provedores de BaaS ainda está evoluindo. Muito dos provedores, adotou o custo de armazenamento e chamadas de API como sendo o seu modelo, porem ainda existe muito o que debater sobre o que é modelo mais proveitoso para os desenvolvedores e que gera lucro para o provedor.
+O modelo de precificação para provedores de BaaS ainda está evoluindo. Muito dos provedores, adotou o custo de armazenamento e chamadas de API como sendo o seu modelo, porem ainda existe muito o que debater sobre o que é modelo mais proveitoso para os desenvolvedores e que gera lucro para o provedor.
 
-	Atualmente alguns dos provedores de BaaS operam usando serviços de terceiros, tal como Amazon Web Services, o que faz com que eles cobrem pelos custos da plataforma. Os modelos mais utilizados para cobrança são chamadas de API e Armazenamento. 
+Atualmente alguns dos provedores de BaaS operam usando serviços de terceiros, tal como Amazon Web Services, o que faz com que eles cobrem pelos custos da plataforma. Os modelos mais utilizados para cobrança são chamadas de API e Armazenamento. 
     
-    Os itens mais utilizados na precificação são:
-    \begin{description}
-    	%\item[]	
-		\item[Chamadas de API]{ Cobrar do desenvolvedor pela quantidade de chamadas a APIs. O valor de um BaaS está nos recursos que as APIs fornecem, o modelo de negocio é construído sob o valor dessas APIs.}
-		
-		\item[Armazenamento]{ Armazenamento é o maior custo para os provedores de BaaS. Para os desenvolvedores, é comum o armazenamento de dados, arquivos e objetos usando o \textit{storage} do provedor. Grande parte dos provedores BaaS rodam em nuvem, assim esse armazenamento é sempre uma solução em nuvem. }
-	\end{description}
+Os itens mais utilizados na precificação são:
+\begin{description}
+	%\item[]	
+	\item[Chamadas de API]{ Cobrar do desenvolvedor pela quantidade de chamadas a APIs. O valor de um BaaS está nos recursos que as APIs fornecem, o modelo de negocio é construído sob o valor dessas APIs.}
+			
+	\item[Armazenamento]{ Armazenamento é o maior custo para os provedores de BaaS. Para os desenvolvedores, é comum o armazenamento de dados, arquivos e objetos usando o \textit{storage} do provedor. Grande parte dos provedores BaaS rodam em nuvem, assim esse armazenamento é sempre uma solução em nuvem. }
+\end{description}
 
-	Apesar de esses serem os métodos mais comuns para cobrança, existem vários outros requisitos por onde o provedor de BaaS pode cobrar.
+Apesar de esses serem os métodos mais comuns para cobrança, existem vários outros requisitos por onde o provedor de BaaS pode cobrar.
 
-	O foco de vários BaaS é o mundo de aplicativos móveis, assim, faz sentido cobrar dos desenvolvedores por quantidade de usuários finais.	
+O foco de vários BaaS é o mundo de aplicativos móveis, assim, faz sentido cobrar dos desenvolvedores por quantidade de usuários finais.	
 
-	O numero de chamadas da API e quantidade de usuários ativos, é uma forma de medir o sucesso do aplicativo,  e assim o desenvolvedor está apto a pagar um pouco mais pelos serviços do provedor.
+O numero de chamadas da API e quantidade de usuários ativos, é uma forma de medir o sucesso do aplicativo,  e assim o desenvolvedor está apto a pagar um pouco mais pelos serviços do provedor.
 
-	A cobrança pelo provedor BaaS, é um processo que não tem um padrão estabelecido. A questão do custo é um reflexo do modelo de negocio de IaaS utilizada pelo provedor. Mas existem outras  abordagens comuns de cobrança entre BaaS:
+A cobrança pelo provedor BaaS, é um processo que não tem um padrão estabelecido. A questão do custo é um reflexo do modelo de negocio de IaaS utilizada pelo provedor. Mas existem outras  abordagens comuns de cobrança entre BaaS:
 
-	\begin{description}
-		%\item[]	
-		\item[Usuários ativos] { Para alguns, o numero de usurários ativos, é uma maneira sensível de cobrar pelos serviços dos BaaS. Cobrar desenvolvedores por cada usuário ativo é uma maneira de deixar os custos do \textit{backend} de acordo com o modelo que foi escolhido pelo desenvolvedor. Cada provedor define diferente o que ele considera usuário ativo. }
-
-		\item[Analytics] { Muitos provedores fornecem ferramentas de análise grátis como parte do serviço e cobram por uma versão \textit{premium} ou melhorada da ferramenta. Ter em mãos os dados das ferramentas de analise ajudam o desenvolvedor a localizar qual parte do seu aplicativo necessita de mais foco.}
-
-		\item[Número de aplicações] { Desenvolvedores criam seus aplicativos usando os serviços dos BaaS, assim, cobrar pelo número de aplicações faz sentido. Alguns provedores BaaS, fornecem uma chave para um aplicativo grátis e você deve pagar uma taxa por cada chave extra requisitada.}
-
-		\item[Largura de banda utilizada] { Largura de banda é mais um dos custos passados juntamente com o provedor de IaaS. É um custo que as vezes vem com uma sobre taxa}
-		
-		\item[Beta] { Muitos provedores de BaaS ainda estão em fase de desenvolvimento, assim eles possuem um modelo de cobrança e não cobram pelos serviços oferecidos.}
-
-		\item[Campanhas] { Os provedores realizam campanhas de marketing  e cobram por esse serviço.}
-		
-		\item[Chats] { Comunicação por chat é provida por BaaS através de soluções de terceiros. Assim passando para os desenvolvedores uma parte do custo. A comunicação via chat, é uma função que agrega valor ao aplicativo, assim, compensa pagar um pouco por ela e ter usuários mais satisfeitos. }
-		
-		\item[E-mails] { entre as tecnologias de comunicação, e-mail é a mais fácil de se medir, associar valor e cobrar por. Alguns provedores de BaaS estão terceirizando seus serviços de e-mail para servidores dedicados para esse serviço passando para desenvolvedores parte dos custos.}
-		
-		\item[Enterprise] { Contratos com empresas são a maior fonte de renda para provedores BaaS, assim criar planos empresarias se faz necessário, onde a contratante pagará pelos serviços que for mais utilizar eliminando ou aumentando os limites de utilização que certas APIs impõem em alguns serviços.}
-		
-		\item[Acesso a ferramentas adicionais] { Alguns provedores alegam que custos de chamadas de API, armazenamento, entre outros, são insignificantes. Defendendo que desenvolvedores deveriam ser cobrados apenas pelas ferramentas(\textit{features}). Assim, criando um modelo onde os desenvolvedores pagam pelas ferramentas que serão disponibilizadas pelo provedor, por terceiros ou atraves de uma loja virtual.}
-		
-		\item[Push Notifications] { \textit{Push notifications} além de ser um dos serviços mais fornecidos pelos provedores BaaS, cerca de 2/3 dos provedores possuem alguma forma de notificação \textit{push}, é um dos mais custosos, assim os provedores passam parte do custo para os desenvolvedores além de que alguns podem cobrar uma taxa extra pelas notificações.}
-		
-		\item[SSL] { Alguns provedores BaaS fornecem SSL em seus pacotes de preços. Os custos para implementação de SSL no provedor são altos, mas alguns veem como um recurso aceitável para se pagar por. }
-		
-		\item[Support] { Muitos provedores fornecem suporte como um serviço a parte aonde o desenvolvedor deve pagar por. }
-		
-		\item[Sincronizações] { Diversos provedores BaaS incluem a possibilidade de sincronizar conteúdo, dados e mensagens. Essas plataformas estruturam seu preço em torno da quantidade de sincronizações entre a plataforma e dispositivos. Sincronização é uma \textit{feature} valorizada por desenvolvedores pois evita que o tempo gasto em desenvolver tal ferramenta além de proporcionar uma melhor experiência para o usuário. }
-	\end{description}
+\begin{description}
+	%\item[]	
+	\item[Usuários ativos] { Para alguns, o numero de usurários ativos, é uma maneira sensível de cobrar pelos serviços dos BaaS. Cobrar desenvolvedores por cada usuário ativo é uma maneira de deixar os custos do \textit{backend} de acordo com o modelo que foi escolhido pelo desenvolvedor. Cada provedor define diferente o que ele considera usuário ativo. }
+	
+	\item[Analytics] { Muitos provedores fornecem ferramentas de análise grátis como parte do serviço e cobram por uma versão \textit{premium} ou melhorada da ferramenta. Ter em mãos os dados das ferramentas de analise ajudam o desenvolvedor a localizar qual parte do seu aplicativo necessita de mais foco.}
+	
+	\item[Número de aplicações] { Desenvolvedores criam seus aplicativos usando os serviços dos BaaS, assim, cobrar pelo número de aplicações faz sentido. Alguns provedores BaaS, fornecem uma chave para um aplicativo grátis e você deve pagar uma taxa por cada chave extra requisitada.}
+	
+	\item[Largura de banda utilizada] { Largura de banda é mais um dos custos passados juntamente com o provedor de IaaS. É um custo que as vezes vem com uma sobre taxa}
+			
+	\item[Beta] { Muitos provedores de BaaS ainda estão em fase de desenvolvimento, assim eles possuem um modelo de cobrança e não cobram pelos serviços oferecidos.}
+	
+	\item[Campanhas] { Os provedores realizam campanhas de marketing  e cobram por esse serviço.}
+			
+	\item[Chats] { Comunicação por chat é provida por BaaS através de soluções de terceiros. Assim passando para os desenvolvedores uma parte do custo. A comunicação via chat, é uma função que agrega valor ao aplicativo, assim, compensa pagar um pouco por ela e ter usuários mais satisfeitos. }
+			
+	\item[E-mails] { entre as tecnologias de comunicação, e-mail é a mais fácil de se medir, associar valor e cobrar por. Alguns provedores de BaaS estão terceirizando seus serviços de e-mail para servidores dedicados para esse serviço passando para desenvolvedores parte dos custos.}
+			
+	\item[Enterprise] { Contratos com empresas são a maior fonte de renda para provedores BaaS, assim criar planos empresarias se faz necessário, onde a contratante pagará pelos serviços que for mais utilizar eliminando ou aumentando os limites de utilização que certas APIs impõem em alguns serviços.}
+			
+	\item[Acesso a ferramentas adicionais] { Alguns provedores alegam que custos de chamadas de API, armazenamento, entre outros, são insignificantes. Defendendo que desenvolvedores deveriam ser cobrados apenas pelas ferramentas(\textit{features}). Assim, criando um modelo onde os desenvolvedores pagam pelas ferramentas que serão disponibilizadas pelo provedor, por terceiros ou atraves de uma loja virtual.}
+			
+	\item[Push Notifications] { \textit{Push notifications} além de ser um dos serviços mais fornecidos pelos provedores BaaS, cerca de 2/3 dos provedores possuem alguma forma de notificação \textit{push}, é um dos mais custosos, assim os provedores passam parte do custo para os desenvolvedores além de que alguns podem cobrar uma taxa extra pelas notificações.}
+			
+	\item[SSL] { Alguns provedores BaaS fornecem SSL em seus pacotes de preços. Os custos para implementação de SSL no provedor são altos, mas alguns veem como um recurso aceitável para se pagar por. }
+			
+	\item[Support] { Muitos provedores fornecem suporte como um serviço a parte aonde o desenvolvedor deve pagar por. }
+			
+	\item[Sincronizações] { Diversos provedores BaaS incluem a possibilidade de sincronizar conteúdo, dados e mensagens. Essas plataformas estruturam seu preço em torno da quantidade de sincronizações entre a plataforma e dispositivos. Sincronização é uma \textit{feature} valorizada por desenvolvedores pois evita que o tempo gasto em desenvolver tal ferramenta além de proporcionar uma melhor experiência para o usuário. }
+\end{description}
 
 \subsubsection{Estudo de caso: Precificação do Firebase}
 
 O Firebase\cite{firebase} é o provedor BaaS que escolhemos utilizar para o aplicativo Minha UFG. Ele divide o pagamento em forma de planos, em que todos possuem acesso às funcionalidades de Analytics, App Indexing, Authentication, Cloud Messaging, Crash Reporting, Dynamic Links, Invites, Notifications \& Remote Config, porem limitados em Realtime Database, Storage, Cloud Functions, Hosting, Test Lab e Google Cloud Platform.
 
 
-    O plano mais básico é o Spark, gratuito, seguido pelo Flame(25 dólares mensais) e Blaze. O Blaze é oferecido sob demanda. Paga-se pelo que se usa. Os limites de cada plano, como disponibilizados em \cite{firebase_pricing}, estão representados na Tabela \ref{pricing-firebase}:
-    \begin{table}[h!]
+O plano mais básico é o Spark, gratuito, seguido pelo Flame(25 dólares mensais) e Blaze. O Blaze é oferecido sob demanda. Paga-se pelo que se usa. Os limites de cada plano, como disponibilizados em \cite{firebase_pricing}, estão representados na Tabela \ref{pricing-firebase}:
+\begin{table}[h!]
 	\centering
 	\label{pricing-firebase}
-    \resizebox{\textwidth}{!}{
-	\begin{tabular}{ll|l|l|l|}
-\cline{3-5}
- &  & \multicolumn{3}{c|}{Planos} \\ \hline
-\multicolumn{1}{|c|}{Funcionalidade} & \multicolumn{1}{c|}{Restrições} & \multicolumn{1}{c|}{Spark} & \multicolumn{1}{c|}{Flame} & \multicolumn{1}{c|}{Blaze} \\ \hline
-\multicolumn{1}{|l|}{\multirow{4}{*}{Realtime Database}} & Conexões Simultâneas & 100 & Ilimitado & Ilimitado \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & GB Armazenados & 1 GB & 2.5GB & (\$)5/GB/mês \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & GB Baixados & 10GB/mês & 20GB/mês & (\$)1/GB \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & Backups Automatizados & não & não & sim \\ \hline
-\multicolumn{1}{|l|}{\multirow{4}{*}{Armazenamento}} & GB Armazenados & 5 GB & 50 GB & (\$)0.026/GB \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & GB Baixados & 1 GB/dia & 50 GB/mês & (\$)0.12/GB \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & Operações de Upload & 20,000/dia & 100,000/dia & (\$)0.10/mil \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & Operações de Download & 50,000/dia & 250,000/dia & (\$)0.01/mil \\ \hline
-\multicolumn{1}{|l|}{\multirow{4}{*}{Cloud Functions}} & Invocações & 125,000/mês & 2,000,000/mês & (\$)0.40/milhão \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & GB-segundos & 40,000/mês & 400,000/mês & (\$)0.0025/mil \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & CPU-segundos & 40,000/mês & 200,000/mês & (\$)0.01/mil \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & Outbound Networking & google-only & 5GB/mês & (\$)0.12/GB \\ \hline
-\multicolumn{1}{|l|}{\multirow{3}{*}{Hosting}} & GB Armazenados & 1 GB & 10 GB & (\$)0.026/GB \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & GB Transferidos & 10GB/mês & 50 GB/mês & (\$)0.15/GB \\ \cline{2-5} 
-\multicolumn{1}{|l|}{} & Custom domain hosting \& SSL & sim & sim & sim \\ \hline
-\multicolumn{1}{|l|}{Testing} & GB Armazenados & 15 testes/dia & 15 testes/dia & horas/dispositivo \\ \hline
-\multicolumn{1}{|l|}{Google Cloud Platform} & Usar BigQuery \& outros IaaS & não & não & sim \\ \hline
-\end{tabular}
-    }
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{ll|l|l|l|}
+			\cline{3-5}
+			&  & \multicolumn{3}{c|}{Planos} \\ \hline
+			\multicolumn{1}{|c|}{Funcionalidade}                     & \multicolumn{1}{c|}{Restrições} & \multicolumn{1}{c|}{Spark} & \multicolumn{1}{c|}{Flame} & \multicolumn{1}{c|}{Blaze} \\ \hline
+			\multicolumn{1}{|l|}{\multirow{4}{*}{Realtime Database}} & Conexões Simultâneas            & 100                        & Ilimitado                  & Ilimitado                  \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & GB Armazenados                  & 1 GB                       & 2.5GB                      & (\$)5/GB/mês               \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & GB Baixados                     & 10GB/mês                   & 20GB/mês                   & (\$)1/GB                   \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & Backups Automatizados           & não                        & não                        & sim                        \\ \hline
+			\multicolumn{1}{|l|}{\multirow{4}{*}{Armazenamento}}     & GB Armazenados                  & 5 GB                       & 50 GB                      & (\$)0.026/GB               \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & GB Baixados                     & 1 GB/dia                   & 50 GB/mês                  & (\$)0.12/GB                \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & Operações de Upload             & 20,000/dia                 & 100,000/dia                & (\$)0.10/mil               \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & Operações de Download           & 50,000/dia                 & 250,000/dia                & (\$)0.01/mil               \\ \hline
+			\multicolumn{1}{|l|}{\multirow{4}{*}{Cloud Functions}}   & Invocações                      & 125,000/mês                & 2,000,000/mês              & (\$)0.40/milhão            \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & GB-segundos                     & 40,000/mês                 & 400,000/mês                & (\$)0.0025/mil             \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & CPU-segundos                    & 40,000/mês                 & 200,000/mês                & (\$)0.01/mil               \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & Outbound Networking             & google-only                & 5GB/mês                    & (\$)0.12/GB                \\ \hline
+			\multicolumn{1}{|l|}{\multirow{3}{*}{Hosting}}           & GB Armazenados                  & 1 GB                       & 10 GB                      & (\$)0.026/GB               \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & GB Transferidos                 & 10GB/mês                   & 50 GB/mês                  & (\$)0.15/GB                \\ \cline{2-5} 
+			\multicolumn{1}{|l|}{}                                   & Custom domain hosting \& SSL    & sim                        & sim                        & sim                        \\ \hline
+			\multicolumn{1}{|l|}{Testing}                            & GB Armazenados                  & 15 testes/dia              & 15 testes/dia              & horas/dispositivo          \\ \hline
+			\multicolumn{1}{|l|}{Google Cloud Platform}              & Usar BigQuery \& outros IaaS    & não                        & não                        & sim                        \\ \hline
+		\end{tabular}
+	}
 	\caption{Precificação Firebase}
-	\end{table}
+\end{table}

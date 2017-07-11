@@ -9,27 +9,27 @@ Em um cenário que os dados de interesse de estudantes e servidores da UFG encont
 O aplicativo Android MinhaUFG é uma alternativa para os métodos atualmente usados para a divulgação da informação, convergindo a informação de diferentes perspectivas em uma só aplicação. Essas informações são agrupadas e divididas em categorias de serviços, facilitando a busca das mesmas pelos interessados. Veja a Figura \ref{figura:figX}.
 
 \begin{figure}[h]
-\centering % para centralizarmos a figura
-\includegraphics[width=3cm]{./fig/figX} % leia abaixo
-\caption{Imagem da tela inicial do aplicativo MinhaUFG.}
-\label{figura:figX}
+	\centering % para centralizarmos a figura
+	\includegraphics[width=3cm]{./fig/figX} % leia abaixo
+	\caption{Imagem da tela inicial do aplicativo MinhaUFG.}
+	\label{figura:figX}
 \end{figure}
 
 Atualmente com seis funcionalidades e cerca de seiscentos usuários utilizando-a diariamente, a aplicação contém as seguintes funcionalidades:
 
 \begin{description}
-
-\item [Segurança]: Contém lista de telefones de segurança e serviço de chamado de vigilante/envio de denúncia com foto e devido acompanhamento pela central. Este serviço foi criado especialmente para a aplicação.
-
-\item [Notícias]: Disponibiliza a lista de notícias e o detalhamento de cada uma das matérias, divididas por Campus Universitário. A fonte das notícias é o sistema weby.
-
-\item [Rádio Universitária]: Acesso a Rádio Universitária e sua programação diária. A fonte do \textit{streaming} é o sistema da própria UFG, porém o sistema de visualização da programação foi criado especialmente para a aplicação.
-
-\item [Eventos]: Listagem dos eventos cadastrados no sistema interno da UFG, podendo ser filtrados por dia. 
-
-\item [Restaurantes Universitários]: Listagem de restaurantes universitários por campus, além do cardápio semanal de cada um, incluindo jantar. Foi criado especialmente para a aplicação.
-
-\item [Guia estudantil]: Guia da vida acadêmica para novos estudantes.  Foi criado especialmente para a aplicação com a colaboração da ASCOM.
+	
+	\item [Segurança]: Contém lista de telefones de segurança e serviço de chamado de vigilante/envio de denúncia com foto e devido acompanhamento pela central. Este serviço foi criado especialmente para a aplicação.
+	
+	\item [Notícias]: Disponibiliza a lista de notícias e o detalhamento de cada uma das matérias, divididas por Campus Universitário. A fonte das notícias é o sistema weby.
+	
+	\item [Rádio Universitária]: Acesso a Rádio Universitária e sua programação diária. A fonte do \textit{streaming} é o sistema da própria UFG, porém o sistema de visualização da programação foi criado especialmente para a aplicação.
+	
+	\item [Eventos]: Listagem dos eventos cadastrados no sistema interno da UFG, podendo ser filtrados por dia. 
+	
+	\item [Restaurantes Universitários]: Listagem de restaurantes universitários por campus, além do cardápio semanal de cada um, incluindo jantar. Foi criado especialmente para a aplicação.
+	
+	\item [Guia estudantil]: Guia da vida acadêmica para novos estudantes.  Foi criado especialmente para a aplicação com a colaboração da ASCOM.
 \end{description}
 
 O aplicativo hoje tem mais de 5 mil \textit{downloads} na Google Play Store, tendo nota acima de 4.5, considerada alta. Novas funcionalidades serão futuramente implementadas, de acordo com a integração de novos serviços criados pela universidade.
@@ -39,10 +39,10 @@ O aplicativo hoje tem mais de 5 mil \textit{downloads} na Google Play Store, ten
 Dentro da visão de implantação, o projeto MinhaUFG possui uma arquitetura descentralizada composta de uma agregação de vários servidores dos serviços da universidade somados a serviços de um \textit{backend} como serviço criado especialmente para cobrir os sistemas não existentes. Logo, não há um servidor dedicado e centralizado para recuperação da informação. A comunicação é realizada de acordo com o serviço, sendo também complementada por serviços do próprio telefone. Veja um exemplo na figura \ref{fig:arq_one}.
 
 \begin{figure}[H]
-\centering % para centralizarmos a figura
-\includegraphics[width=18cm]{./fig/arqui_one} % leia abaixo
-\caption{Arquitetura de implantação do MinhaUFG.}
-\label{fig:arq_one}
+	\centering % para centralizarmos a figura
+	\includegraphics[width=18cm]{./fig/arqui_one} % leia abaixo
+	\caption{Arquitetura de implantação do MinhaUFG.}
+	\label{fig:arq_one}
 \end{figure}
 
 A arquitetura de pacotes aplicativo MinhaUFG é modular. Tal decisão tem o objetivo de diminuir o acoplamento de funcionalidades e facilitar a manutenção do código, principalmente no que se refere ao modelo do  banco de dados. Cada módulo é responsável por gerenciar segmentos de dados específicos, havendo pouca intersecção entre as informações nos grupos de serviços. Para realizar tal implementação, o padrão arquitetural escolhido foi o MVP (Model-View-Presenter), cuja característica de desacoplamento entre controle de interface e lógica da aplicação.
@@ -50,10 +50,10 @@ A arquitetura de pacotes aplicativo MinhaUFG é modular. Tal decisão tem o objeti
 A figura \ref{figura:mvp} ilustra este padrão arquitetural.
 
 \begin{figure}[H]
-\centering % para centralizarmos a figura
-\includegraphics[width=18cm]{./fig/mvp} % leia abaixo
-\caption{Padrão arquitetural MVP e a relação de seus componentes.}
-\label{figura:mvp}
+	\centering % para centralizarmos a figura
+	\includegraphics[width=18cm]{./fig/mvp} % leia abaixo
+	\caption{Padrão arquitetural MVP e a relação de seus componentes.}
+	\label{figura:mvp}
 \end{figure}
 
 \section{Implementação}
